@@ -13,7 +13,7 @@ public:
 };
 
 class BtlObjMove{
-    u8 unk[944];
+    u8 unk[0x3ac];
 public:
     virtual ~BtlObjMove();
 

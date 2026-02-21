@@ -1,0 +1,12 @@
+bak/
+build/
+*.elf
+*.bin
+loader.sym
+newcode.sym
+compile_commands.json
+.vscode/
+.cache/
+newcodeinfo.h
+linker.x
+lib/

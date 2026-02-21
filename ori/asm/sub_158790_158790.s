@@ -1,0 +1,34 @@
+MOV             R1, #0
+LDR             R2, =off_6ACEDC
+STR             R1, [R0,#4]
+STR             R1, [R0,#8]
+STR             R1, [R0,#0xC]
+LDR             R3, =0x270F
+STR             R2, [R0]
+STRB            R1, [R0,#0x10]
+STR             R1, [R0,#0x14]
+STR             R3, [R0,#0x18]
+VLDR            S0, =1.0
+STR             R1, [R0,#0x1C]
+VSTR            S0, [R0,#0x20]
+VLDR            S0, =0.0
+STR             R1, [R0,#0x24]
+VSTR            S0, [R0,#0x28]
+STR             R1, [R0,#0x2C]
+STR             R1, [R0,#0x30]
+STR             R1, [R0,#0x3C]
+STRB            R1, [R0,#0x40]
+STRB            R1, [R0,#0x41]
+STRH            R1, [R0,#0x42]
+STRH            R1, [R0,#0x44]
+LDR             R12, =off_6B8168
+STRH            R1, [R0,#0x46]
+VSTR            S0, [R0,#0x48]
+ADD             R3, R0, #0x50 ; 'P'
+STR             R1, [R0,#0x4C]
+STM             R3, {R1,R12}
+STR             R1, [R0,#0x58]
+STR             R1, [R0,#0x5C]
+STR             R1, [R0,#0x60]
+STR             R1, [R0,#0x64]
+BX              LR

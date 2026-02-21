@@ -5,12 +5,10 @@
 #include "Task.hpp"
 
 class Task;
-class TaskMainBase : public Task{
+class TaskMainBase{
+    Task* mBase;
     uint nextTask; //0x8
 public:
-
     void restore(uint next, Task base){
-    next = nextTask;
-    base = base;
 }
 };

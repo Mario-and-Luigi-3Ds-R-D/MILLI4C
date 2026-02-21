@@ -1,0 +1,9 @@
+BL              sub_100024
+BL              sub_1040B4
+BL              sub_10496C
+BL              sub_104128
+BLX             sub_1009AC
+BL              sub_104080
+BL              sub_104108
+BL              sub_103D98
+B               loc_103D90

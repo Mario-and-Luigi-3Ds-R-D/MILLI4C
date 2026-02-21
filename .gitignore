@@ -1,34 +1,8 @@
-# Dev
-private/
+# User obtained files.
+
+*.elf
+*.bin
+*.axf
+*.s
 build/
 ori/
-.vscode/
-
-# Building
-
-data/US_1.0/code.bin
-src/
-project/
-disassembly/
-
-# Python non public
-
-tools/Bin/
-tools/asm-differ/
-
-# Py cache
-
-tools/__pycache__/
-tools/Bin/__pycache__/
-tools/asm-differ/__pycache__/
-
-# Misc files; not for public
-*.json
-*.py
-*.cpp
-*.o
-*.s
-*.exe
-*.axf
-*.elf
-CMakeLists.txt

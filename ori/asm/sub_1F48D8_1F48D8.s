@@ -1,0 +1,11 @@
+PUSH            {R4,LR}
+VLDR            S1, [R2,#0x68]
+VLDR            S2, =1.0
+MOV             R3, R0
+LDRH            R0, [R2,#2]
+VDIV.F32        S0, S2, S1
+MOV             R2, R1
+MOV             R1, R3
+BL              sub_145730
+MOV             R0, #0
+POP             {R4,PC}

@@ -1,0 +1,20 @@
+MOV             R3, #0xC
+VLDR            S0, =0.0
+STRB            R3, [R0,#8]
+MOV             R1, #0
+VSTR            S0, [R0,#0x10]
+STR             R1, [R0]
+STRH            R1, [R0,#4]
+MOV             R2, #2
+STRH            R1, [R0,#6]
+STRB            R2, [R0,#9]
+STRB            R2, [R0,#0xA]
+STRB            R1, [R0,#0xB]
+STRB            R1, [R0,#0xC]
+STRB            R1, [R0,#0x14]
+STRB            R1, [R0,#0x15]
+STRB            R1, [R0,#0x16]
+STRB            R1, [R0,#0x17]
+STRB            R1, [R0,#0x18]
+STRB            R1, [R0,#0x19]
+BX              LR

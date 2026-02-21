@@ -3,9 +3,10 @@
 #include "types.hpp"
 #include "system/TaskMan.hpp"
 
+class TaskMan;
 class Task{
 public:
-    Task* mTask;
+    TaskMan* mTaskManager;
 
     virtual void execute();
     virtual ~Task();

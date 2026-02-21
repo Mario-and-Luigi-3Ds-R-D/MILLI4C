@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class CmdCacheMulti{
     u8 _pad_[128]; //garbage

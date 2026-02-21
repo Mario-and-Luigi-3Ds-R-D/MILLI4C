@@ -7,9 +7,12 @@ Currently this project is going through a "setup" phase, meaning it may take whi
 
 This project is will be going on a small hiatus to get some fundamentals figured out first, until then, stay tuned!
 
-# Building the rom
+# Todo List
 
-I will not share building the rom yet, as I am using a temporary method to do so.
+1) Building the code.bin ✅
+2) Sub libraries 
+3) Header files
+4) Start doing the thing.
 
 # The Goal
 

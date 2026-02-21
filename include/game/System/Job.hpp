@@ -1,18 +1,18 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class Job{
-    int* _0x4;
-    int* _0x8; //Job::end
-    u8 _0xc[4];
+    int* unk_0x4;
+    int* unk_0x8; //Job::end
+    u8 unk_0xc[4];
 public:
 
-    int* end(int* _0x8){
-    }
+    int* end(int* unk_0x8);
 };
 
-class JobMan : public Job{
+class JobMan{
+    Job mBase;
 public:
     virtual ~JobMan();
 };
