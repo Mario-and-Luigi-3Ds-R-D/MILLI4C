@@ -1,0 +1,28 @@
+# Dev
+private/
+build/
+ori/
+.vscode/
+
+# Building
+
+data/US_1.0/code.bin
+src/
+project/
+disassembly/
+
+# Python non public
+
+tools/
+
+# Misc files; not for public
+*.json
+*.py
+*.cpp
+*.o
+*.s
+*.exe
+*.axf
+*.elf
+CMakeLists.txt
+todo.txt

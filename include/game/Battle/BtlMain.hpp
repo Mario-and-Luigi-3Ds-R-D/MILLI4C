@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "CtrThread.hpp"
 
 class BtlMain{ //BtlMain vtable @ 0x006b8178

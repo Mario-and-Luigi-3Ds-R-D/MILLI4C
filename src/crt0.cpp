@@ -9,8 +9,8 @@ extern "C" void nninitCallStaticInitializers();
 extern "C" void nninitSetup();
 extern "C" void nnMain();
 
-extern "C" __asm void __ctr_start();   
-/*{
+extern "C" __asm void __ctr_start();   /*
+{
     bl __cpp(nninitRegion)
     bl __cpp(nninitLocale)
     bl __cpp(nninitSystem)
@@ -21,3 +21,4 @@ extern "C" __asm void __ctr_start();
     bl __cpp(nnMain)
     b __cpp(nn::svc::ExitProcess)
 }*/
+//Doesnt work, stubbed as of so far.

@@ -1,9 +1,2 @@
-#pragma once
-
-#include <game/types.hpp>
-
-namespace BtlAtkMJ{
-    class CamStateMain{ //BtlAtkMJ::CamStateMain to fix namespaces by alphadream
-    
-};//CamStateMain
-}//BtlAtkMJ
+// All BtlAtkMJCam(state)_ 
+// Keep bad namespaces for 1:1 matching purposes for vtables.

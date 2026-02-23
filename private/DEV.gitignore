@@ -1,0 +1,8 @@
+# User obtained files.
+
+*.elf
+*.bin
+*.axf
+*.s
+build/
+ori/
