@@ -1,0 +1,3 @@
+RedSpark.map (Current Ghidra Map)
+RedSparkAllTargetVar (IDA - vtable, TypeInfo, TypeName information)
+StaticAllTargetAdr.map (Static.crs, contains VERY relevant function information)

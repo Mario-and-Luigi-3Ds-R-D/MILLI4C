@@ -1,0 +1,1164 @@
+
+
+  Address         Publics by Value
+
+ 0000:00100000       __ctr_start
+ 0000:00100024       nninitRegion
+ 0000:00100048       __c89vswprintf
+ 0000:00100090       wcslen
+ 0000:001000B0       _printf_int_dec
+ 0000:00100124       _printf_charcount
+ 0000:001002F4       __aeabi_vec_ctor_nocookie_nodtor
+ 0000:00100320       _printf_longlong_oct
+ 0000:00100398       _printf_longlong_hex
+ 0000:001004FC       memcmp
+ 0000:00100648       __c89vsnprintf
+ 0000:00100680       __2snprintf
+ 0000:001006BC       _printf_str
+ 0000:00100710       _printf_wctomb
+ 0000:001007CC       atoi
+ 0000:001007E6       mbstowcs
+ 0000:00100836       wcstombs
+ 0000:001008A2       mbsinit
+ 0000:001008B4       mbrlen
+ 0000:001008D2       strncat
+ 0000:001008F6       wmemmove
+ 0000:00100900       wcscmp
+ 0000:0010091C       wcsncmp
+ 0000:00100944       wmemset
+ 0000:001009ac       __cpp_initialize__aeabi_
+ 0000:001009D8       __aeabi_vec_dtor
+ 0000:00102860       __rw::__rw_allocate(uint,int)
+ 0000:001029F4       __rw::__rw_deallocate(void *,uint,int)
+ 0000:001029FC       __rw::__rw_facet_base::_C_initfacet(std::locale const&)
+ 0000:00102A3C       __rw::__rw_locale_imp::__rw_locale_imp(__rw::__rw_locale_imp const&,char const*,uint)
+ 0000:00102AF0       __rw::__rw_punct_data<char>::~__rw_punct_data() REVIEW
+ 0000:00102AFC       __rw::__rw_numpunct_impl_data<char>::~__rw_numpunct_impl_data() REVIEW
+ 0000:00102BB0       std::__rw_exception::what(void)
+ 0000:00102BB4       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::do_unshift(std::__mbstate_t&,char *,char *,char *&)
+ 0000:00102BD8       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::do_encoding(void)
+ 0000:00102BF4       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::do_max_length(void)
+ 0000:00102BFC       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::do_always_noconv(void)
+ 0000:00102EAC       std::ctype<char>::do_tolower(char *,char const*)
+ 0000:00102EDA       std::ctype<char>::do_tolower(char)
+ 0000:00102EFA       std::ctype<char>::do_toupper(char *,char const*)
+ 0000:00102F28       std::ctype<char>::do_toupper(char)
+ 0000:00102F48       std::ctype<char>::do_widen(char const*,char const*,char *)
+ 0000:00102F58       std::ctype<char>::do_widen(char)
+ 0000:00102F5C       std::ctype<char>::do_narrow(char const*,char const*,char,char *)
+ 0000:00102F6C       std::ctype<char>::do_narrow(char,char)
+ 0000:001030AC       std::codecvt<wchar_t,char,std::__mbstate_t>::do_length(std::__mbstate_t const&,char const*,char const*,uint)
+ 0000:001032CC       std::ctype_byname<char>::~ctype_byname()
+ 0000:001032D8       std::ctype_byname<char>::~ctype_byname()
+ 0000:00103368       std::__rw_exception::__rw_exception(void)
+ 0000:0010337C       std::__rw_exception::~__rw_exception()
+ 0000:00103388       std::__rw_exception::~__rw_exception()
+ 0000:001033A4       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::~codecvt_byname()
+ 0000:001033AC       std::codecvt_byname<wchar_t,char,std::__mbstate_t>::~codecvt_byname()
+ 0000:001033AE       std::collate_byname<char>::~collate_byname()
+ 0000:001033BC       std::collate_byname<char>::~collate_byname()
+ 0000:001033D4       std::__rw_open_cat_data::__rw_open_cat_data(void)
+ 0000:001033EE       std::__rw_open_cat_data::~__rw_open_cat_data()
+ 0000:00103514       std::ctype<char>::~ctype()
+ 0000:00103520       std::locale::_C_remove_facets(int)
+ 0000:00103574       std::locale::facet::~facet()
+ 0000:0010357C       std::locale::facet::~facet()
+ 0000:0010357E       std::locale::locale(std::locale const&)
+ 0000:0010358C       std::locale::locale(void)
+ 0000:001035B0       std::collate<char>::~collate()
+ 0000:001035B8       std::collate<char>::~collate()
+ 0000:001035BA       std::messages<char>::~messages()
+ 0000:001035C6       std::messages<char>::~messages()
+ 0000:001035D4       std::numpunct<char>::~numpunct()
+ 0000:001035E0       std::numpunct<char>::~numpunct()
+ 0000:0010360A       operator delete(void *,void *)
+ 0000:0010360C       operator new(uint,void *)
+ 0000:001036B4       __aeabi_vec_cctor_nocookie_nodtor
+ 0000:001036F8       __cxa_guard_release
+ 0000:001036FA       __cxa_pure_virtual
+ 0000:00103798       __rw::__rw_facet_maker<std::ctype<char>>::_C_maker_func(int,char const*,uint)
+ 0000:001037E0       __rw::__rw_locale_vector<__rw::__rw_facet_base *>::~__rw_locale_vector()
+ 0000:001037EE       __rw::__rw_locale_vector<__rw::__rw_cat *>::~__rw_locale_vector()
+ 0000:001037FC       __rw::__rw_locale_vector<std::string>::operator[](uint)
+ 0000:00103804       __rw::__rw_locale_vector<std::__rw_open_cat_data>::resize(uint)
+ 0000:00103884       __rw::__rw_locale_vector<std::__rw_open_cat_data>::~__rw_locale_vector()
+ 0000:00103898       std::collate<char>::do_compare(char const*,char const*,char const*,char const*)
+ 0000:001038F6       std::collate<char>::do_transform(char const*,char const*)
+ 0000:00103936       std::collate<char>::do_hash(char const*,char const*)
+ 0000:0010397C       std::messages<char>::do_get(int,int,int,std::string const&)
+ 0000:00103A08       std::messages<char>::do_open(std::string const&,std::locale const&)
+ 0000:00103A12       std::messages<char>::do_close(int)
+ 0000:00103A1C       std::numpunct<char>::do_grouping(void)
+ 0000:00103A26       std::numpunct<char>::do_truename(void)
+ 0000:00103A30       std::numpunct<char>::do_falsename(void)
+ 0000:00103A3A       std::numpunct<char>::do_decimal_point(void)
+ 0000:00103A3E       std::numpunct<char>::do_thousands_sep(void)
+ 0000:00103A42       std::allocator<__rw::__string_ref<char,std::char_traits<char>,std::allocator<char>>>::allocator<char>(std::allocator<char> const&)
+ 0000:00103A44       std::allocator<char>::allocator(std::allocator<char> const&)
+ 0000:00103A46       std::allocator<char>::allocator(void)
+ 0000:00103A48       std::string::_C_allocate(uint,uint,uint)
+ 0000:00103A7C       std::string::replace(uint,uint,char const*,uint,uint,uint)
+ 0000:00103BF8       std::string::operator=(char const*)
+ 0000:00103C48       std::numpunct<char>::_C_initfacet(std::locale const&)
+ 0000:00103CCC       _printf_percent
+ 0000:00103CD4       _printf_p
+ 0000:00103D08       _printf_i
+ 0000:00103D10       _printf_d
+ 0000:00103D18       _printf_u
+ 0000:00103D20       _printf_o
+ 0000:00103D28       _printf_x
+ 0000:00103D64       _printf_c
+ 0000:00103D6C       _printf_s
+ 0000:00103D74       _printf_lc
+ 0000:001040b4       nninitLocale
+ 0000:00104108       nninitSetup
+ 0000:00104128       nninitStartUp
+ 0000:00104148       nn::applet::CTR::detail::Initialize
+ 0000:0010496c       nninitSystem
+ 0000:0010498c       nn::os::CTR::detail::SetInternalErrorHandlingMode
+ 0000:00105E10       SndSys::func(void)
+ 0000:00106284       GameWork::initGameWork(void)
+ 0000:00106818       SoundHandle::StartPrepared(void)
+ 0000:00106BE8       VramAlcRange::term(void)
+ 0000:00106C10       Grp::mergeVram(uint)
+ 0000:00106C3C       VramAlcRange::merge(void)
+ 0000:00106C88       Grp::splitVram(uint)
+ 0000:001070B8       MsgDataAcsrBase::init(void const*)
+ 0000:001073bc       nn::os::WaitableCounter::Initialize
+ 0000:0010745C       nn::os::GetDeviceMemorySize(void)
+ 0000:0010754C       nn::os::GetDeviceMemoryAddress(void)
+ 0000:00108024       nninitSetupDefault
+ 0000:001080f8       nn::srv::RegisterNotificationHandler
+ 0000:00108160       nn::font::ResFont::RemoveResource(void)
+ 0000:00108408       nn::applet::CTR::detail::IsAppletMode
+ 0000:00108578       nn::applet::CTR::detail::InitializeConnect
+ 0000:00108914       CtrFS::unmountSaveData(void)
+ 0000:00108988       Backup::isBusyCopying(void)
+ 0000:00108AC8       Backup::writeInitData(void)
+ 0000:00108CA0       MemAlc::initCore(void *,uint)
+ 0000:00109238       TaskMan::entry(Task *)
+ 0000:00109634       GameWork::updatePlayTime(void)
+ 0000:0010A358       operator new(uint,MemAlcBase *,char const*,uint)
+ 0000:0010A37C       glBindRenderbuffer
+ 0000:0010A4C4       glDeleteFramebuffers
+ 0000:0010A6A0       glDeleteRenderbuffers
+ 0000:0010A824       glFramebufferRenderbuffer
+ 0000:0010A8E8       glGenFramebuffers
+ 0000:0010AB20       glGenRenderbuffers
+ 0000:0010AD58       glRenderbufferStorage
+ 0000:0010AE68       nngxActiveDisplay
+ 0000:0010AEA0       nngxBindCmdlist
+ 0000:0010B008       nngxBindDisplaybuffer
+ 0000:0010B110       nngxCmdlistStorage
+ 0000:0010B1F8       nngxDeleteCmdlists
+ 0000:0010B468       nngxDisplayEnv
+ 0000:0010B6DC       nngxGenCmdlists
+ 0000:0010BB5C       nngxGetVramStartAddr
+ 0000:0010C868       nngxRunCmdlist
+ 0000:0010C984       nngxWaitCmdlistDone
+ 0000:0010ca44       nn::svc::CreateAddressArbiter
+ 0000:0010D1B4       MemAlcBase::GetOpt(int,bool,uint)
+ 0000:0010D1D0       MessageSys::GetPath(wchar_t *,wchar_t const*,bool)
+ 0000:0010D250       MessageSys::MessageSys(void)
+ 0000:0010D2AC       CtrFileBase::open(wchar_t const*)
+ 0000:0010D33C       CtrFileBase::close(void)
+ 0000:0010D4F0       SoundHandle::DetachSound(void)
+ 0000:0010D7A8       nn::fs::CTR::MPCore::detail::UserFileSystem::TryOpenFile(void **,wchar_t const*,uint)
+ 0000:0010D89C       nn::fs::CTR::MPCore::detail::UserFileSystem::CloseFile(void *)
+ 0000:0010D8F4       nn::fs::detail::FileBase::TryRead(int *,void *,uint)
+ 0000:0010E1F8       nn::err::CTR::ThrowFatalErrAll(nn::Result,uint)
+ 0000:0010ee98       nn::srv::detail::Service::EnableNotification
+ 0000:0010EF48       nn::font::ResFont::SetResource(void *)
+ 0000:0010F120       nn::font::ResFont::SetDrawBuffer(void *)
+ 0000:0010F15C       nn::font::ResFont::GetDrawBufferSize(void const*)
+ 0000:0010F210       nn::gxlow::CTR::SetAppletMode
+ 0000:0010F264       nn::applet::CTR::EnableSleep(bool)
+ 0000:0010f2bc       nn::applet::CTR::GetAttribute
+ 0000:0010f2cc       nn::applet::CTR::IsInfoAccess
+ 0000:0010f2ec       nn::applet::CTR::SetAttribute
+ 0000:0010f344       nn::applet::CTR::InitializeWrapper
+ 0000:0010f52c       nn::applet::CTR::SetId
+ 0000:0010f53c       nn::applet::CTR::detail::Disconnect
+ 0000:0010f588       nn::applet::CTR::detail::InitializeMutex
+ 0000:0010f84c       nn::applet::CTR::detail::InitializeClientThread
+ 0000:0010fae8       nn::applet::CTR::detail::APPLET::Initialize
+ 0000:0010fb38       nn::applet::CTR::detail::APPLET::GetLockHandle
+ 0000:0011027C       Grp::SetClearColor(nn::util::Color8)
+ 0000:00110290       Grp::end(uchar)
+ 0000:001102FC       Grp::begin(uint,uint)
+ 0000:001103A4       Mem::Copy(void *,void const*,uint)
+ 0000:00110BE4       Mem::Fill(void *,uint,uint)
+ 0000:00110D10       Mem::Free(void *)
+ 0000:00111BC4       Prim::disableCull(void)
+ 0000:00111BEC       Prim::setDrawMode(PicaDataDrawMode)
+ 0000:00111C30       Prim::enableDepthTest(bool,PicaDataDepthTest)
+ 0000:00111C60       Prim::setCombConstClr(nn::util::Color8)
+ 0000:00111CF8       Prim::disableAlphaTest(void)
+ 0000:00111D20       Prim::enableStencilTest(uint,uint,uchar,PicaDataStencilTest,PicaDataStencilOp,PicaDataStencilOp,PicaDataStencilOp)
+ 0000:00111E70       Prim::setBlend(int)
+ 0000:00111F30       PrimVtxBuf::~PrimVtxBuf()
+ 0000:00111F48       Prim::~Prim()
+ 0000:00111F70       CtrFS::CtrFS(void)
+ 0000:00111FD8       CtrFS::~CtrFS()
+ 0000:00112128       Backup::Backup(void)
+ 0000:00112494       GameWork::startPlayTime(void)
+ 0000:00112548       GameWork::UpdatePcStatus(DataPc *)
+ 0000:00112928       GameWork::addItem(ushort,signed char)
+ 0000:00112D3C       REDSPARK::Sd::RSSound::GetInstance(void)
+ 0000:00113630       REDSPARK::Sd::RSSound::isStandby(int)
+ 0000:001137FC       CellAnime::init(void const*,CellAnimeTex const*,void const*,uchar,short,short)
+ 0000:00113924       CtrJobMan::init(void *,int,int)
+ 0000:001139AC       CtrJobMan::term(void)
+ 0000:00113A5C       CtrJobMan::CtrJobMan(void)
+ 0000:00113ADC       CtrJobMan::~CtrJobMan()
+ 0000:00113BF0       nn::fs::detail::FileBase::TryGetSize(long long *)
+ 0000:001143B4       operator new[](uint,MemAlcBase *,char const*,uint)
+ 0000:00116200       glBindFramebuffer
+ 0000:001162FC       glGetRenderbufferParameteriv
+ 0000:0011644C       nngxAddVramDmaCommand
+ 0000:001164C0       nngxGetAllocator
+ 0000:001164E4       nngxSplitDrawCmdlist
+ 0000:0011667C       nngxWaitVSync
+ 0000:001169CC       nn::math::ARMv6::MTX34CopyAsm(nn::math::MTX34 *,nn::math::MTX34 const*)
+ 0000:001169FC       nn::math::ARMv6::VEC3TransformAsm(nn::math::VEC3 *,nn::math::MTX34 const*,nn::math::VEC3 const*)
+ 0000:00116A38       nw::lyt::DrawInfo::SetProjectionMtx(nn::math::MTX44 const&)
+ 0000:00116A40       nn::math::ARMv6::MTX44CopyAsm(nn::math::MTX44 *,nn::math::MTX44 const*)
+ 0000:00116a90       nn::svc::CreateThread
+ 0000:00116AB8       nn::svc::GetSystemTick(void)
+ 0000:00116AC0       __aeabi_ldivmod
+ 0000:00116B10       __aeabi_memset
+ 0000:00116B20       GlobalEvent::getRegister(ScriptUnit *,int)
+ 0000:00116B34       GetRegFlag(ushort,GlobalEvent *,LocalEvent *)
+ 0000:00116ED4       CtrFileBase::~CtrFileBase()
+ 0000:00116EDC       CtrFileBase::~CtrFileBase()
+ 0000:001170D0       CtrFReadBase::CtrFReadBase(void)
+ 0000:00117110       MessageDrawer::MessageDrawer(void)
+ 0000:00118c00       nn::os::Thread::TryInitializeAndStartImpl
+ 0000:001194e8       nn::err::CTR::ThrowFatalErr
+ 0000:0011a10c       nn::applet::CTR::IsApplication
+ 0000:0011b18c       nn::applet::CTR::detail::SetReceiveCallback
+ 0000:0011b1e4       nn::applet::CTR::detail::SetPowerButtonState
+ 0000:0011b1f4       nn::applet::CTR::detail::SetOrderToCloseState
+ 0000:0011b5f0       nn::applet::CTR::detail::SetActive
+ 0000:0011C418       Grp::GetLcdWidth(uint)
+ 0000:0011C444       Prim::Prim(void)
+ 0000:0011CA18       CtrFS::initCore(CtrJobMan *,void *,int)
+ 0000:0011CA94       GameDB::GetEquip(ushort)
+ 0000:0011CAF4       Message::Message(void)
+ 0000:0011CCD8       CellAnimeTex::initFcram(void const*)
+ 0000:0011DAF4       REDSPARK::Sd::RSSound::IsEntry(int,int,int)
+ 0000:0011DCDC       CellAnime::play(uchar,short,short)
+ 0000:0011EE8C       nn::gr::CTR::Combiner::MakeCommand(uint *)
+ 0000:0011FEF4       _get_lc_ctype
+ 0000:0011FF3C       _get_lc_numeric
+ 0000:001201E8       nn::svc::ArbitrateAddress
+ 0000:00120200       nn::svc::ConnectToPort
+ 0000:00120218       nn::svc::CreateEvent
+ 0000:0012029C       strncmp
+ 0000:00120230       nn::svc::GetProcessId
+ 0000:0012038C       __aeabi_memclr
+ 0000:001203D4       CtrFileBase::CtrFileBase(void)
+ 0000:00120480       MessageWriter::MessageWriter(void)
+ 0000:00120CD8       nn::fs::detail::FileBase::TrySeek(long long,nn::fs::PositionBase)
+ 0000:00120E48       nn::os::LightEvent::Initialize
+ 0000:00120E7C       nn::os::LightEvent::Wait(void)
+ 0000:00120f40       nn::os::SimpleLock::Initialize
+ 0000:0012107C       nn::os::CTR::detail::HandleInternalError
+ 0000:00121140       nn::os::Thread::SleepImpl(nn::fnd::TimeSpan)
+ 0000:001215E4       nn::err::CTR::ThrowFatalErr
+ 0000:0012162C       nn::err::CTR::FatalErr::Throw
+ 0000:00122B64       nngxGetPhysicalAddr 
+ 0000:00123148       nn::applet::CTR::GetId
+ 0000:00123520       nn::applet::CTR::detail::DisconnectAndUnlock
+ 0000:00123C70       Frm::play(int)
+ 0000:00123CE8       Frm::setSpd(short)
+ 0000:00124EC8       s_RedSpark_00024ec8
+ 0000:00126EA4       nngxUpdateBuffer
+ 0000:00126EA8       nngxUpdateState
+ 0000:00126FF8       nngxValidateState
+ 0000:001273D0       nnnstdMemCpy
+ 0000:00127EB8       __aeabi_memcpy4
+ 0000:00127F6C       __aeabi_uidivmod
+ 0000:00127FD4       CellAnimeState::resetState(void)
+ 0000:00128004       CellAnimeState::prepare(void)
+ 0000:00128148       nn::fs::detail::FileBase::TrySetPosition(long long)
+ 0000:00128238       nn::os::SimpleLock::Lock
+ 0000:00128434       nndbgPanic
+ 0000:0012AB38       Grp::GetProjOrtho(nn::math::MTX44 *,uint,bool,bool,float,float)
+ 0000:0012C9C4       CellAnime::setConstColor(int,nn::util::Color8)
+ 0000:0012CA08       CellAnime::draw(CellAnimeState &)
+ 0000:0013267C       nn:svc::Break
+ 0000:0013273C       nn::os::CriticalSection::Enter
+ 0000:00136824       CellAnime::GetPtnNo(CellAnimeFmtCtr::FileHeader const*,uchar,int)
+ 0000:00136908       CellAnime::drawCore(CellAnimeState &,uint *,CellAnimeFmtCtr::Pattern const*,bool)
+ 0000:001407D4       __hardfp_cosf
+ 0000:00140950       __hardfp_sinf
+ 0000:00141EFC       nn::math::ARMv6::VEC3TransformAsm(nn::math::VEC3 *,nn::math::MTX33 const*,nn::math::VEC3 const*)
+ 0000:00141F30       nn::math::ARMv6::MTX34MultAsm(nn::math::MTX34 *,nn::math::MTX34 const*,nn::math::MTX34 const*)
+ 0000:00142014       nn::math::ARMv6::MTX34MultAsm(nn::math::MTX34 *,nn::math::MTX34 const*,float)
+ 0000:00142050       nn::math::ARMv6::MTX34AddAsm(nn::math::MTX34 *,nn::math::MTX34 const*,nn::math::MTX34 const*)
+ 0000:0014209C       nn::math::ARMv6::MTX34MultScaleAsm(nn::math::MTX34 *,nn::math::MTX34 const*,nn::math::VEC3 const*)
+ 0000:00142110       nn::math::ARMv6::MTX34InverseAsm(nn::math::MTX34 *,nn::math::MTX34 const*)
+ 0000:0014222C       nn::math::ARMv6::MTX34InvTransposeAsm(nn::math::MTX34 *,nn::math::MTX34 const*)
+ 0000:00142328       nn::math::ARMv6::MTX34MultTranslateAsm(nn::math::MTX34 *,nn::math::VEC3 const*,nn::math::MTX34 const*)
+ 0000:00142344       nn::math::ARMv6::MTX34MultTranslateAsm(nn::math::MTX34 *,nn::math::MTX34 const*,nn::math::VEC3 const*)
+ 0000:00142378       nn::math::ARMv6::MTX34TransposeAsm(nn::math::MTX34 *,nn::math::MTX34 const*)
+ 0000:00142564       nn::math::ARMv6::MTX34ToMTX33Asm(nn::math::MTX33 *,nn::math::MTX34 const*)
+ 0000:00143544       memset
+ 0000:00143560       strncpy
+ 0000:00145470       LMS_GetText
+ 0000:001454AC       LMS_GetTextSize
+ 0000:00145730       PutRegFlag(ushort,float,GlobalEvent *,LocalEvent *)
+ 0000:001459F8       FieldPlaySe(uint,FieldChrPrim const*,float,float,bool)
+ 0000:00145FD4       BtlGetMonData(uint)
+ 0000:00146084       GetSndSeParam(uint)
+ 0000:001464D4       TransCrossBtnBit(uint)
+ 0000:00146638       RewriteMatTexComb(adsl::gfx::Model *,RewriteMatTexCombEquMode,nw::ut::FloatColor const&)
+ 0000:00146A94       SetTex4bLocationFlag(uint,adsl::gfx::res::ResGraphicsFile,adsl::gfx::res::ResGraphicsFile*,uint)
+ 0000:00146E50       InitRewriteMatTexComb(adsl::gfx::Model *,char const**)
+ 0000:0014848C       GetHugeBtlInfo_LimitTurn_Hard(uchar)
+ 0000:00148678       GetHugeBtlInfo_LimitTurn_Normal(uchar)
+ 0000:001486D4       GetHugeBtlInfo_LimitTurn_Hard_Final(uchar)
+ 0000:00148750       GetHugeBtlInfo_LimitTurn_Normal_Final(uchar)
+ 0000:00148CD0       BCBootInfo::get(void)
+ 0000:00158B60       CtrArcFile::open(wchar_t const*,void const*)
+ 0000:00158C18       CtrArcFile::cancel(int)
+ 0000:00158D78       CtrArcFile::isBusy(uint)
+ 0000:00158E18       CtrArcFile::getSize(int)
+ 0000:00158E88       CtrArcFile::readCore(CtrFRead *,int,uint,uint)
+ 0000:0015ACA8       DfxSys::term(void)
+ 0000:0019483C       FieldObjCA::chgCA(FieldCAData *)
+ 0000:00194954       FieldObjCA::delCA(void)
+ 0000:001949A0       FieldObjCA::initCA(nn::math::MTX34 const*)
+ 0000:001949B4       FieldObjCA::playCA(int,int)
+ 0000:001949CC       FieldObjCA::playCA(int,int,short,float)
+ 0000:00194A78       FieldObjCA::buildCA(MemAlcBase *)
+ 0000:00194BC0       FieldObjCA::setCADisp(bool)
+ 0000:00194BD0       FieldObjCA::FieldObjCA(void)
+ 0000:001C71BC       MessageSys::GetLangName(void)
+ 0000:001C726C       MessageSys::draw(uint)
+ 0000:001C7590       MessageSys::func(void)
+ 0000:001C78E8       MessageSys::init(MemAlcBase *,int,int,uint)
+ 0000:001C79F4       MessageSys::GetPath(char *,char const*,bool)
+ 0000:001C7A78       MessageSys::~MessageSys()
+ 0000:001C8B64       PrimVtxBuf::init(void *,uint,bool)
+ 0000:001C8D34       PrimVtxBuf::begin(PrimVtxBuf::Style,PrimVtxBuf::DrawMode,uint,bool)
+ 0000:001C8EB4       PrimVtxBuf::vtxClr(nn::util::Color8)
+ 0000:001C8F64       PrimVtxBuf::vtxPos(float,float,float)
+ 0000:001C8FF0       PrimVtxBuf::vtxTex(float,float)
+ 0000:001C9094       PrimVtxBuf::swapBuf(void)
+ 0000:001C9134       PrimVtxBuf::PrimVtxBuf(void)
+ 0000:001CB050       RealSystem::RealSystem(FieldBootInfo const*)
+ 0000:001CE930       BtlBootInfo::reset(void)
+ 0000:001DFDA8       CtrFileBase::cancel(void)
+ 0000:001DFF00       CtrFileBase::isBusy(void)
+ 0000:001DFF90       CtrFileBase::~CtrFileBase()
+ 0000:001E211C       DfxChildMan::run(void)
+ 0000:001E4AB4       DreamSystem::DreamSystem(FieldBootInfo const*)
+ 0000:001E5A88       FieldCamera::setPos(nn::math::VEC3 const*,nn::math::VEC3 const*)
+ 0000:001E5C30       FieldCamera::update(void)
+ 0000:001E9348       FieldObjMdl::chgMdl(FieldMdlData *,uint,GfxScnSys *,GfxScnSys::ScnObjCreateParam const*)
+ 0000:001E93C0       FieldObjMdl::chgMdl(adsl::gfx::res::ResModel *,GfxScnSys *,GfxScnSys::ScnObjCreateParam const*)
+ 0000:001E9F04       FieldObjMdl::FieldObjMdl(void)
+ 0000:001E9FF4       FieldObjMdl::~FieldObjMdl()
+ 0000:001EA7F0       FieldSystem::GetMdlData(FieldMainBase *,uchar,uint)
+ 0000:001F343C       FieldSystem::GetCAData(FieldMainBase *,uchar,uint)
+ 0000:001F4258       GlobalEvent::getStatusReg(LocalEvent *,int)
+ 0000:001F4264       GlobalEvent::setStatusReg(LocalEvent *,int,float)
+ 0000:001F4544       GlobalEvent::execLocalEvent(LocalEvent *)
+ 0000:001F4764       GlobalEvent::init(void const*,float *,uchar)
+ 0000:001F4D5C       GlobalEvent::execEx(LocalEvent *,ScriptCode *)
+ 0000:001F5518       GlobalEvent::GlobalEvent(void)
+ 0000:0020175C       SndSys::setVolume(SoundHandle *,float,int)
+ 0000:00214680       BtlMainProxy::BtlMainProxy(void)
+ 0000:0021CFE8       CalcEquipEff::setCoin(uint)
+ 0000:0021CFF0       CalcEquipEff::CalcEquipEff(uint)
+ 0000:0021D0A4       CellAnimeTex::initVram(void const*,uint,uint)
+ 0000:002217C8       DfxMemorySys::memReadCancelAll(void)
+ 0000:00221890       DfxMemorySys::init(MemAlcBase *,DfxResAlc *,DfxLinkList<DfxLineBB> *,DfxVRAMTransfer *,CtrFS *,ushort)
+ 0000:0022196C       DfxMemorySys::term(void)
+ 0000:00221A48       DfxMemorySys::doWork(void)
+ 0000:00221D8C       DfxMemorySys::DfxMemorySys(void)
+ 0000:00221DD4       DfxMemorySys::~DfxMemorySys()
+ 0000:00222108       DfxUnitIDMan::init(MemAlcBase *,uchar)
+ 0000:0022214C       DfxUnitIDMan::term(void)
+ 0000:00222170       DfxUnitIDMan::getNextID(void)
+ 0000:002221C8       DfxUnitIDMan::releaseID(uchar)
+ 0000:00233754       FieldObjCA::~FieldObjCA()
+ 0000:0029D010       ScriptSystem::init(void const*)
+ 0000:0029D1B0       ScriptSystem::rewind(ScriptUnit *,ScriptCode const*)
+ 0000:0029D258       GlobalEvent::~GlobalEvent()
+ 0000:0029F4FC       TaskMainBase::restore(void)
+ 0000:002A0EB0       VramAlcRange::VramAlcRange(void)
+ 0000:002A0EE8       VramAlcRange::~VramAlcRange()
+ 0000:002A841C       CmdCacheMulti::init(int,int)
+ 0000:002A8470       CmdCacheMulti::term(void)
+ 0000:002A84A0       CmdCacheMulti::clear(void)
+ 0000:002A84DC       CmdCacheMulti::endSave(int)
+ 0000:002A8520       CmdCacheMulti::beginSave(void)
+ 0000:002A8548       CmdCacheMulti::CmdCacheMulti(void)
+ 0000:002A8578       CmdCacheMulti::~CmdCacheMulti()
+ 0000:002A8760       CtrLoadModule::CtrLoadModule(void)
+ 0000:002AF718       FieldMainBase::GetMapStatData(ushort)
+ 0000:002BE9CC       MessageDrawer::drawCursor(uint *,MessageWriter *)
+ 0000:002BEB24       MessageDrawer::drawRubyWin(uint *,MessageWriter *)
+ 0000:002BEC88       MessageDrawer::draw(MessageWriter *,bool)
+ 0000:002BEE30       MessageDrawer::init(MemAlcBase *,uint)
+ 0000:002BF4EC       MessageDrawer::term(void)
+ 0000:002BF550       MessageDrawer::setTex(uint *,int)
+ 0000:002BF5FC       MessageDrawer::drawBtn(uint *,MessageWriter *)
+ 0000:002BF988       MessageDrawer::drawStr(uint *,MessageWriter *)
+ 0000:002C04EC       MessageDrawer::prepare(void)
+ 0000:002C0500       MessageDrawer::drawKick(uint *,uint)
+ 0000:002C0538       MessageDrawer::copyCache(uint *,uint)
+ 0000:002C05AC       MessageDrawer::~MessageDrawer()
+ 0000:002C06FC       MessageSimple::getLineSpace(wchar_t const*,bool,float *)
+ 0000:002C0A14       MessageSimple::getLineWidth(wchar_t const*,wchar_t **,bool *,float *)
+ 0000:002C0CA0       MessageSimple::getPageWidth(wchar_t const*)
+ 0000:002C0D24       MessageSimple::getLineHeight(wchar_t const*,wchar_t **,bool *,float *)
+ 0000:002C0E58       MessageSimple::getPageHeight(wchar_t const*)
+ 0000:002C0EF0       MessageSimple::init(void)
+ 0000:002C0F9C       MessageSimple::play(wchar_t const*,MessageSimple::InsParam *,bool)
+ 0000:002C1E70       MessageSimple::checkCol(float,float)
+ 0000:002C1F1C       MessageSimple::printRuby(uint,MessageWriter *)
+ 0000:002C2000       MessageSimple::MessageSimple(void)
+ 0000:002C20A8       MessageSimple::~MessageSimple()
+ 0000:002C20F0       MessageWriter::setParallax(float,nn::ulcd::CTR::StereoCamera const*)
+ 0000:002C2180       MessageWriter::setFontColor(nn::util::Color8,bool)
+ 0000:002C2340       MessageWriter::init(void)
+ 0000:002C2500       MessageWriter::term(void)
+ 0000:002C2504       MessageWriter::clear(void)
+ 0000:002C292C       MessageWriter::setDepth(float,float,float)
+ 0000:002C29B8       MessageWriter::~MessageWriter()
+ 0000:002CD9F4       CellAnimeState::setProj2dParallax(nn::ulcd::CTR::StereoCamera const*,nn::math::MTX44 const&)
+ 0000:002CDA20       CellAnimeState::CellAnimeState(void)
+ 0000:002CDACC       CellAnimeState::~CellAnimeState()
+ 0000:002D30FC       FieldDfxSystem::deleteUnitAll(uchar)
+ 0000:002D3DF8       FieldDfxSystem::entry(uchar,ushort)
+ 0000:002FB570       DfxVRAMTransfer::transferCancelAll(void)
+ 0000:002FB5EC       DfxVRAMTransfer::init(uint,MemAlcBase *)
+ 0000:002FB6D8       DfxVRAMTransfer::term(void)
+ 0000:002FB754       DfxVRAMTransfer::doWork(void)
+ 0000:002FDF08       _printf_truncate_signed
+ 0000:002FDF1E       _printf_truncate_unsigned
+ 0000:002FE050       _printf_pre_padding
+ 0000:002FE3A8       _is_digit
+ 0000:002FEFCC       __aeabi_idivmod
+ 0000:002FF3D8       __aeabi_memcpy
+ 0000:002FF460       mbrtowc
+ 0000:002FF5D4       operator delete[](void *)
+ 0000:002FFE8C       __aeabi_memclr4
+ 0000:003000AC       strcmp
+ 0000:00300168       strlen
+ 0000:00300F58       std::string::string(std::allocator<char> const&)
+ 0000:00300FD4       operator delete(void *)
+ 0000:00301510       __rw::__rw_throw(int,...)
+ 0000:00301578       std::string::string(char const*,std::allocator<char> const&)
+ 0000:003015B0       std::string::string(std::string const&)
+ 0000:003015EC       std::string::~string()
+ 0000:003015F8       __rw::__rw_locale_vector<std::string>::~__rw_locale_vector()
+ 0000:00301664       memcpy
+ 0000:00301684       std::string::operator=(std::string const&)
+ 0000:003016C8       __aeabi_vec_delete
+ 0000:003016D4       setlocale
+ 0000:003017BC       __rw::__rw_use_c_lib_locale::~__rw_use_c_lib_locale()
+ 0000:00301828       std::string::string(char const*,uint,std::allocator<char> const&)
+ 0000:00301888       std::string::begin(void)
+ 0000:003018DC       std::__rw_get_cats(void)
+ 0000:00301998       std::ctype<char>::is(std::ctype_base::mask,char)
+ 0000:003019A6       __rw::__rw_locale_vector<__rw::__rw_facet_base *>::resize(uint,__rw::__rw_facet_base * const&)
+ 0000:003019F0       std::locale::locale(__rw::__rw_locale_imp *)
+ 0000:00301A94       std::locale::~locale()
+ 0000:00301B9C       __rw::__rw_locale_vector<__rw::__rw_facet_base *>::operator[](uint)
+ 0000:00301D9C       std::ctype<char>::~ctype()
+ 0000:00302168       __rw::__rw_locale_imp::__rw_locale_imp(char const*,uint,uint)
+ 0000:00302250       __rw::__rw_locale_imp::~__rw_locale_imp()
+ 0000:003022F4       __cxa_guard_acquire
+ 0000:00302308       __aeabi_atexit
+ 0000:00302744       std::__rw_open_cat_data::operator=(std::__rw_open_cat_data const&)
+ 0000:00302756       __rw::__rw_collate_data<char>::_C_coll_order(char)
+ 0000:00302790       std::max<uint>(uint const&,uint const&)
+ 0000:0030279C       std::string::_C_getRep(uint,uint)
+ 0000:0030281C       std::char_traits<char>::copy(char *,char const*,uint)
+ 0000:00302828       std::string::_C_unlink(void)
+ 0000:00302870       __aeabi_memmove
+ 0000:003028FC       __rw::__string_ref<char,std::char_traits<char>,std::allocator<char>>::_C_inc_ref(void)
+ 0000:00302910       std::string::replace(uint,uint,char const*,uint)
+ 0000:00308980       MsgDataAcsrBase::MsgDataAcsrBase(LMSBlockInfo *,uint)
+ 0000:003089C4       MsgDataAcsrBase::~MsgDataAcsrBase()
+ 0000:003215F0       FieldSoundSystem::playBgm(int,uint)
+ 0000:00321610       FieldSoundSystem::stopBgm(int,int)
+ 0000:0032F1EC       RenderDrawSysDFX::DfxRenderBuf::init(MemAlcBase *,ushort,ushort)
+ 0000:0032F2A0       RenderDrawSysDFX::DfxRenderBuf::term(void)
+ 0000:0032F2EC       RenderDrawSysDFX::DfxRenderBuf::DfxRenderBuf(void)
+ 0000:0032F308       RenderDrawSysDFX::setLayerZFunc(uchar,bool,bool)
+ 0000:0032F72C       RenderDrawSysDFX::initRenderState(uchar)
+ 0000:0032F740       RenderDrawSysDFX::preCollectionEx(uchar)
+ 0000:0032F838       RenderDrawSysDFX::DfxRenderBufRange::Range::makeRenderPack(RenderDrawSysDFX::DfxRenderBuf &,RenderDrawSysDFX*)
+ 0000:00330320       RenderDrawSysDFX::DfxRenderBufRange::Range::Range(void)
+ 0000:00330EEC       RenderDrawSysDFX::init(MemAlcBase *,ushort,ushort,uint)
+ 0000:003313C0       RenderDrawSysDFX::setCam(nn::math::MTX34 const&,nn::math::MTX44 const&,nn::math::VEC3 const&,nn::math::VEC3 const&)
+ 0000:0033180C       RenderDrawSysDFX::preRender(void)
+ 0000:0033183C       RenderDrawSysDFX::RenderDrawSysDFX(void)
+ 0000:00331AF8       RenderDrawSysDFX::~RenderDrawSysDFX()
+ 0000:00331D28       UIListWindowPlus::drawListCA(CellAnimeState &,UICommon::Pos const&,int,int)
+ 0000:00332248       UIListWindowPlus::drawCaption(CellAnimeState &)
+ 0000:00332320       UIListWindowPlus::drawListStr(MessageDrawer &,UICommon::Pos const&,int,int)
+ 0000:00332824       UIListWindowPlus::tpCtrlStart(short,short)
+ 0000:00332C08       UIListWindowPlus::draw(CellAnimeState &,Prim &,MessageDrawer &)
+ 0000:003330EC       UIListWindowPlus::init(UIListWindowPlus::InitParam const&)
+ 0000:00333180       UIListWindowPlus::tpCtrl(UIListWindowPlus::Item **,short,short,signed char,signed char)
+ 0000:00333374       UIListWindowPlus::keyCtrl(uint,uint,uint,uint,float)
+ 0000:003333F0       UIListWindowPlus::setCurNo(uchar)
+ 0000:0033350C       UIListWindowPlus::InitParam::InitParam(void)
+ 0000:00333578       UIListWindowPlus::tpCtrlCnt(short,short)
+ 0000:00333A28       UIListWindowPlus::tpCtrlEnd(UIListWindowPlus::Item **)
+ 0000:00333AF8       UIListWindowPlus::UIListWindowPlus(void)
+ 0000:00333D48       UIListWindowPlus::~UIListWindowPlus()
+ 0000:0035B024       FieldCameraStereo::FieldCameraStereo(void)
+ 0000:0035B048       FieldCameraStereo::~FieldCameraStereo()
+ 0000:0037D5E8       FieldMessageSystem::setSE(uint,uint,uint)
+ 0000:0037D710       FieldMessageSystem::resetSE(uint)
+ 0000:003A3488       MsgWndPosCalculator::calc(MsgWndPosCalculator::Result *)
+ 0000:00460744       nn::hid::CTR::GetGyroscope(void)
+ 0000:00460750       nn::hid::CTR::GyroscopeReader::ReadLatest(nn::hid::CTR::GyroscopeStatus *)
+ 0000:0046087C       nn::hid::CTR::GyroscopeReader::EnableZeroPlay(void)
+ 0000:00460888       nn::hid::CTR::GyroscopeReader::DisableZeroPlay(void)
+ 0000:00460894       nn::hid::CTR::GyroscopeReader::EnableAccRevise(void)
+ 0000:004608A0       nn::hid::CTR::GyroscopeReader::EnableZeroDrift(void)
+ 0000:004608AC       nn::hid::CTR::GyroscopeReader::DisableAccRevise(void)
+ 0000:004608B8       nn::hid::CTR::GyroscopeReader::DisableZeroDrift(void)
+ 0000:004608C4       nn::hid::CTR::GyroscopeReader::SetZeroDriftMode(nn::hid::CTR::ZeroDriftMode const&)
+ 0000:00460B14       nn::hid::CTR::GyroscopeReader::ResetZeroDriftMode(void)
+ 0000:00461B5C       nn::hid::CTR::GyroscopeReader::GyroscopeReader(nn::hid::CTR::AccelerometerReader *,nn::hid::CTR::Gyroscope &)
+ 0000:00461D5C       nn::hid::CTR::GyroscopeReader::~GyroscopeReader()
+ 0000:00462B20       nn::math::SinCosFIdx(float *,float *,float)
+ 0000:00464318       nn::math::CosFIdx(float)
+ 0000:00464380       nn::math::SinFIdx(float)
+ 0000:004643FC       nn::math::Atan2Idx(float,float)
+ 0000:00464528       nn::math::AtanFIdx(float)
+ 0000:004645C0       nn::math::Atan2FIdx(float,float)
+ 0000:004647E0       nn::ulcd::CTR::StereoCamera::Initialize(void)
+ 0000:004648B0       nn::ulcd::CTR::StereoCamera::SetBaseCamera(nn::math::MTX34 const*)
+ 0000:00464900       nn::ulcd::CTR::StereoCamera::SetBaseFrustum(nn::math::MTX44 const*)
+ 0000:00464998       nn::ulcd::CTR::StereoCamera::CalculateMatrices(nn::math::MTX44 *,nn::math::MTX34 *,nn::math::MTX44 *,nn::math::MTX34 *,float,float,nn::math::PivotDirection)
+ 0000:00464CD0       nn::ulcd::CTR::StereoCamera::CalculateMatricesReal(nn::math::MTX44 *,nn::math::MTX34 *,nn::math::MTX44 *,nn::math::MTX34 *,float,float,nn::math::PivotDirection)
+ 0000:00465034       nn::ulcd::CTR::StereoCamera::Finalize(void)
+ 0000:00465038       nn::ulcd::CTR::StereoCamera::StereoCamera(void)
+ 0000:0046504C       nn::ulcd::CTR::StereoCamera::~StereoCamera()
+ 0000:00465810       nw::ut::GetNextBinaryBlockHeader(nw::ut::BinaryFileHeader *,nw::ut::BinaryBlockHeader *)
+ 0000:00465C08       nw::lyt::FindHitPane(nw::lyt::Layout *,nn::math::VEC2 const&)
+ 0000:00466064       nw::lyt::TexResource::Set(void *,uint)
+ 0000:00466178       nw::lyt::AnimResource::Set(void const*)
+ 0000:00466220       nw::lyt::AnimResource::AnimResource(void)
+ 0000:004666BC       nw::lyt::GraphicsResource::StartSetup(void)
+ 0000:004666C0       nw::lyt::GraphicsResource::FinishSetup(void)
+ 0000:004667A0       nw::lyt::GraphicsResource::SetResource(int,void *,uint,bool)
+ 0000:00466AF4       nw::lyt::GraphicsResource::Finalize(void)
+ 0000:00466BC0       nw::lyt::GraphicsResource::GraphicsResource(void)
+ 0000:00467A98       nw::lyt::ArcResourceAccessor::Attach(void *,char const*)
+ 0000:00467AFC       nw::lyt::ArcResourceAccessor::Detach(void)
+ 0000:00467B64       nw::lyt::ArcResourceAccessor::ArcResourceAccessor(void)
+ 0000:004680B0       nw::lyt::Pane::AppendChild(nw::lyt::Pane*)
+ 0000:004680D4       nw::lyt::Pane::InsertChild(nw::lyt::Pane*,nw::lyt::Pane*)
+ 0000:004680F8       nw::lyt::Pane::RemoveChild(nw::lyt::Pane*)
+ 0000:00468A94       nw::lyt::Pane::SetName(char const*)
+ 0000:00468C10       nw::lyt::Pane::Pane(void)
+ 0000:00468D18       nw::lyt::Pane::~Pane()
+ 0000:0046A9F0       nw::lyt::Drawer::DrawEnd(nw::lyt::DrawInfo const&,uint)
+ 0000:0046AA58       nw::lyt::Drawer::DrawBegin(nw::lyt::DrawInfo const&,uint)
+ 0000:0046AAEC       nw::lyt::Drawer::Drawer(void)
+ 0000:0046B3C0       nw::lyt::Initialize(nw::os::IAllocator *,nw::os::IAllocator *)
+ 0000:0046B70C       nw::lyt::Layout::Layout(void)
+ 0000:0046B840       nw::lyt::TexMap::ResetU32Info(void)
+ 0000:0046D0A0       nw::lyt::TextBox::SetFont(nw::font::Font const*)
+ 0000:0046D448       nw::lyt::TextBox::TextBox(ushort,wchar_t const*,nw::font::Font const*,nw::font::DispStringBuffer::CommandBufferMode)
+ 0000:0046D6A4       nw::lyt::DrawInfo::DrawInfo(void)
+ 0000:0046DA0C       nw::lyt::Material::GetTexMapAry(void)
+ 0000:0046DA14       nw::lyt::Material::GetTexSRTAry(void)
+ 0000:0047110C       nw::lyt::Drawer::Initialize(nw::lyt::GraphicsResource &,void *)
+ 0000:00471244       nw::font::RectDrawer::SetParallax(float,float,float)
+ 0000:00472650       nw::lyt::Drawer::Draw(nw::lyt::Layout const*,nw::lyt::DrawInfo &)
+ 0000:004802C8       Btn::Cnt(uint,int)
+ 0000:004802F8       Btn::Trg(uint,int)
+ 0000:00480310       Btn::Select(int,int,uint,uint,int)
+ 0000:00485780       Frm::setFrm(int)
+ 0000:004857C8       Frm::update(void)
+ 0000:004858A0       Grp::swapDispBuf(uint)
+ 0000:00485B0C       Grp::GetLcdHeight(uint)
+ 0000:00485B40       Grp::SetClearStencil(uint)
+ 0000:00485B50       Grp::restoreDefVramAlc(uint)
+ 0000:00485B94       Grp::simpleSwapBufVSync(uint)
+ 0000:00485BDC       Grp::GetLcdAsp(uint)
+ 0000:00485C14       Grp::waitVSync(uint)
+ 0000:004A0900       Prim::enableCull(nn::gr::CTR::RenderState::Culling::FrontFace,nn::gr::CTR::RenderState::Culling::CullFace)
+ 0000:004A0930       Prim::setProjMtx(nn::math::MTX44 const&)
+ 0000:004A09BC       Prim::setViewMtx(nn::math::MTX34 const&)
+ 0000:004A0AFC       Prim::setVtxAttr(Prim::VtxPos const*)
+ 0000:004A0BD0       Prim::setVtxAttr(Prim::VtxPosClr const*)
+ 0000:004A0FA0       Prim::drawElemCore(void const*,uint,bool)
+ 0000:004A1060       Prim::disableTexAll(void)
+ 0000:004A10AC       Prim::setCombVtxClr(void)
+ 0000:004A10F0       Prim::setupCmnShbin(Prim::CmnShbinIdx,Prim::CmnGsShbinIdx)
+ 0000:004A1190       Prim::enableAlphaTest(uchar,PicaDataAlphaTest)
+ 0000:004A1234       Prim::disableDepthTest(void)
+ 0000:004A125C       Prim::disable2dParallax(void)
+ 0000:004A1284       Prim::setProj2dParallax(nn::ulcd::CTR::StereoCamera const*)
+ 0000:004A1318       Prim::setProj2dParallax(nn::ulcd::CTR::StereoCamera const*,nn::math::MTX44 const&)
+ 0000:004A136C       Prim::disableStencilTest(void)
+ 0000:004A1394       Prim::setFrameBufferByGL(void)
+ 0000:004A1574       Prim::setViewportScissor(uint)
+ 0000:004A16C0       Prim::setVtxAttrConstTex(nn::math::VEC2 const&)
+ 0000:004A1724       Prim::setCombTex0ModVtxClr(void)
+ 0000:004A1768       Prim::setVtxAttrConstClrRaw(nn::util::FloatColor const&)
+ 0000:004A17CC       Prim::term(void)
+ 0000:004A18F0       PrimVtxBuf::end(void)
+ 0000:004A1918       Prim::drawAry(uint,uint)
+ 0000:004A1948       Prim::prepare(void)
+ 0000:004A1E40       Prim::setTexMtx(nn::math::MTX34 const&)
+ 0000:004A1E7C       Prim::setTexRes(int,GXResTex const&,PicaDataTextureWrap,PicaDataTextureWrap,PicaDataTextureMinFilter,PicaDataTextureMagFilter,float,nn::util::Color8)
+ 0000:004A1F14       Prim::setWldMtx(nn::math::MTX34 const&)
+ 0000:004A1F50       Save::saveFormat(void)
+ 0000:004A1FC4       Save::getErrorCode(void)
+ 0000:004A1FF4       Save::saveOptionData(void)
+ 0000:004A2054       Save::exec(void)
+ 0000:004A214C       Save::entry(void)
+ 0000:004A21A8       Save::create(CtrFS *,MemAlcBase *,uint)
+ 0000:004A2204       Save::destroy(void)
+ 0000:004A2244       Task::term(void)
+ 0000:004A8C1C       adsl::gfx::MeshRenderer::RenderMesh(adsl::gfx::res::ResMesh,adsl::gfx::Model *)
+ 0000:004AC1CC       adsl::gfx::IRenderTarget::CreateOffScreenBuffer(nw::os::IAllocator *,adsl::gfx::res::ResTexture)
+ 0000:004AC2E4       adsl::gfx::RenderContext::ResetState(int,int)
+ 0000:004AC624       adsl::gfx::RenderContext::ActivateContext(adsl::gfx::IMaterialActivator *)
+ 0000:004AC814       adsl::gfx::RenderContext::SetCameraMatrix(adsl::gfx::Camera *,bool)
+ 0000:004AC8F8       adsl::gfx::RenderContext::SetRenderTarget(adsl::gfx::IRenderTarget *)
+ 0000:004AE25C       adsl::gfx::ShaderProgram::ActivateDescription(adsl::gfx::res::ResShaderProgramDescription)
+ 0000:004B0068       adsl::gfx::TransformNode::InvalidateInverseWorldMatrix(void)
+ 0000:004B1570       GfxScnSys::traverseScnRoot(void)
+ 0000:004B18F4       adsl::gfx::SkeletonUpdater::UpdateView(adsl::gfx::Skeleton *,adsl::gfx::Camera const&)
+ 0000:004B438C       adsl::gfx::BaseAnimEvaluator::ResetMember(int)
+ 0000:004BC2E8       adsl::gfx::res::ResTexture::Setup(nw::os::IAllocator *,adsl::gfx::res::ResGraphicsFile)
+ 0000:004BC390       adsl::gfx::res::ResTexture::Cleanup(void)
+ 0000:004BDC60       adsl::gfx::res::ResGraphicsFile::Setup(nw::os::IAllocator *,adsl::gfx::res::ResGraphicsFile)
+ 0000:004BE0F8       adsl::gfx::res::ResGraphicsFile::Cleanup(void)
+ 0000:004BE588       adsl::gfx::res::ResImageTexture::DynamicBuilder::Create(nw::os::IAllocator *)
+ 0000:004BE808       adsl::gfx::res::ResImageTexture::DynamicDestroy(void)
+ 0000:004BED3C       adsl::gfx::res::ResShadowTexture::DynamicBuilder::Create(nw::os::IAllocator *)
+ 0000:004BEEF8       adsl::gfx::res::ResShadowTexture::DynamicDestroy(void)
+ 0000:004BEF8C       adsl::gfx::res::ResTextureMapper::SetTexture(adsl::gfx::res::ResTexture)
+ 0000:004C1EA0       adsl::gfx::res::ResModel::Setup(nw::os::IAllocator *,adsl::gfx::res::ResGraphicsFile)
+ 0000:004C541C       adsl::gfx::Camera::SetPerspective(float,float,float,float)
+ 0000:004C56EC       adsl::gfx::Camera::SetUpwardVector(nn::math::VEC3 const&)
+ 0000:004C57D8       adsl::gfx::Camera::SetTargetPosition(nn::math::VEC3 const&)
+ 0000:004C5864       adsl::gfx::Camera::UpdateCameraMatrix(void)
+ 0000:004C668C       adsl::gfx::Camera::SetFar(float)
+ 0000:004C66B4       adsl::gfx::Camera::SetNear(float)
+ 0000:004C66DC       adsl::gfx::Camera::SetOrtho(float,float,float,float,float,float)
+ 0000:004E5F18       CtrFS::cancel(void)
+ 0000:004E60A0       CtrTp::CtrTp(void)
+ 0000:004E60FC       MoveC::moveCosSin(nn::util::Color8 const&,float)
+ 0000:004E625C       MoveC::func(float)
+ 0000:004E63E0       MoveC::stop(void)
+ 0000:004E64EC       MoveC::wait(float)
+ 0000:004E6534       MoveC::moveCos(nn::util::Color8 const&,float)
+ 0000:004E665C       MoveC::moveFrm(nn::util::Color8 const&,float)
+ 0000:004E6784       MoveC::moveSin(nn::util::Color8 const&,float)
+ 0000:004E7C50       rsLib::ColorBlink::init(int)
+ 0000:004E7C68       rsLib::ColorBlink::update(float)
+ 0000:004E7C9C       rsLib::ColorBlink::ColorBlink(int)
+ 0000:004E7CC8       rsLib::ColorBlink::~ColorBlink()
+ 0000:004F0BDC       Backup::copySaveData(short,short)
+ 0000:004F0C90       Backup::getSaveData1(short)
+ 0000:004F0CC8       Backup::isBusyFormat(void)
+ 0000:004F0D10       Backup::isBusyReading(void)
+ 0000:004F0DB0       Backup::isBusyWriting(void)
+ 0000:004F0FCC       Backup::readSaveData2(short)
+ 0000:004F11E8       Backup::buildPrizeWork(void)
+ 0000:004F1260       Backup::deleteSaveData(short,bool)
+ 0000:004F1328       Backup::writeSaveData0(short)
+ 0000:004F13E8       Backup::setMsgPlayParam(Message::PlayParam *,int *)
+ 0000:004F1438       Backup::destroyPrizeWork(void)
+ 0000:004F14A0       Backup::writeSaveDataPartial(uint,short)
+ 0000:004F1674       Backup::init(CtrFS *)
+ 0000:004F16A0       Backup::term(void)
+ 0000:004F16C4       Backup::mount(void)
+ 0000:004F16EC       Backup::format(void)
+ 0000:004F1748       Backup::addCoin(int)
+ 0000:004F1774       Backup::addItem(ushort,signed char)
+ 0000:004F17A8       Backup::~Backup()
+ 0000:0050E688       DfxSys::ApplyCamShake(nn::math::VEC3 *,nn::math::VEC3 *,nn::math::VEC3 *)
+ 0000:0050E9C0       DfxSys::resetFrmParam(void)
+ 0000:0050EA80       DfxSys::init(RenderDrawSysDFX::CATEGORY,DfxMemorySys *,RenderDrawSysDFX*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*,wchar_t const*)
+ 0000:0050EB48       DfxSys::freeRes(void)
+ 0000:0050EB80       DfxSys::entryRes(ushort)
+ 0000:0050EC60       DfxSys::initParam(void)
+ 0000:0050ED48       DfxSys::DfxSys(void)
+ 0000:0050EE64       DfxSys::~DfxSys()
+ 0000:0050EF08       GameDB::GetItemMsg(ushort,GameDB::ItemMsgType)
+ 0000:0050EFA0       GameDB::GetUseItem(ushort)
+ 0000:0050EFC4       GameDB::GetItemData(ushort)
+ 0000:0050F020       GameDB::GetPcAtkData(ushort)
+ 0000:0050F080       GameDB::GetBadgeEffect(ushort)
+ 0000:0050F0A4       GameDB::GetBadgeIdList(uchar)
+ 0000:0050F0B4       GameDB::GetBadgeIdList(void)
+ 0000:0050F0C0       GameDB::GetBadgeIdPair(ushort)
+ 0000:0050F100       GameDB::GetEquipIdList(void)
+ 0000:0050F10C       GameDB::GetItemMsgCore(ushort)
+ 0000:0050F11C       GameDB::GetPcAtkExpMsg(ushort,uchar,uchar)
+ 0000:0050F174       GameDB::GetBadgeEffectId(ushort,ushort)
+ 0000:0050F1A4       GameDB::GetBrosAtkIdList(void)
+ 0000:0050F220       GameDB::GetUseItemIdList(void)
+ 0000:0050F22C       GameDB::GetBadgeEffExpMsg(ushort)
+ 0000:0050F28C       GameDB::GetRankUpBonusName(ushort)
+ 0000:0050F2B8       GameDB::GetMiracleAtkIdList(void)
+ 0000:0050F2D0       GameDB::GetRankUpBonusExpMsg(ushort)
+ 0000:0050F308       GameDB::GetExpertChallengeMsgData(ushort)
+ 0000:0050F318       GameDB::GetExpertChallengeMsgFile(void)
+ 0000:0050F328       GameDB::GetBadge(ushort)
+ 0000:0050F4B0       MemAlc::free(void *)
+ 0000:0050F798       MemAlc::allocCore(uint,uint)
+ 0000:0051C1FC       SndSys::setStartPoint(float)
+ 0000:0051C20C       SndSys::startPrepared(SoundHandle *)
+ 0000:0051C2FC       SndSys::clearReplayPoint(int)
+ 0000:0051C300       SndSys::init(MemAlcBase *,uint,uint,uint,uint)
+ 0000:0051C3E4       SndSys::load(uint,uint,uint,bool,int)
+ 0000:0051C77C       SndSys::stop(SoundHandle *,int)
+ 0000:0051C7DC       SndSys::term(void)
+ 0000:0051C7F8       SndSys::pause(SoundHandle *,int)
+ 0000:0051C830       SndSys::start(uint,SoundHandle *)
+ 0000:0051CC00       SndSys::remove(int)
+ 0000:0051CC4C       SndSys::resume(SoundHandle *,int)
+ 0000:0051CC84       SndSys::setPan(SoundHandle *,float)
+ 0000:0051CCCC       SndSys::prepare(uint,SoundHandle *)
+ 0000:0051CE34       SndSys::startSe(SndSys::SeWork *,uint,ushort)
+ 0000:0051CEE8       SndSys::stopAll(void)
+ 0000:0051D0E8       SndSys::getSeWork(int *)
+ 0000:0051D1BC       SndSys::getSeWork(int)
+ 0000:00532600       CtrFSEx::read(uint,MemAlcBase *,uint,uint,uint,uint)
+ 0000:005326DC       CtrFSEx::read(uint,void *,uint,uint,uint)
+ 0000:00532794       CtrFSEx::read(uint,int,MemAlcBase *,uint,uint,uint)
+ 0000:0053294C       CtrFSEx::term(void)
+ 0000:00532AA0       DfxUnit::setVisible(bool)
+ 0000:00532B54       DfxUnit::isExistChild(void)
+ 0000:00532C04       DfxUnit::run(void)
+ 0000:00533240       DfxUnit::init(uchar)
+ 0000:00533330       DfxUnit::kill(void)
+ 0000:0053335C       DfxUnit::setUp(ushort,Dfx &)
+ 0000:005334D8       DfxUnit::DfxUnit(void)
+ 0000:00533584       DfxUnit::~DfxUnit()
+ 0000:0053708C       FieldFS::open(uint,uint)
+ 0000:00543CBC       MComSys::getPrevAreaNo(void)
+ 0000:00543CD0       MComSys::setPrevAreaNo(uchar)
+ 0000:00543CE0       MComSys::initPrevAreaNo(void)
+ 0000:00544478       Message::func(uint,bool)
+ 0000:005459B4       Message::init(void)
+ 0000:00545A80       Message::play(Message::PlayParam *)
+ 0000:00545B80       Message::play(ushort,MessageSimple::InsParam *,bool)
+ 0000:00546240       Message::term(void)
+ 0000:0054626C       Message::close(void)
+ 0000:005462C8       Message::setSE(uint,int,int,int,float,uchar,uint,int,int,int,float,uchar)
+ 0000:005463E4       Message::setMsgDat(void const*)
+ 0000:00546490       Message::~Message()
+ 0000:00546DB0       RandSys::get(void)
+ 0000:00572CF0       CtrNwAlc::CtrNwAlc(void)
+ 0000:00572D24       CtrNwAlc::~CtrNwAlc()
+ 0000:00572D38       DfxChild::DfxChild(void)
+ 0000:00572D64       DfxChild::~DfxChild()
+ 0000:005858F8       GXResCmn::deallocCmn(uint)
+ 0000:00585940       GXResCmn::term(void)
+ 0000:005859A4       GXResCmn::GXResCmn(void)
+ 0000:005859CC       GXResCmn::~GXResCmn()
+ 0000:00585A5C       GXResTex::initTPL(void const*,int)
+ 0000:00585AD4       GXResTex::allocTPL(void const*,int,uint,uint,bool)
+ 0000:00585BAC       GXResTex::GXResTex(void)
+ 0000:00585C60       GXResTex::~GXResTex()
+ 0000:00585E70       GameMain::gameModeOld(void)
+ 0000:00585EFC       GameMain::back(void)
+ 0000:00586338       GameMain::change(GAME_MODE)
+ 0000:00586630       GameWork::equipBadge(uchar,ushort)
+ 0000:00586648       GameWork::addPcStatus(uchar,PcStatusType,DataPc::ParamAddType,int,bool)
+ 0000:005866B8       GameWork::getPlayTime(short *,short *,short *,short *)
+ 0000:00586834       GameWork::onNewPuzzle(uchar)
+ 0000:00586854       GameWork::ApplyPerCent(int,int)
+ 0000:00586890       GameWork::getRealAreaNo(uchar)
+ 0000:005868FC       GameWork::onNewColosseum(uchar)
+ 0000:00586914       GameWork::putBadgeBitFlag(ushort)
+ 0000:00586920       GameWork::existKoopaCastle(void)
+ 0000:0058693C       GameWork::onClearColosseum(uchar)
+ 0000:00586954       GameWork::onPlayablePuzzle(uchar)
+ 0000:00586AF8       GameWork::putPuzzleClearTime(uchar,uint)
+ 0000:00586B04       GameWork::putMenuEquipBitFlag(uint,bool)
+ 0000:00586C18       GameWork::putColosseumBestTurn(uchar,uchar)
+ 0000:00586D84       GameWork::addCoin(int)
+ 0000:00587088       GameWork::equipItem(uchar,ushort,uchar)
+ 0000:005897B4       REDSPARK::Sd::RSSound::isPause(int)
+ 0000:00589F08       REDSPARK::Sd::RSSound::GetStreamPlayInfo(int,int &,int &,int &)
+ 0000:0058A0A8       REDSPARK::Sd::RSSound::pause(int,bool,int)
+ 0000:00592EDC       CellAnime::term(void)
+ 0000:00592F08       CellAnime::setFrm(int)
+ 0000:00592F14       CellAnime::update(void)
+ 0000:00593084       CellAnime::setPtnNo(ushort)
+ 0000:005931A8       CellAnime::CellAnime(void)
+ 0000:00593394       CellAnime::~CellAnime()
+ 0000:0059438C       CtrJobMan::jam(Job *)
+ 0000:005943C0       CtrJobMan::isBusy(Job *)
+ 0000:005943F4       CtrJobMan::enqueue(Job *)
+ 0000:00594428       CtrJobMan::release(Job *)
+ 0000:0059445C       CtrJobMan::release(void)
+ 0000:00594490       CtrModule::CtrModule(void)
+ 0000:00594540       CtrModule::~CtrModule()
+ 0000:00594C38       DfxBuffer::setBufNum(uint)
+ 0000:005958F0       DfxLineBB::DfxLineBB(void)
+ 0000:00595924       DfxLineBB::~DfxLineBB()
+ 0000:00595954       DfxResAlc::init(uint,uint,uint,uint,uint)
+ 0000:005975B0       DreamUtil::ChkQuadSeg(nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,float *)
+ 0000:00598788       DreamUtil::ChkTriSeg(nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,nn::math::VEC3 const&,float *)
+ 0000:005996A0       FieldFade::start(uint,ushort)
+ 0000:0059B674       FieldLoad::StartField(void)
+ 0000:0059B728       FieldLoad::Read(void const*,uint)
+ 0000:0059B818       GfxScnSys::UpdateNode(adsl::gfx::TransformNode *)
+ 0000:0059BE7C       GfxScnSys::initScnRoot(int)
+ 0000:0059BF54       GfxScnSys::termScnTree(void)
+ 0000:0059BFCC       GfxScnSys::createCamera(adsl::gfx::res::ResCamera::ProjType,adsl::gfx::res::ResCamera::ViewType,bool)
+ 0000:0059C240       GfxScnSys::createScnObj(adsl::gfx::res::ResSceneObject,GfxScnSys::ScnObjCreateParam const&)
+ 0000:0059C3D8       GfxScnSys::createMatAnim(adsl::anim::res::ResAnim,adsl::gfx::Model *,bool,int,int)
+ 0000:0059C484       GfxScnSys::createVisAnim(adsl::anim::res::ResAnim,adsl::gfx::Model *,bool,int,int)
+ 0000:0059C598       GfxScnSys::updateScnRoot(void)
+ 0000:0059C5B0       GfxScnSys::createTransAnim(adsl::anim::res::ResAnim,adsl::gfx::SkeletalModel *,bool,int,int)
+ 0000:0059C660       GfxScnSys::SetRenderContext(adsl::gfx::SceneContext *,adsl::gfx::RenderContext *,adsl::gfx::Camera *,int)
+ 0000:0059C830       GfxScnSys::calcStereoCamera(adsl::gfx::Camera *,adsl::gfx::Camera *,adsl::gfx::Camera const*,float,float,bool,nn::math::PivotDirection)
+ 0000:0059CA44       GfxScnSys::createSimpleCamera(void)
+ 0000:0059CB18       GfxScnSys::init(GfxScnSys::InitParam const&)
+ 0000:0059CC94       GfxScnSys::term(void)
+ 0000:0059CE14       GfxScnSys::GfxScnSys(void)
+ 0000:0059CE8C       GfxScnSys::~GfxScnSys()
+ 0000:0059CEC0       GfxShader::set(adsl::gfx::res::ResModel)
+ 0000:0059FF84       MBootInfo::backCursor(void)
+ 0000:0059FFE8       MBootInfo::setDefault(void)
+ 0000:005A0060       MBootInfo::shopItemNew(ushort)
+ 0000:005A0084       MBootInfo::menuEquipNew(ushort)
+ 0000:005A00AC       MBootInfo::shopItemNew2(ushort)
+ 0000:005A00D0       MBootInfo::shopLookItem(ushort)
+ 0000:005A0124       MBootInfo::updateCursor(void)
+ 0000:005A014C       MBootInfo::menuEquipNew2(ushort)
+ 0000:005A0174       MBootInfo::menuLookEquip(ushort)
+ 0000:005A01B8       MBootInfo::menuSndSysInit(bool)
+ 0000:005A0268       MBootInfo::menuSndSysTerm(void)
+ 0000:005A02E8       MBootInfo::menuSndSysEntry(void)
+ 0000:005A0370       MBootInfo::menuAlterPcParam(uchar)
+ 0000:005A038C       MBootInfo::menuAlterGameWork(void)
+ 0000:005A0448       MBootInfo::menuSndSysPlayBgm(void)
+ 0000:005A0468       MBootInfo::menuSndSysRelease(void)
+ 0000:005A04B8       MBootInfo::menuAlterPartyData(uchar)
+ 0000:005A05A4       MBootInfo::menuRestoreGameWork(void)
+ 0000:005A05F4       MBootInfo::menuRestorePartyData(void)
+ 0000:005A0644       MBootInfo::get(void)
+ 0000:005A0650       MBootInfo::setMode(short)
+ 0000:005A0660       MBootInfo::setPage(short)
+ 0000:005A0694       MBootInfo::getCursor(void)
+ 0000:005A06AC       MBootInfo::setCursor(ushort)
+ 0000:005A1218       MoveFBase::moveCosAbs(int,float,float)
+ 0000:005A1274       MoveFBase::moveCosSin(int,float,float)
+ 0000:005A12F8       MoveFBase::moveFrmAbs(float,float)
+ 0000:005A13F0       MoveFBase::moveFrmAbs(int,float,float)
+ 0000:005A1598       MoveFBase::moveSinAbs(int,float,float)
+ 0000:005A16E4       MoveFBase::moveCosSinAbs(int,float,float)
+ 0000:005A1740       UIListWindowPlus::update(float)
+ 0000:005A176C       MoveFBase::func(float)
+ 0000:005A1834       MoveFBase::move(int,float,float)
+ 0000:005A186C       MoveFBase::stop(int)
+ 0000:005A18EC       MoveFBase::stop(void)
+ 0000:005A1924       MoveFBase::wait(int,float)
+ 0000:005A1A48       MoveFBase::moveAbs(float,float)
+ 0000:005A1AA8       MoveFBase::moveAbs(int,float,float)
+ 0000:005A1B5C       MoveFBase::moveCos(int,float,float)
+ 0000:005A1BAC       MoveFBase::moveFrm(float,float)
+ 0000:005A1C9C       MoveFBase::moveFrm(int,float,float)
+ 0000:005A1D68       MoveFBase::moveSin(int,float,float)
+ 0000:005A1E10       MoveFBase::MoveFBase(float)
+ 0000:005A1E2C       MoveFBase::MoveFBase(void)
+ 0000:005A1E54       MoveFBase::~MoveFBase()
+ 0000:005A1E58       MoveVBase::moveCosAbs(nn::math::VEC3 const&,float)
+ 0000:005A1EE8       MoveVBase::moveCosAbs(int,nn::math::VEC3 const&,float)
+ 0000:005A1F58       MoveVBase::moveCosSin(int,nn::math::VEC3 const&,float)
+ 0000:005A1FC8       MoveVBase::moveFrmAbs(nn::math::VEC3 const&,float)
+ 0000:005A2074       MoveVBase::moveFrmAbs(int,nn::math::VEC3 const&,float)
+ 0000:005A2138       MoveVBase::moveSinAbs(nn::math::VEC3 const&,float)
+ 0000:005A2298       MoveVBase::moveSinAbs(int,nn::math::VEC3 const&,float)
+ 0000:005A2308       MoveVBase::moveSin2Abs(int,nn::math::VEC3 const&,float,float,float)
+ 0000:005A2384       MoveVBase::moveCosSinAbs(nn::math::VEC3 const&,float)
+ 0000:005A2414       MoveVBase::moveCosSinAbs(int,nn::math::VEC3 const&,float)
+ 0000:005A2484       MoveVBase::func(float)
+ 0000:005A25D0       MoveVBase::move(int,nn::math::VEC3 const&,float)
+ 0000:005A2640       MoveVBase::stop(int)
+ 0000:005A26D0       MoveVBase::stop(void)
+ 0000:005A2708       MoveVBase::wait(int,float)
+ 0000:005A2758       MoveVBase::jumpFA(int,float,float,float,nn::math::VEC3 const&)
+ 0000:005A2840       MoveVBase::jumpFS(int,float,float,float,nn::math::VEC3 const&)
+ 0000:005A28C4       MoveVBase::jumpFT(int,float,float,float,nn::math::VEC3 const&)
+ 0000:005A2A74       MoveVBase::moveAbs(int,nn::math::VEC3 const&,float)
+ 0000:005A2AE4       MoveVBase::moveCos(int,nn::math::VEC3 const&,float)
+ 0000:005A2B20       MoveVBase::moveFrm(int,nn::math::VEC3 const&,float)
+ 0000:005A2B5C       MoveVBase::moveSin(int,nn::math::VEC3 const&,float)
+ 0000:005A2B98       MoveVBase::MoveVBase(nn::math::VEC3 const&)
+ 0000:005A2BD0       MoveVBase::MoveVBase(void)
+ 0000:005A2C10       MoveVBase::~MoveVBase()
+ 0000:005A2C14       MoveFBase::move(float,float)
+ 0000:005A2F28       MoveWorkF::MoveWorkF(void)
+ 0000:005A2F64       MoveWorkF::~MoveWorkF()
+ 0000:005A2F68       MoveVBase::moveCosSin(nn::math::VEC3 const&,float)
+ 0000:005A3064       MoveVBase::move(nn::math::VEC3 const&,float)
+ 0000:005A3580       MoveVBase::moveCos(nn::math::VEC3 const&,float)
+ 0000:005A367C       MoveVBase::moveFrm(nn::math::VEC3 const&,float)
+ 0000:005A3780       MoveVBase::moveSin(nn::math::VEC3 const&,float)
+ 0000:005AE67C       ShadowSys::entryCaster(FieldObjMdl *,float,float,float,float,float,float)
+ 0000:005AE6CC       ShadowSys::setShadowTex(adsl::gfx::Model *)
+ 0000:005AE780       ShadowSys::draw(FieldMainBase *,adsl::gfx::SceneContext *)
+ 0000:005AF4A8       ShadowSys::init(FieldMainBase *,uint,int)
+ 0000:005AF558       ShadowSys::term(void)
+ 0000:005AF648       ShadowSys::build(FieldMainBase *,MemAlc *,uint)
+ 0000:005AFCCC       ShadowSys::update(void)
+ 0000:005B08B4       ShadowSys::ShadowSys(void)
+ 0000:005B0930       ShadowSys::~ShadowSys()
+ 0000:005B1340       StdRender::setRenderTarget(uint,bool,bool)
+ 0000:005B1498       StdRender::init(MemAlcBase *,int,uint)
+ 0000:005B17C4       StdRender::term(void)
+ 0000:005C63A4       FieldObjCA::isCADisp(void)
+ 0000:005C7AD0       FieldCamera::getPos(nn::math::VEC3 *)
+ 0000:005C8F08       CalcEquipEff::getWeaponPow(DataPc const&,EquipSlotType)
+ 0000:005C9104       CalcEquipEff::getDef(DataPc const&)
+ 0000:005C92B8       CalcEquipEff::getDefUp(DataPc const&)
+ 0000:005CE5D8       CmdCacheMulti::useSave(int,uint,bool)
+ 0000:005CE994       MessageWriter::getRectHeight(void)
+ 0000:005D0AFC       BinGlu3AcsIdxHdr::getOfs(uint,uint *,uchar *)
+ 0000:005E0CA0       nn::ulcd::CTR::StereoCamera::GetCoefficientForParallax(void)
+ 0000:005E0EC0       nw::ut::ResDicPatricia::Get(char const*,uint)
+ 0000:005E10E4       nw::lyt::AnimTransform::GetFrameSize(void)
+ 0000:005E2C78       nw::lyt::Material::GetTexMapAry(void)
+ 0000:005E2C80       nw::lyt::Material::GetTexSRTAry(void)
+ 0000:005E60B0       adsl::gfx::RenderContext::ClearBuffer(uint,nw::ut::FloatColor const&,float)
+ 0000:005E80B8       adsl::gfx::res::DefaultShaderAutoSelector::operator()(adsl::gfx::res::ResModel,adsl::gfx::res::ResMaterial)
+ 0000:005E81A8       adsl::gfx::Camera::GetTargetPosition(void)
+ 0000:005E8230       adsl::gfx::Camera::GetFar(void)
+ 0000:005E8254       adsl::gfx::Camera::GetNear(void)
+ 0000:005EC024       rsLib::ColorBlink::get(void)
+ 0000:005EC120       Backup::errorCode(void)
+ 0000:005EDA30       CtrBtn::get(int)
+ 0000:005EEF9C       DispBuf::getDispBufId(int)
+ 0000:005F0F00       GameWork::getItemNum(ushort)
+ 0000:005F0F50       GameWork::isHardMode(void)
+ 0000:005F0F84       GameWork::getEquipMax(void)
+ 0000:005F0FB8       GameWork::isNewPuzzle(uchar)
+ 0000:005F0FD0       GameWork::getRealAreaNo(void)
+ 0000:005F0FDC       GameWork::getUseItemMax(void)
+ 0000:005F1010       GameWork::isClearPuzzle(uchar)
+ 0000:005F1024       GameWork::getEquipStatus(DataPc *,uchar,ushort,uchar)
+ 0000:005F1094       GameWork::isNewColosseum(uchar)
+ 0000:005F10B0       GameWork::getBadgeBitFlag(void)
+ 0000:005F10BC       GameWork::isPlayablePuzzle(uchar)
+ 0000:005F10EC       GameWork::getPuzzleClearTime(uchar)
+ 0000:005F10F8       GameWork::getColosseumBestTurn(uchar)
+ 0000:005F15E4       CellAnime::getSeqPtnFrm(int,int)
+ 0000:005F163C       CellAnime::getConstColor(int)
+ 0000:005F1648       CellAnime::getPtnFromSeqPtnNo(uchar,ushort)
+ 0000:005F1964       MoveFBase::isBusy(void)
+ 0000:005F19B8       MoveVBase::isBusy(void)
+ 0000:005F1A28       MoveWorkF::calc(float)
+ 0000:005F54CC       `virtual thunk to'CtrFileBase::~CtrFileBase()
+ 0000:005F54EC       `virtual thunk to'CtrFileBase::~CtrFileBase()
+ 0000:005F5B2C       __hardfp_acosf
+ 0000:005F5C58       __hardfp_asinf
+ 0000:005F5D90       __hardfp_atan2f
+ 0000:005F6000       __hardfp_atof
+ 0000:005F6048       __hardfp_ceilf
+ 0000:005F60D8       __hardfp_expf
+ 0000:005F6308       __hardfp_floorf
+ 0000:005F63A4       __hardfp_fmodf
+ 0000:005F6480       __hardfp_logf
+ 0000:0060A3DC       glDisable
+ 0000:0060D1F8       glEnable
+ 0000:0060D4A4       glGetFramebufferAttachmentParameteriv
+ 0000:0060D588       glGetIntegerv
+ 0000:00612040       nngxAdd3DCommand
+ 0000:00612160       nngxAddMemoryFillCommand
+ 0000:006121AC       nngxCheckVSync
+ 0000:00612240       nngxClearCmdlist
+ 0000:006123FC       nngxFlush3DCommand
+ 0000:006125A4       nngxGetDisplaybufferParameteri
+ 0000:00612678       nngxSetCmdlistParameteri
+ 0000:006126B8       nngxSetDisplayMode
+ 0000:006127C0       nngxStopCmdlist
+ 0000:00613068       nnroAeabiAtexit_
+ 0000:0063C628       __aeabi_l2d
+ 0000:0063C79C       __aeabi_l2f
+ 0000:0063C9BC       __aeabi_d2lz
+ 0000:0063D000       Badge::DFX_SYMBOL_TBL_BTL
+ 0000:0063D00E       Badge::DFX_SYMBOL_TBL_MENU
+ 0000:0063D01C       Badge::DFX_SYMBOL_LOAD_TBL_BTL
+ 0000:0063D02C       Badge::DFX_SYMBOL_LOAD_TBL_MENU!
+ 0000:00658014       Grp::DEF_ORTHO_NEAR! (START HERE)
+ 0000:00658018       Grp::DEF_ORTHO_FAR!
+ 0000:006581A8       MessageSys::_BtlMenuFontSize!
+ 0000:006581F0       MsgWndPosCalculator::_TailBorderYDefault!
+ 0000:00658F00       RenderDrawSysDFX::RENDERINFO_NUM_DEF!
+ 0000:00658F02       RenderDrawSysDFX::RENDERPACK_NUM_DEF!
+ 0000:0065B104       GlobalEvent::_CmdFuncTblSize!
+ 0000:0067316C       UICommon::DEFAULT_KEY_REP_FRM!
+ 0000:00697140       nn::math::internal::gSinCosTbl!
+ 0000:0069BA64       `typeinfo for'CtrFileBase
+ 0000:0069BB3C       `typeinfo for'GlobalEvent
+ 0000:0069C238       `typeinfo for'MsgDataAcsrBase
+ 0000:0069C330       `typeinfo for'UIListWindowPlus
+ 0000:0069C8F8       `typeinfo for'CtrFS
+ 0000:0069C990       `typeinfo for'MemAlc
+ 0000:0069CA00       `typeinfo for'DfxUnit
+ 0000:0069CC3C       `typeinfo for'CellAnime
+ 0000:0069CC50       `typeinfo for'CtrJobMan
+ 0000:0069CCD0       `typeinfo for'MoveFBase
+ 0000:0069CCD8       `typeinfo for'MoveVBase
+ 0000:0069CCE0       `typeinfo for'MoveWorkF
+ 0000:0069CF18       `typeinfo for'__cxxabiv1::__class_type_info
+ 0000:0069CF24       `typeinfo for'__cxxabiv1::__si_class_type_info
+ 0000:0069CF30       `typeinfo for'__cxxabiv1::__vmi_class_type_info
+ 0000:0069F208       `typeinfo for'__rw::__rw_facet_base
+ 0000:0069F214       `typeinfo for'__rw::__rw_punct_data<char>
+ 0000:0069F21C       `typeinfo for'__rw::__rw_collate_data<char>
+ 0000:0069F224       `typeinfo for'__rw::__rw_collate_impl<char>
+ 0000:0069F230       `typeinfo for'__rw::__rw_ctype_helper<char>
+ 0000:0069F238       `typeinfo for'__rw::__rw_synchronized
+ 0000:0069F240       `typeinfo for'__rw::__rw_numpunct_impl<char>
+ 0000:0069F24C       `typeinfo for'__rw::__rw_numpunct_impl_base
+ 0000:0069F254       `typeinfo for'__rw::__rw_numpunct_impl_data<char>
+ 0000:006A00E0       `typeinfo for'std::locale::facet
+ 0000:006A00EC       `typeinfo for'std::ctype_base
+ 0000:006A00F4       `typeinfo for'std::codecvt_base
+ 0000:006A00FC       `typeinfo for'std::ctype_byname<char>
+ 0000:006A0108       `typeinfo for'std::messages_base
+ 0000:006A0110       `typeinfo for'std::__rw_exception
+ 0000:006A011C       `typeinfo for'std::codecvt_byname<wchar_t,char,std::__mbstate_t>
+ 0000:006A0128       `typeinfo for'std::collate_byname<char>
+ 0000:006A0134       `typeinfo for'std::__rw_messages_base
+ 0000:006A0140       `typeinfo for'std::ctype<char>
+ 0000:006A0168       `typeinfo for'std::codecvt<wchar_t,char,std::__mbstate_t>
+ 0000:006A0188       `typeinfo for'std::collate<char>
+ 0000:006A01A8       `typeinfo for'std::messages<char>
+ 0000:006A01C8       `typeinfo for'std::numpunct<char>
+ 0000:006A01E8       `typeinfo for'std::exception
+ 0000:006A01F0       `typeinfo for'std::type_info
+ 0000:006A2AEE       `typeinfo name for'__cxxabiv1::__class_type_info
+ 0000:006A2B10       `typeinfo name for'__cxxabiv1::__si_class_type_info
+ 0000:006A2B35       `typeinfo name for'__cxxabiv1::__vmi_class_type_info
+ 0000:006AA0D4       `typeinfo name for'__rw::__rw_facet_base
+ 0000:006AA0ED       `typeinfo name for'__rw::__rw_punct_data<char>
+ 0000:006AA109       `typeinfo name for'__rw::__rw_collate_data<char>
+ 0000:006AA127       `typeinfo name for'__rw::__rw_collate_impl<char>
+ 0000:006AA145       `typeinfo name for'__rw::__rw_ctype_helper<char>
+ 0000:006AA163       `typeinfo name for'__rw::__rw_synchronized
+ 0000:006AA17E       `typeinfo name for'__rw::__rw_numpunct_impl<char>
+ 0000:006AA19D       `typeinfo name for'__rw::__rw_numpunct_impl_base
+ 0000:006AA1BE       `typeinfo name for'__rw::__rw_numpunct_impl_data<char>
+ 0000:006ACAEE       `typeinfo name for'std::locale::facet
+ 0000:006ACB00       `typeinfo name for'std::ctype_base
+ 0000:006ACB0F       `typeinfo name for'std::codecvt_base
+ 0000:006ACB20       `typeinfo name for'std::ctype_byname<char>
+ 0000:006ACB34       `typeinfo name for'std::messages_base
+ 0000:006ACB46       `typeinfo name for'std::__rw_exception
+ 0000:006ACB59       `typeinfo name for'std::codecvt_byname<wchar_t,char,std::__mbstate_t>
+ 0000:006ACB7F       `typeinfo name for'std::collate_byname<char>
+ 0000:006ACB95       `typeinfo name for'std::__rw_messages_base
+ 0000:006ACBAC       `typeinfo name for'std::ctype<char>
+ 0000:006ACBB8       `typeinfo name for'std::codecvt<wchar_t,char,std::__mbstate_t>
+ 0000:006ACBD6       `typeinfo name for'std::collate<char>
+ 0000:006ACBE4       `typeinfo name for'std::messages<char>
+ 0000:006ACBF3       `typeinfo name for'std::numpunct<char>
+ 0000:006ACC02       `typeinfo name for'std::exception
+ 0000:006ACC0F       `typeinfo name for'std::type_info
+ 0000:006ACF7C       `vtable for'CtrFReadEx!
+ 0000:006B5F70       `vtable for'CtrLoadModuleEx
+ 0000:006B7AF0       `vtable for'Dfx!
+ 0000:006B7E0C       `vtable for'MemAlc!
+ 0000:006B8D3C       `vtable for'CtrFRead!
+ 0000:006B9ED4       `vtable for'MoveWorkF!
+ 0000:006BB67C       `vtable for'__cxxabiv1::__class_type_info
+ 0000:006BB68C       `vtable for'__cxxabiv1::__si_class_type_info
+ 0000:006BB69C       `vtable for'__cxxabiv1::__vmi_class_type_info
+ 0000:006C3C14       `vtable for'std::locale::facet
+ 0000:006C3C28       `vtable for'std::ctype_byname<char>
+ 0000:006C3C5C       `vtable for'std::__rw_exception
+ 0000:006C3C70       `vtable for'std::codecvt_byname<wchar_t,char,std::__mbstate_t>
+ 0000:006C3CA0       `vtable for'std::collate_byname<char>
+ 0000:006C3CC0       `vtable for'std::ctype<char>
+ 0000:006C3CF4       `vtable for'std::collate<char>
+ 0000:006C3D14       `vtable for'std::messages<char>
+ 0000:006C3D34       `vtable for'std::numpunct<char>
+ 0000:006C3D5C       `vtable for'std::exception
+ 0000:006C3DF4       adsl::gfx::res::ResDepthOperation::SetTestFunc(adsl::gfx::res::ResDepthOperation::TestFunc)::table!
+ 0000:006C3E30       __ARM__ads::gfx::res::ResBlendOperation::SetBlendMode  b_anon0!
+ 0000:006CD6D8       Badge::STOCK_POS_TBL!
+ 0000:006CECB0       Backup::_fs!
+ 0000:006CECC4       Backup::_bufHead!
+ 0000:006CED48       GxMemAlc::_me!
+ 0000:006CEDF0       MessageDrawer::_BaseFontSize!
+ 0000:006CEE28       MessageSys::_RubyMode!
+ 0000:006CF85A       DfxSys::_GAMESPEED!
+ 0000:006CF939       AppletMan::Sleep::_disable!
+ 0000:006CF93C       AppletMan::HomeMenu::_callbackFunc!
+ 0000:006CF940       AppletMan::HomeMenu::NixSign::_state!
+ 0000:006CF9F0       gTaskMainMan!
+ 0000:006CFA08       UICommon::DEFAULT_MSG_SCALE!
+ 0000:006D1648       FieldSystem::_Sys!
+ 0000:006D1E38       MComSys::_inst!
+ 0000:006D1F40       gRand!
+ 0000:006D2010       adsl::gfx::AnimEvaluator::s_TypeInfo!
+ 0000:006D20CC       adsl::gfx::GraphicsDevice::s_RenderBufferWidth!
+ 0000:006D20D0       adsl::gfx::GraphicsDevice::s_RenderBufferHeight!
+ 0000:006D2128       adsl::gfx::GraphicsDevice::s_WScale24!
+ 0000:006D2148       adsl::gfx::IRenderTarget::s_TypeInfo!
+ 0000:006D2160       adsl::gfx::Light::s_TypeInfo!
+ 0000:006D21A0       adsl::gfx::Model::s_TypeInfo!
+ 0000:006D22B0       adsl::gfx::SkeletalModel::s_TypeInfo!
+ 0000:006D22F0       adsl::gfx::TransformAnimEvaluator::s_TypeInfo!
+ 0000:006D2418       __cb_current_command_buffer!
+ 0000:006D241C       __cb_current_max_command_buffer!
+ 0000:006D2428       __dmpgl_allocator!
+ 0000:006D242C       __dmpgl_deallocator!
+ 0000:006D32A8       nw::lyt::TextBox::s_TypeInfo
+ 0000:006E12F4       `guard variable for'CtrNullNwAlc::Get(void)::inst
+ 0000:006E12F8       CtrNullNwAlc::Get(void)::inst
+ 0000:006E1314       `guard variable for'nn::math::VEC2::One(void)::one
+ 0000:006E1318       nn::math::VEC2::One(void)::one
+ 0000:006E1320       `guard variable for'nn::math::VEC2::Zero(void)::zero
+ 0000:006E1324       nn::math::VEC2::Zero(void)::zero
+ 0000:006E132C       `guard variable for'nn::math::VEC3::One(void)::one
+ 0000:006E1330       `guard variable for'nn::math::VEC3::Zero(void)::zero
+ 0000:006E1334       `guard variable for'nn::math::VEC4::Zero(void)::zero
+ 0000:006E1340       `guard variable for'nn::math::MTX34::Identity(void)::identity
+ 0000:006E1344       `guard variable for'nn::math::MTX44::Identity(void)::identity
+ 0000:006E1358       std::locale::id::_C_init(void)::_C_id_gen
+ 0000:006E135C       `guard variable for'std::__rw_get_cats(void)::__open_cats
+ 0000:006E1360       std::__rw_get_cats(void)::__open_cats
+ 0000:006E14A8       Badge::PARAM
+ 0000:006E2378       gBtlBootInfo
+ 0000:006E3800       Backup::_bufData1
+ 0000:006E7CD0       gGameWork!
+ 0000:006E9820       gGrp
+ 0000:006EA218       MessageDrawer::_FontRes
+ 0000:006EA234       MessageDrawer::_FontDrawBuf
+ 0000:006EA250       MessageDrawer::_Font
+ 0000:006EA308       GfxScnSys::ScnObjCreateParam::DEF_PARAM
+ 0000:006EA37C       DfxLineBB::_CAMPOS
+ 0000:006EA394       DfxSys::_CAMSHAKE
+ 0000:006EB568       gSndSys
+ 0000:006ED6E0       gPzlWork
+ 0000:006ED8BC       gHBtlBootInfo
+ 0000:006ED9B8       gMem
+ 0000:006EDA78       gBtn
+ 0000:006EDAC0       gTp
+ 0000:006EDAE8       gGyr
+ 0000:006EF03C       gMemCtr
+ 0000:00711F80       std::string::__nullref
+ 0000:00711FD8       nn::math::VEC3::One(void)::one
+ 0000:00711FE4       nn::math::VEC3::Zero(void)::zero
+ 0000:00711FF0       nn::math::VEC4::Zero(void)::zero!
+ 0000:0071203C       nn::math::MTX34::Identity(void)::identity!
+ 0000:0071206C       nn::math::MTX44::Identity(void)::identity!

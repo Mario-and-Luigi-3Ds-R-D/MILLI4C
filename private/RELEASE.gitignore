@@ -2,17 +2,11 @@
 private/
 build/
 ori/
-.vscode/
-
-# Building
-
 data/US_1.0/code.bin
+data/US_1.0/Map/
+.vscode/
 src/
 project/
-disassembly/
-
-# Python non public
-
 tools/
 
 # Misc files; not for public
