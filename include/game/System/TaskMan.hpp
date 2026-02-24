@@ -4,8 +4,8 @@
 
 class Task;
 class TaskMan{
-    Task* currentTask;
-    Task* mTask;
+    Task* currentTask; //0x00, I think?
+    Task* mTask; //0x4
 public:
     TaskMan();
 

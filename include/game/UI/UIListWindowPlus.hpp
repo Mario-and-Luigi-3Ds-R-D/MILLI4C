@@ -1,10 +1,10 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "Message.hpp"
-#include "CellAnimeState"
+#include "CellAnime/CellAnimeState.hpp"
 #include "Prim.hpp"
-//COME BACK TO
+//fix namespace issues but yuh yuh
 
 namespace UIListWindowPlus{ //uses SOMETHING as a base
 class InitParam{

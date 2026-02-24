@@ -2,10 +2,10 @@ import os
 from pathlib import Path
 
 versions = {
-    "US_1.0": "c5cf607de6ad4db19a0ea2fe2423f94c927d7daa1dc77aecc62153b9467e4211",
-    "EU_1.0": "e1d7e188ff88467df776c17cec45c44857fadf5b699944baa8cddcae7d939e64",
-    "JP_1.0": "885dcaed5994076732b1f99e452a6f06493c23464ae0509ebbf44b8c6fd614a7",
-    "KR_1.0": "820940dc19b86f8d47515973d9f1484c4efc0571a729c294e85b53e5097fda56",
+    "US_1.0": "c5cf607de6ad4db19a0ea2fe2423f94c927d7daa1dc77aecc62153b9467e4211", # Correct, obviously
+    "EU_1.0": "42d8b37c6817a8324f8f4df7c4715cfdb33f9ce21db6259f526e22d5d6b11250", # Correct
+    "JP_1.0": "563ebbc5000eff1d78cd00370c87abe7f81f5ed1b01f6303c3019f6f9ab328e5", # Correct
+    "KR_1.0": "6e03dd902a4e1017f616f924e3170cfeeb66ef09e899a43183e14ccc7dda03bb", # Correct
 }
 
 def _getProjDir():

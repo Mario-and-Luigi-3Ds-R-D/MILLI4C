@@ -6,7 +6,7 @@
 class TaskMan;
 class Task{
 public:
-    TaskMan* mTaskManager;
+    TaskMan* mTaskManager; //0x4
 
     virtual void execute();
     virtual ~Task();
