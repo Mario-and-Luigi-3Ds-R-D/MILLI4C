@@ -1,11 +1,11 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 
-#include "CtrFEnd.hpp"
-#include "CtrJobMan.hpp"
-#include "CtrSave.hpp"
+#include "Ctr/File/CtrFEnd.hpp"
+#include "Ctr/CtrJobMan.hpp"
+#include "Ctr/CtrSave.hpp"
 #include "MemAlcBase.hpp"
 
 class CtrFS{

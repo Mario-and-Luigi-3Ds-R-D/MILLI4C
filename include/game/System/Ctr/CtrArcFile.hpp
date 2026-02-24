@@ -4,8 +4,7 @@
 #include "system/Ctr/File/CtrFRead.hpp"
 #include "system/Ctr/File/CtrFileBase.hpp"
 
-class CtrArcFile{
-    CtrFileBase Base;
+class CtrArcFile : public CtrFileBase{
 public:
     virtual ~CtrArcFile();
 

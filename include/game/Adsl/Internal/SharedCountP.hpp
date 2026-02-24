@@ -1,14 +1,14 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "BETPcWin/BETPcWinUI.hpp"
 #include "BETPcWin/BETPcWinObj.hpp"
-//btl atk
+// oh god help this shit
 
 namespace Adsl{
 namespace Internal{
 
-    struct SharedCountP<BETPcWin::ObjCA>{
+    class SharedCountP<BETPcWin>::ObjCA>{
     public:
     SharedCountP<BETPcWin::ObjCA>(void);
     virtual SharedCountP<BETPcWin::ObjCA>();

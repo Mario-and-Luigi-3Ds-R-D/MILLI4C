@@ -2,8 +2,7 @@
 
 #include "ya/LuigiBox.hpp"
 
-class yaMarioBox{
-    yaLuigiBoxLocal Base; //beeg
+class yaMarioBox : public yaLuigiBoxLocal {
 public:
     virtual ~yaMarioBox();
 

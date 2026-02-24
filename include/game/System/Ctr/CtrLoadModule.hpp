@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class CtrLoadModule{
 public: 

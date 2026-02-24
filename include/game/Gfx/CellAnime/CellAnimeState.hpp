@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 //#include "include/CTR-SDK/include/nn/math/math_Matrix44.h"
 //#include "include/CTR-SDK/include/nn/ulcd/CTR/ulcd_StereoCamera.h"

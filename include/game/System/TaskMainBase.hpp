@@ -1,8 +1,8 @@
 #pragma once
 
 #include "types.hpp"
-#include "TaskMan.hpp"
-#include "Task.hpp"
+#include "system/TaskMan.hpp"
+#include "system/Task.hpp"
 
 class Task;
 class TaskMainBase{

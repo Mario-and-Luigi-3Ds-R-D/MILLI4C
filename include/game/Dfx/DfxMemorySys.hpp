@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 #include "CtrFS.hpp"
 #include "DfxResAlc.hpp"

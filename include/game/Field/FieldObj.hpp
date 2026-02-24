@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 //#include <nn/math/Matrix34.h>
 
 class FieldObjBase{ //FieldObjBase vtable @ 0x006b38ac

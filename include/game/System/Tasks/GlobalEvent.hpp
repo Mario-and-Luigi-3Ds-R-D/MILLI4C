@@ -1,7 +1,7 @@
 #pragma once
 
-#include "ScriptSystem.hpp"
-#include "types.hpp"
+#include "Script/ScriptSystem.hpp"
+#include "game/types.hpp"
 
 class GlobalEvent : public ScriptSystem{
 };

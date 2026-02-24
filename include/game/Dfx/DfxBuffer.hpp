@@ -1,11 +1,11 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class DfxBuffer{
 public:
     virtual ~DfxBuffer();
 
     DfxBuffer(void);
-    void setBufNum(uint);
+    void setBufNum(uint bufNum);
 };

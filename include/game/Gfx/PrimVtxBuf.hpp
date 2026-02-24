@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 //#include "include/CTR-SDK/include/nn/util/util_Color.h"
 
 class PrimVtxBuf{

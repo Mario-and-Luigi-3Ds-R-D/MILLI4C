@@ -1,7 +1,7 @@
 #pragma once
 
-#include "types.hpp"
-#include "nn/math/Vector3.h"
+#include "game/types.hpp"
+//#include "nn/math/Vector3.h"
 
 class FieldCamera{
 public: 
@@ -10,5 +10,5 @@ public:
     FieldCamera(void);
 };
 
-class FieldCameraStereo{ //placehldr
+class FieldCameraStereo{
 };

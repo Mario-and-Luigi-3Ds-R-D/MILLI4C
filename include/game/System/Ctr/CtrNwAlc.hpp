@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class CtrNwAlc {
     int*     mCurrentAlc;
@@ -9,7 +9,6 @@ public:
     virtual ~CtrNwAlc();
 
     CtrNwAlc(void);
-    void __deallocating();
     void init();
 };
 

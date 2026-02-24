@@ -2,8 +2,8 @@
 
 #include "types.hpp"
 
-#include "CtrFS.hpp"
-#include "Message.hpp"
+#include "system/Ctr/File/CtrFS.hpp"
+#include "Message/Message.hpp"
 
 class CtrFS;
 class Message;

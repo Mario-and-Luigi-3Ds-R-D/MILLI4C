@@ -11,8 +11,7 @@ public:
     int* end(int* unk_0x8);
 };
 
-class JobMan{
-    Job mBase;
+class JobMan : public Job{
 public:
     virtual ~JobMan();
 };

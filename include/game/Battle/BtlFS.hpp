@@ -1,7 +1,7 @@
 #pragma once
 
-#include "CtrFileBase.hpp"
-#include "CtrFReadBase.hpp"
+#include "system/Ctr/file/CtrFileBase.hpp"
+#include "system/Ctr/file/CtrFRead.hpp"
 
 namespace BtlFS{
     class FileUnit : public CtrFileBase{

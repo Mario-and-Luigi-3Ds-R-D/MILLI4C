@@ -2,7 +2,7 @@
 
 #include "FieldSrtBase.hpp"
 #include "FieldObj.hpp"
-#include "types.hpp"
+#include "game/types.hpp"
 
 class FieldChr{ //imports from something maybe Chrprim?, FielcChr vtable @ 0x006b8d74
     u8 unk[0x2a0];

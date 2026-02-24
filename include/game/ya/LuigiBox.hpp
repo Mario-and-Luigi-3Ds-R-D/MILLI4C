@@ -2,9 +2,8 @@
 
 #include "Battle/Obj/BtlObjBase.hpp"
 
-class yaLuigiBoxLocal{
-    BtlObjMove Base; //end @ 3b0
-    u8 unk_pad1[0x44];//end 3f4
+class yaLuigiBoxLocal : public BtlObjMove{
+    u8 unk_pad1[0x44];//start 3b4
     int unk1; //start @ 3f4
     int unk2; //end @ 3f8
     u8 unk_pad2[0x10]; // end @ 408
@@ -20,7 +19,7 @@ public:
     yaLuigiBoxLocal();
 };
 
-static_assert(sizeof(yaLuigiBoxLocal) == 0x4e0, "");
+static_assert(sizeof(yaLuigiBoxLocal) == 0x4d8, "");
 
 class yaLuigiBoxLocalTOP{
     yaLuigiBoxLocal Base; //luigiboxloc is our base might delete lowk

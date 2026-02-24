@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "MoveWorkF.hpp"
 #include "FieldObj.hpp"
 
@@ -8,6 +8,9 @@ class DLuigi{
 };
 
 class DLuigiCam{
+};
+
+class DLuigiPartTask{ //Others need this first
 };
 
 class DLuigiEtc : public DLuigiPartTask{
@@ -20,9 +23,6 @@ class DLuigiNoseRot : public DLuigiPartTask{
 };
 
 class DLuigiNoseSnz : public DLuigiPartTask{
-};
-
-class DLuigiPartTask{
 };
 
 class DLuigiRotBed : public FieldObjCA{
