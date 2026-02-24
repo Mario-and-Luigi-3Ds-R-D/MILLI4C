@@ -1,6 +1,18 @@
-1) Make placeholder classes until finished.
-(BtlObj needs to be finished i got lazy)
-(Anonymous namespaces get namespace{ } with no namespace name.)
-2) SDK Work. Might just make the .o CTR Libraries into the current build if im gonna be honest.
-3) Start decomping System/ folder.
+Luigifan27::toDo  <--- this does nothing it looks cool to type like a func in vscode
 
+1) Organize file system currently BAD (Maybe start with Field, Dream, and Real folders) (BASED OF GHIDRA KNOWN REPO)
+2) Temp headers?
+3) Get Work on building CTRSDK ARM archives (.a) with the project maybe, decomping the ctrsdk src isnt worth but headers are REQUIRED!
+4) Same hack with nintendoware, and adsl. (Not Adsl)
+5) Start decomping System/Folder, using decomp.me since it works
+
+
+Danius88::toDo
+xxx
+xxx
+xxx
+xxx
+xxx
+
+
+Main Target as of src/ wise is the games main systems. These are used EVERYWHERE!

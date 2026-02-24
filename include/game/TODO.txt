@@ -1,2 +1,0 @@
-CMB2 game/UI/
-CMB2 LuigiBox.hpp size is wrong
