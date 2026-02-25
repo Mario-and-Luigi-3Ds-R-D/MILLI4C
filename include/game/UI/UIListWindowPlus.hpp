@@ -2,6 +2,7 @@
 
 #include "game/types.hpp"
 #include "Message.hpp"
+#include "MessageSimple.hpp"
 #include "CellAnime/CellAnimeState.hpp"
 #include "Prim.hpp"
 //fix namespace issues but yuh yuh

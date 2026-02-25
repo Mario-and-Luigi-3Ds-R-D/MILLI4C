@@ -21,8 +21,7 @@ public:
 
 static_assert(sizeof(yaLuigiBoxLocal) == 0x4d8, "");
 
-class yaLuigiBoxLocalTOP{
-    yaLuigiBoxLocal Base; //luigiboxloc is our base might delete lowk
+class yaLuigiBoxLocalTOP : public yaLuigiBoxLocal{
 public:
    virtual ~yaLuigiBoxLocalTOP();
    

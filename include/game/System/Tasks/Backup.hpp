@@ -1,9 +1,8 @@
 #pragma once
 
 #include "types.hpp"
-
-#include "system/Ctr/File/CtrFS.hpp"
-#include "Message/Message.hpp"
+#include "Ctr/File/CtrFS.hpp"
+#include "Message.hpp"
 
 class CtrFS;
 class Message;
