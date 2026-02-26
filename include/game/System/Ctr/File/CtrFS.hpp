@@ -9,16 +9,15 @@
 #include "MemAlcBase.hpp"
 
 class CtrFS{
-    u8 _pad_[0x4];
-    int * _unk_flag1_;
-    CtrFEnd mCtrFEnd;    
-    u8 _pad2_[0x4];
-    u32 mRomPath;
-    u8 _pad3_[0xa];
-    ushort _0x26;
-    CtrSaveFormat mCtrSaveFormat;  
+    u8 pad[0x4]; // 0x4
+    int * flag1; // 0x8
+    CtrFEnd mCtrFEnd; // 0xc  
+    u8 pad2[0x4]; // 0x10
+    u32 mRomPath; // 0x14
+    u8 pad3[0xa]; // 0x18
+    ushort flag2; // 0x22
+    CtrSaveFormat mCtrSaveFormat; // 0x24
     u8 _pad4_[0x27];
-
 public:
     CtrFS(void);
     virtual ~CtrFS();

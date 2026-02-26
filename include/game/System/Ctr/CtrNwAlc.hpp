@@ -3,8 +3,8 @@
 #include "game/types.hpp"
 
 class CtrNwAlc {
-    int*     mCurrentAlc;
-    uint32_t  Unk_0x8[];
+    s32  mCurrentAlc;
+    s32  mOpt;
 public:
     virtual ~CtrNwAlc();
 

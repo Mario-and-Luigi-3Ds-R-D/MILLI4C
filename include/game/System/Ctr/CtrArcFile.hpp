@@ -1,8 +1,8 @@
 #pragma once
 
 #include "game/types.hpp"
-#include "system/Ctr/File/CtrFRead.hpp"
-#include "system/Ctr/File/CtrFileBase.hpp"
+#include "Ctr/File/CtrFRead.hpp"
+#include "Ctr/File/CtrFileBase.hpp"
 
 class CtrArcFile : public CtrFileBase{
 public:
