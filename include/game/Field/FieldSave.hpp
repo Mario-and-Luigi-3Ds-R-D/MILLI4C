@@ -1,1 +1,4 @@
-//FieldSaveExDataAcsr read/write
+#pragma once
+
+class FieldSaveExDataAcsr{
+};

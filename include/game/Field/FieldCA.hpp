@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Gfx/CellAnime/CellAnime.hpp"
-#include "system/TaskList.hpp"
+#include "System/TaskList.hpp"
 
 class FieldCA : public CellAnime, TaskList{ //FieldCA
 public:
@@ -12,20 +12,22 @@ public:
     void init(CellAnime* );
 };
 
-class FieldCAData{ //FieldCAData, unknown
+class FieldCAData{ //FieldCAData, doesnt exist?
 };
 
-class FieldCAInfo{ //FieldCAInfo
+class FieldCAInfo{ //FieldCAInfo, Empty vtable
 };
 
 class FieldCAList{ //FieldCAList
-    int unk1;
-    u8 pad[8];
+    s32 flag1;
+    u8 pad[0x4];
+    s32 flag2;
 public:
     virtual ~FieldCAList();
 
     FieldCAList(void);
 };
+static_assert(sizeof(FieldCAList) == 0x18);
 
 class FieldSystemCA : public FieldCA{ //FieldSytstemCA
 public:

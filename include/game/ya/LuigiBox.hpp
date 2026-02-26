@@ -18,8 +18,7 @@ public:
 
     yaLuigiBoxLocal();
 };
-
-static_assert(sizeof(yaLuigiBoxLocal) == 0x4d8, "");
+static_assert(sizeof(yaLuigiBoxLocal) == 0x4d8, "In Ghidra this is 0x4d0, -4 for vtable.");
 
 class yaLuigiBoxLocalTOP : public yaLuigiBoxLocal{
 public:

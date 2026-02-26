@@ -10,10 +10,11 @@ class FieldCamera{
     float unk4; //0x10
     float unk5; //0x14
     float unk6; //0x18
-    float x; //0x1c, 3 of these are x,y,z
+    float x; //0x1c
+//  Vector3 pos; 0x1c-0x24 XYZ
     float y; //0x20
     float z; //0x24
-public: 
+public: //Placeholder Labels.
     virtual ~FieldCamera();
 
     FieldCamera(void);

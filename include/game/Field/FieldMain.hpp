@@ -7,6 +7,8 @@
 #include "game/types.hpp"
 
 class FieldMainBase{ //at 0x2c4 it imports Prim, 0x364 it imports FieldCAList
+    u8 unkpad[0x2c4];
+    Prim mPrim;
 public:
     virtual ~FieldMainBase();
 

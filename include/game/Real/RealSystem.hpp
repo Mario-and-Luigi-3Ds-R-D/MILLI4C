@@ -6,9 +6,8 @@
 
 class RealSystem : public FieldSystem {
 public:
-    u8 unk[0x170];
-public:
-    RealSystem(FieldBootInfo const*);
     virtual ~RealSystem();
+
+    RealSystem(FieldBootInfo const*);
     void getPath();
 };

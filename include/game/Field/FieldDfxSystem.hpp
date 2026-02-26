@@ -5,6 +5,8 @@
 
 class FieldDfxSystem : public DfxUnit{
 public:
+    virtual void SetupSystem(); // LAB_002d3e90
+    virtual void SetUpMemory();
     virtual ~FieldDfxSystem();
 
     FieldDfxSystem(void);
@@ -14,5 +16,5 @@ public:
     void Prepare();
 };
 
-class FieldDfxSystemSeCallback{ //needs research
+class FieldDfxSystemSeCallback{ //needs research, doesnt need a base
 };

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.hpp"
-#include "system/TaskMan.hpp"
+#include "System/TaskMan.hpp"
 
 class TaskMan;
 class Task{
