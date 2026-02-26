@@ -18,7 +18,7 @@ __compiler_armcc(CXX)
 __compiler_armcc(ASM)
 
 file(GLOB_RECURSE SOURCES_GAME ${CMAKE_SOURCE_DIR}/src/game/*.c ${CMAKE_SOURCE_DIR}/src/game/*.cpp)
-file(GLOB_RECURSE SOURCES_RSLIB ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.c ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.cpp)
+file(GLOB_RECURSE SOURCES_RSLIB ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.c ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.cpp) 
 file(GLOB_RECURSE SOURCES_ADSL ${CMAKE_SOURCE_DIR}/library/adsl/src/*.c ${CMAKE_SOURCE_DIR}/library/adsl/src/*.cpp)
 
 add_library(crt0 OBJECT src/crt0.cpp)
@@ -37,4 +37,4 @@ add_executable(MILLI4C $<TARGET_OBJECTS:crt0> ${SOURCES_GAME} ${SOURCES_RSLIB} $
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
 target_include_directories(MILLI4C PUBLIC library/rsLib/include)
-target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include)
+target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/nn/include)
