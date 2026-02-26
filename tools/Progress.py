@@ -47,7 +47,7 @@ def main():
     bytes_ok = get_matching_bytes(getExeFile(), str(Path(getBuildPath()) / "code.bin"))
     code_bin_size = os.path.getsize(getExeFile())
     ver = get_ver()
-    os.makedirs(str(Path('data') / 'stats' / ver), exist_ok=True)
+    os.makedirs(str(Path('data') / 'Info' / ver), exist_ok=True)
     
     syms = read_sym_file()
     for sym in syms:

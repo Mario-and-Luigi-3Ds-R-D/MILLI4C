@@ -8,4 +8,5 @@ public:
     virtual ~FieldSrtBase();
 
     FieldSrtBase(void);
+    void getFlags(); //this-> call idfk
 };    
