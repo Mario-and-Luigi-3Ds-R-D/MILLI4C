@@ -1,11 +1,13 @@
 #pragma once
 
 #include "FieldSrtBase.hpp"
+#include "FReturnCode.hpp"
 #include "FieldObj.hpp"
+#include "Etc/FieldBlock.hpp"
 #include "game/types.hpp"
 
 class FieldChr{ //imports from something maybe Chrprim?, FielcChr vtable @ 0x006b8d74
-    u8 unk[0x2a0];
+    u8 unk[0x2f8];
 public:
     virtual ~FieldChr();
 
@@ -18,6 +20,8 @@ public:
     virtual ~FieldChrBase();
 
     FieldChrBase(void);
+    FieldReturnCode getReturnCode();
+    FieldTypeReturnCode getSubReturnCode();
 };
 
 class FieldChrCA : public FieldChr, public FieldCAChrBase{ //FieldChrCA vtable @ 0x006aee34
@@ -43,11 +47,11 @@ public:
     FieldChrPrimCA(void);
 };
 
-class FieldChrCol{ //FieldChrCol vtable @ 0x006b1fe4
+class FieldColChr : public FieldBlock{ //FieldChrCol vtable @ 0x006b1fe4
 public:
-    virtual ~FieldChrCol();
+    virtual ~FieldColChr();
 
-    FieldChrCol(void);
+    FieldColChr(void);
 };
 
 class FieldCAChrBase : public FieldObjBase{ //FieldCAChrBase vtable @ 0x006b57bc

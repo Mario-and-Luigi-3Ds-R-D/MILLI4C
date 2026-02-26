@@ -123,7 +123,7 @@ def main():
     ax.yaxis.set_major_formatter(matplotlib.ticker.PercentFormatter())
     ax.plot(dates, y_values, '-')
 
-    plt.savefig(str(Path('data') / 'stats' / ver / "Progress.png"))
+    plt.savefig(str(Path('data') / 'stats' / "Progress.png"))
 
     if 'show' in sys.argv:
         import mplcursors

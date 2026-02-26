@@ -15,8 +15,8 @@ is_sim_mode = False
 is_silent = False
 is_log = False
 found_flag = False
-csv_path = getMapFile()
-log_path = f"{getProjDir()}/data/{get_ver}/.changes"
+csv_path = getFuncSymFile()
+log_path = f"{getProjDir()}/data/ver/{get_ver}/.changes"
 
 def rank_symbol(sym, decomp_sym):
     sym_size = int(sym[2])
@@ -112,20 +112,24 @@ def check_syms():
         progress = ((addr-first_sym_addr) / (last_sym_addr-first_sym_addr)) * 100
         progress = round(progress, 1)
 
+        # check addr dupl
         if addr in sym_addrs:
             print (f"0x{addr:08X} appears more than once!")
 
         sym_addrs.append(addr)
         sym_sizes.append(size)
 
+        # check no name
         if is_skip_mode or not name or len(name) == 0:
             newsyms.append(sym)
             continue
-
+        #continue
+        # try get symbol from elf
         decomp_symbol = get_elf_symbol(name)
         if not decomp_symbol is None:
             rank = rank_symbol(sym, decomp_symbol)
 
+        # main adding
         newsyms.append((addr, rank, size, name, tag))
         last_name = name
         clear_line()
@@ -138,6 +142,7 @@ def check_syms():
 
     clear_line()
 
+    # post check before writing
     mySyms = [(int(sym_addrs[i]), int(sym_sizes[i])) for i in range(len(sym_addrs))]
     mySyms.sort(key=lambda x: x[0])
     for i in range(len(mySyms) - 1):
@@ -173,10 +178,10 @@ def check_syms():
 
     else:
         print ("Updating map ...")
-
+        # read
         with open(csv_path, 'r') as src, open(csv_path + '_b', 'w') as dst:
             dst.write(src.read())
-
+        # write
         with open(csv_path, 'w') as f:
             f.write("Address,Rank,Size,Symbol,Tag\n")
             for sym in newsyms:
@@ -198,7 +203,7 @@ def check_sym(symbol_name):
         nowrank = rank_symbol(sym, dec)
 
         if found_flag and prevrank != nowrank:
-
+            # update CSV
             file = open(csv_path, "r").readlines()
             newline = f"0x{sym[0]:08X},{nowrank},{sym[2]:06d},{sym[3]},{sym[4]}\n"
             for i, line in enumerate(file):
@@ -208,10 +213,10 @@ def check_sym(symbol_name):
             with open(csv_path, "w") as f:
                 f.writelines(file)
 
-
+            # Always print rank change in literal format for single symbol
             print (f"{prevrank} -> {nowrank} ({getRankMsg(prevrank, nowrank)})")
         else:
-
+            # Print the normal message for unchanged single symbol
             printf (getRankMsg(prevrank, nowrank))
         break
 
@@ -237,10 +242,10 @@ def main():
     is_log = args.w
 
     with open(Path(getBuildPath()) / "compile_commands.json", "r") as f:
-        if any("NON_MATCHING" in line for line in f):
+        if any("NON_MATCHING" in line for line in f): # check if we compiled for Matching-only build
             found_flag = True
     if not found_flag:
-        csv_path = getMapFile().rsplit('.csv', 1)[0] + '_test.csv'
+        csv_path = getFuncSymFile().rsplit('.csv', 1)[0] + '_test.csv'
         print("Info: TEST MODE. You need to compile without -m (only matching) to rebuild the functions map. This output will be written to data/*_test.csv")
 
     if args.sym:

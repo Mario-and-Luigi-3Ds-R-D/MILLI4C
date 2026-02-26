@@ -9,18 +9,24 @@ public:
     FieldPC(void);
 };
 
+
 namespace FieldPC{
     class FieldPCColChr : public FieldChr{ //FieldPC::FieldPCColChr vtable @ 0x006c261c
     public:
+        virtual ~FieldPCColChr();
+
+        FieldPCColChr(void);
 };
 }; //namespace FieldPC
 
-class FieldPCSub : public FieldChr{ //FieldPCSub vtable @ 0x006b0558
+
+class FieldPCSub : public FieldChrCA{ //FieldPCSub vtable @ 0x006b0558
 public:
     virtual ~FieldPCSub();
 
     FieldPCSub(void);
 };
+
 
 class FieldMario : public FieldPC{ //FieldMario vtable @ 0x006b0070
 public:
@@ -29,9 +35,11 @@ public:
     FieldMario(void);
 };
 
+
 class FieldLuigi : public FieldPC{ //FieldLuigi vtable @ 0x006af640
 public:
     virtual ~FieldLuigi();
 
     FieldLuigi(void);
 };
+

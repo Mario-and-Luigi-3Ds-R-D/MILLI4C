@@ -3,16 +3,16 @@
 #include "Battle/Obj/BtlObjBase.hpp"
 
 class yaLuigiBoxLocal : public BtlObjMove{
-    u8 unk_pad1[0x44];//start 3b4
-    int unk1; //start @ 3f4
-    int unk2; //end @ 3f8
-    u8 unk_pad2[0x10]; // end @ 408
-    int unk3; //start at 408
-    u8 unk_pad3[0x30];
-    int unk4; //start at 43c, not found in game
-    int unk5; //start at 440
-    int unk6; //start at 444
-    u8 unk_pad3[0x84]; //end at 4cc then stop
+    u8 unk_pad1[68];//start 3b0
+    int unk1; //0x3f4
+    int unk2; //0x3f8
+    u8 unk_pad2[12]; //0x3fc
+    int unk3; //0x408
+    u8 unk_pad3[48];
+    int unk4; //0x43c
+    int unk5; //0x440
+    int unk6; //0x444
+    u8 unk_pad3[132]; //end at 4cc then stop
 public:
     virtual ~yaLuigiBoxLocal();
 
