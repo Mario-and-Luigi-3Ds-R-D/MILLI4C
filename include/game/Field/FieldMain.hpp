@@ -4,6 +4,7 @@
 #include "FieldCamera.hpp"
 #include "FieldCA.hpp"
 #include "Memory/MemAlc.hpp"
+#include "Gfx/Prim.hpp"
 #include "game/types.hpp"
 
 class FieldMainBase{ //at 0x2c4 it imports Prim, 0x364 it imports FieldCAList

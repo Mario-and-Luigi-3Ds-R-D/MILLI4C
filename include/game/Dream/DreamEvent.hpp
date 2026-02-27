@@ -1,7 +1,7 @@
 #pragma once
 
-#include "types.hpp"
-#include "FieldEvent.hpp"
+#include "game/types.hpp"
+#include "Field/Etc/FieldEvent.hpp"
 
 class DreamEvent : public FieldEvent{
 };

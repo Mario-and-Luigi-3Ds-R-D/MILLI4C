@@ -1,6 +1,7 @@
 #pragma once
 
-#include "types.hpp"
+#include "Etc/FieldGuideMap.hpp"
+#include "game/types.hpp"
 
-class DreamGuideMap{
+class DreamGuideMap : FieldGuideMap{
 };

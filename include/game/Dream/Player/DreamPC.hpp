@@ -8,10 +8,22 @@
 //};
 
 class DreamMario : public FieldMario{ //DreamMario vtable @ 0x006ae0a4
+public:
+    virtual ~DreamMario();
+
+    DreamMario(void);
 };
 
 class DreamMarioSub : public FieldChr{ //DreamMarioSub vtable @ 0x006b41fc
+public:
+    virtual ~DreamMarioSub();
+
+    DreamMarioSub(void);
 };
 
 class DreamLuigi : public FieldLuigi{ //DreamLuigi vtable @ 0x006ad654
+public:
+    virtual ~DreamLuigi();
+
+    DreamLuigi(void);
 };

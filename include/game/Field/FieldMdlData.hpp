@@ -9,3 +9,10 @@ public:
 
     FieldMdlCharBase(void);
 };
+
+class FieldMapMdl : public FieldObjBase{
+public:
+    virtual ~FieldMapMdl();
+
+    FieldMapMdl(void);
+};

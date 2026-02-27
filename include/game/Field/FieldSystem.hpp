@@ -7,6 +7,8 @@
 #include "System/TaskMainBase.hpp"
 
 class FieldSystem : public TaskMainbase{
+    s32 flag1;
+    s32 flag2;
     CtrNwAlc* mNwAlc;
     u8 unk[316]; //add more info
 public:

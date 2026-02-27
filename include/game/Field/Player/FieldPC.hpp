@@ -9,7 +9,6 @@ public:
     FieldPC(void);
 };
 
-
 namespace FieldPC{
     class FieldPCColChr : public FieldChr{ //FieldPC::FieldPCColChr vtable @ 0x006c261c
     public:
