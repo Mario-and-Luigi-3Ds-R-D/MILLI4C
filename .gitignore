@@ -8,8 +8,6 @@ data/US_1.0/Map/
 src/
 project/
 tools/
-
-# Misc files; not for public
 *.json
 *.py
 *.cpp
