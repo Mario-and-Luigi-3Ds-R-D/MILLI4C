@@ -1,10 +1,6 @@
-#dev
-private/
+# Dev Things
+priv/
 build/
-ori/
-data/
-src/
+original/
+data/US_1.0/2code.bin
 project/
-tools/
-*.py
-*.json

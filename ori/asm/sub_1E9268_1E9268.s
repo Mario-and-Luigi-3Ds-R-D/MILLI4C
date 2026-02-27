@@ -1,8 +1,0 @@
-PUSH            {R4,LR}
-LDR             R1, [R0]
-LDR             R1, [R1,#0x10C]
-BLX             R1
-LDR             R1, [R0]
-LDR             R1, [R1,#0x14]
-POP             {R4,LR}
-BX              R1

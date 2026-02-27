@@ -1,3 +1,5 @@
+# Made by user Moddimation, WIP on Building System.
+
 import os
 from Bin.verManager import get_ver
 from pathlib import Path

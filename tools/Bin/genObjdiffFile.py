@@ -1,3 +1,5 @@
+# Made by user Moddimation, WIP on Building System.
+
 import sys
 from Settings import *
 from .genCtxFile import genCtx
