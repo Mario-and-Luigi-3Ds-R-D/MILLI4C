@@ -1,6 +1,7 @@
 # Dev Things
-priv/
+private/
 build/
-original/
-data/US_1.0/2code.bin
+ori/
+data/US_1.0/code.bin
+data/Info/
 project/

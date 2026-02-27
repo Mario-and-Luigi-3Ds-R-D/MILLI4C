@@ -7,18 +7,28 @@ Currently this project is going through a "setup" phase, meaning it may take whi
 
 This project is will be going on a small hiatus to get some fundamentals figured out first, until then, stay tuned!
 
-# Todo List
-
-1) Building the code.bin ✅
-2) Sub libraries 
-3) Header files
-4) Start doing the thing.
-
 # The Goal
 
 1:1 Matching of the US 1.0 release, and later down the line other releases.
 As of currently,  only the code.bin is being targeted. No CROs *yet*. Nor will be building of the RomFS be targeted ethier.
 I myself don't care for a PC Port of a 3Ds game. But, once finished I will not care if someone forks it and makes a PC Port for themselves.
+
+# Building the code.bin
+
+Currently, the system for building the code.bin is using the tools/Build.py file. (This method is temporary, borrowed from User Moddimations SM3DL Decomp Project) 
+**Windows**
+
+1) The User will *need* ARMCC_894, and DevkitARM
+2) Set ARMCC Path enviornments for windows
+Example:
+ARMCC_PATH = C:\path\2\folder\ARMCC\894
+ARMCC41LIB = C:\path\2\folder\ARMCC\894\lib
+ARMCC41INC = C:\path\2\folder\ARMCC\894\include\windows
+3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several *.o files.
+
+**Linux**
+
+As of currently, I do not know if linux is supported yet.
 
 # How to help
 

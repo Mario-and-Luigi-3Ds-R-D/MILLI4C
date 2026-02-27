@@ -7,13 +7,4 @@ Luigifan27::toDo  <--- this does nothing it looks cool to type like a func in vs
 4) Same hack with nintendoware, and adsl. (Not Adsl)
 5) Start decomping System/Folder, using decomp.me since it works
 
-
-Danius88::toDo
-xxx
-xxx
-xxx
-xxx
-xxx
-
-
 Main Target as of src/ wise is the games main systems. These are used EVERYWHERE!
