@@ -1,8 +1,22 @@
-# User obtained files.
-
-*.elf
-*.bin
-*.axf
-*.s
+# Dev
+private/
 build/
 ori/
+data/US_1.0/code.bin
+data/US_1.0/Map/
+.vscode/
+src/
+project/
+tools/
+
+# Misc files; not for public
+*.json
+*.py
+*.cpp
+*.o
+*.s
+*.exe
+*.axf
+*.elf
+CMakeLists.txt
+todo.txt
