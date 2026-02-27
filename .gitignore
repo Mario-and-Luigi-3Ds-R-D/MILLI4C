@@ -1,20 +1,10 @@
-# Dev
+#dev
 private/
 build/
 ori/
-data/US_1.0/code.bin
-data/US_1.0/Map/
-.vscode/
+data/
 src/
 project/
 tools/
-*.json
 *.py
-*.cpp
-*.o
-*.s
-*.exe
-*.axf
-*.elf
-CMakeLists.txt
-todo.txt
+*.json
