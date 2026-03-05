@@ -1,12 +1,12 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "System/TaskMan.hpp"
 #include "System/Task.hpp"
 
 class Task;
 class TaskMainBase : public Task{
-    uint nextTask; //0x8
+    uint nextTask; // 0x8
 public:
     virtual ~TaskMainBase();
 

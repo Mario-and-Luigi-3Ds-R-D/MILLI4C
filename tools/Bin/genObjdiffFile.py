@@ -1,10 +1,10 @@
 # Made by user Moddimation, WIP on Building System.
 
-import sys
 from Settings import *
-from .genCtxFile import genCtx
 import json
+import sys
 from colorama import Fore, Style
+from Bin.genCtxFile import genCtx
 from elftools.elf.elffile import ELFFile
 from elftools.elf.sections import SymbolTableSection
 
@@ -50,9 +50,10 @@ def genObjdiffJson():
     for file in files:
         src = file[0]
         obj = file[1]
-        name = file[1][len(getProjDir())+1:].partition('.dir/')[2].rsplit(".", 1)[0]
+#        name = file[1][len(getProjDir())+1:].partition('.dir/')[2].rsplit(".", 1)[0]
+        name = file[1].rssplit(".", 1)[0]
         ctx = obj.rsplit('.', 1)[0] + '.ctx'
-        #ctx = makeCtxFile(src, obj)
+        ctx = makeCtxFile(src, obj)
         data +=  "    {\n"
         data += f'      \"name\": "{name}",\n'
         data += f"      \"target_path\": \"{getElfPath()}\",\n"

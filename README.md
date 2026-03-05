@@ -19,11 +19,16 @@ Currently, the system for building the code.bin is using the tools/Build.py file
 **Windows**
 
 1) The User will *need* ARMCC_894, and DevkitARM
+
 2) Set ARMCC Path enviornments for windows
 Example:
+
 ARMCC_PATH = C:\path\2\folder\ARMCC\894
+
 ARMCC41LIB = C:\path\2\folder\ARMCC\894\lib
+
 ARMCC41INC = C:\path\2\folder\ARMCC\894\include\windows
+
 3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several *.o files.
 
 **Linux**

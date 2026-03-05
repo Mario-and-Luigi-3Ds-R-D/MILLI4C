@@ -3,7 +3,6 @@
 #pragma once
 
 #include "CellAnime.hpp"
-#include "Move/MoveF.hpp"
-#include "Move/MoveWorkF.hpp"
-#include "Move/MoveV.hpp"
+#include "Move.hpp"
+#include "MoveWork.hpp"
 #include "game/types.hpp"

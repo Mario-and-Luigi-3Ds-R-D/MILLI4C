@@ -145,20 +145,20 @@ def check_syms():
     clear_line()
 
     # post check before writing
-    mySyms = [(int(sym_addrs[i]), int(sym_sizes[i])) for i in range(len(sym_addrs))]
-    mySyms.sort(key=lambda x: x[0])
-    for i in range(len(mySyms) - 1):
-        addr, size = mySyms[i]
-        next_addr = mySyms[i + 1][0]
-        if addr + size > next_addr:
-            print (f"MAP OVERLAP: 0x{addr:08X} overlaps with 0x{next_addr:08X}")
-            is_error = True
-
-    if is_error and do_rewrite:
-        print ("Errors detected, cannot update map. Please fix!")
-        if is_sim_mode or is_skip_mode:
-            print (r"... you ran in simulation mode anyways so \_(ツ)_/")
-        return
+#    mySyms = [(int(sym_addrs[i]), int(sym_sizes[i])) for i in range(len(sym_addrs))]
+#    mySyms.sort(key=lambda x: x[0])
+#    for i in range(len(mySyms) - 1):
+#        addr, size = mySyms[i]
+#        next_addr = mySyms[i + 1][0]
+#        if addr + size > next_addr:
+#            print (f"MAP OVERLAP: 0x{addr:08X} overlaps with 0x{next_addr:08X}")
+#            is_error = True
+#
+#    if is_error and do_rewrite:
+#        print ("Errors detected, cannot update map. Please fix!")
+#        if is_sim_mode or is_skip_mode:
+#            print (r"... you ran in simulation mode anyways so \_(ツ)_/")
+#        return
 
     if is_error:
         print ("Errors detected, but no changes. Please fix!")

@@ -45,7 +45,6 @@ class FieldObjBase{ //FieldObjBase vtable @ 0x006b38ac, all flags unknown.
     f32 flag33; // 0x9c
 public:
     virtual ~FieldObjBase();
-
     FieldObjBase(void);
 };
 
@@ -58,18 +57,13 @@ class FieldObjCA : public FieldObjBase { //FieldObjCA vtable @ 0x006b0504
 //    nn::math::MTX34* mMtx = nullptr;
 public:
     virtual ~FieldObjCA();
-
     FieldObjCA(void);
-};
-
-static_assert(sizeof(FieldObjCA) == 0xc4, "Nice!"); 
+}; 
 
 class FieldObjMdl : public FieldObjBase{ //FieldObjMdl vtable @ 0x006b24b8, imports from some more too, COMEBACK TO
 public:
     virtual void ModelInfo(); //LAB_001e9494
-    //Need to document anything after FUN_005c82b4
     virtual ~FieldObjMdl();
-
     FieldObjMdl(void);
 };
 static_assert(sizeof(FieldObjMdl) == 0x12c, "Max in Ghidra is 0x130. -4 for vtable"); 

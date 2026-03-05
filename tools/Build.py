@@ -95,6 +95,7 @@ def main() -> None:
     if os.path.exists(f'compile_commands.json'):
         shutil.copyfile(f'compile_commands.json', '../compile_commands.json')
 
+    #busted
     #status("Generating objdiff.json ...")
     #genObjdiff()
 

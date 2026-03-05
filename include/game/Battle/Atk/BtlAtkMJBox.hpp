@@ -4,5 +4,5 @@
 #include "BtlObjBase.hpp"
 #include "BtlHandleTmpl.hpp"
 #include "BTLMJ/StompTask.hpp"
-#include "Move/MoveF.hpp"
-#include "Move/MoveWorkF.hpp"
+#include "Move.hpp"
+#include "MoveWork.hpp"

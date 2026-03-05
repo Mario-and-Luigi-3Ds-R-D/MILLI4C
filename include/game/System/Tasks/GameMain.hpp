@@ -2,7 +2,9 @@
 
 //wowsers also a big one
 
-#include "types.hpp"
+#include "game/types.hpp"
+#include "Ctr/CtrModule.hpp"
+#include "Boot/BtlBootInfo.hpp"
 #include "TaskMainBase.hpp"
 
 enum class GAME_MODE : u32{
@@ -20,5 +22,16 @@ enum class GAME_MODE : u32{
     STAFFROLL = 11,
 };
 
-class GameMain{
+class GameMain : public TaskMainBase{ //0x4180 large, big
+    int flag1; // 0x10
+public:
+    virtual ~GameMain();
+
+    GameMain();
+    GameMain* gameModeOld(void);
+    Unknown_x1 back(void); 
+    void change(GAME_MODE mode);
+    void init(CtrModule* module);
+    void changeBgm(BtlBootInfo*);
 };
+

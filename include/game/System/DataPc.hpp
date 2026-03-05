@@ -2,9 +2,12 @@
 
 #include "game/types.hpp"
 
-class DataPc {
-struct ParamAddType{ //placeholder
-    u32 plcehldr;
+class DataPc{
 public:
-};
+    class ParamAddType{
+    public:
+}; // ParamAddType
+}; // DataPc
+
+class PcStatusType{
 };

@@ -1,0 +1,40 @@
+#pragma once
+
+#include "game/types.hpp"
+
+class MoveVBase{
+    s32 flag1; // 0x4
+    s32 flag2; // 0x8
+    s32 flag3; // 0xc
+    s32 flag4; // 0x10
+    s32 flag5; // 0x14
+    s32 flag6; // 0x18
+    s32 flag7; // 0x1c
+    s32 flag8; // 0x20
+    s32 flag9; // 0x24
+    s32 flag10; // 0x28
+public:
+    virtual ~MoveVBase();
+
+    MoveVBase(); //VEC3
+    MoveVBase(void);
+
+    void moveCosAbs(); //Vec3 const&, and float, 0x005a1e58
+    MoveVBase* moveCosAbs(int); //Vec3 const&, float, 0x005a1ee8
+    void moveCosSin(int); //Vec3 const&, float
+    void moveFrmAbs(); //Vec3 const&, float, 0x005a1fc8
+    MoveVBase* moveFrmAbs(int); //Vec3 const&, float, 0x005a2074
+    void moveSinAbs(); //Vec3 const&, float, 0x005a21cc
+    MoveVBase* moveSinAbs(int); //Vec3 const&, float, 0x005a2298
+    MoveVBase* moveSin2Abs(int); //nn::math::VEC3 const&,float,float,float
+    void moveCosSinAbs(); //Vec3 const&, float, 0x005a2384
+    MoveVBase* moveCosSinAbs(int); //Vec3 const&, float, 0x005a2414
+    MoveVBase* func(float);
+    MoveVBase* move(int); //Vec const&, float, 0x005a25d0
+    MoveVBase* stop(int); // 0x005a2640
+    MoveVBase* stop(void *); // 0x005a26d0
+    void wait(int, float); 
+    void jumpFA(int,float,float,float); // Vec3 const&
+    MoveVBase* jumpFS(int,float,float,float); // Vec3 const&
+    void jumpFT(int,float,float,float); // Vec3 const&
+};

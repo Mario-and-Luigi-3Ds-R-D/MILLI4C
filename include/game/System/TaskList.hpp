@@ -3,8 +3,8 @@
 #include "game/types.hpp"
 
 class TaskList{
-    int unk1;
-    int unk2;
+    int flag1; // 0x4
+    int flag2; // 0x8
 public: 
     virtual ~TaskList();
 

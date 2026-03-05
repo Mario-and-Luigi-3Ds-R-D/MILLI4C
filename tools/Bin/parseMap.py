@@ -1,7 +1,7 @@
 # Made by user Moddimation, WIP on Building System.
 
-import csv
 import sys
+import csv
 from Settings import *
 
 def read_sym_file():

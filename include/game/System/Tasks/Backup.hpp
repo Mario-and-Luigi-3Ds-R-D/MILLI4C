@@ -1,13 +1,14 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 #include "Ctr/File/CtrFS.hpp"
+#include "Ctr/CtrSave.hpp"
 #include "Message.hpp"
 
 class CtrFS;
 class Message;
 
-class Backup{
+class Backup : public CtrSaveFile{
 public:
     virtual ~Backup();
 

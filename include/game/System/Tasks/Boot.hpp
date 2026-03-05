@@ -2,16 +2,16 @@
 
 #include "game/types.hpp"
 #include "Ctr/File/CtrFS.hpp"
+#include "TaskMainBase.hpp"
 
-class Boot{
-//ctrfs at 0x4 here and others defined in Boot:~Boot
+class Boot : public TaskMainBase{
+    int flag1; // 0xc
 public:
     virtual ~Boot();
 
     Boot(void); //void status unknown
     void initMessage(); //unk
-    int StartBoot(); //unk
+    int StartBoot(); // Return could be Boot*
     void startCtr(); //holy GUAC theres a lot
     void term(); //unk
-    void Update(); //void status unknown
 };

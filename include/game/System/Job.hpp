@@ -1,17 +1,25 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class Job{
-    int* unk_0x4; //0x4
-    int* unk_0x8; //Job::end, 0x8
-    u8 unk_0xc[4]; //0xc
 public:
+    Job* flag0; //0x4
+    Job* flag1; //Job::end, 0x8
+    u8 unk_0xc[4]; //0xc
 
     int* end(int* unk_0x8);
 };
 
-class JobMan : public Job{
+class JobMan{ // could inherit from Job, you should get one
+    Job* flag1; // 0x4
+    Job* flag2; // 0x8
+    Job* flag3; // 0xc 
 public:
     virtual ~JobMan();
+
+    JobMan();
+    void jam(Job*);
+    void FUN_0050f398(Job*);
+    bool FUN_005eda38();
 };

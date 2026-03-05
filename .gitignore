@@ -1,7 +1,8 @@
 # Dev Things
 private/
 build/
-ori/
+
+# Nuh uh, not for public!
 data/US_1.0/code.bin
 data/Info/
-project/
+ori/

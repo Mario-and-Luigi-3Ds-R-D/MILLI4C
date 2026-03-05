@@ -12,3 +12,5 @@ public:
     void init();
 };
 
+class CtrNullNwAlc{
+};

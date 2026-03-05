@@ -1,0 +1,3 @@
+[submodule "library/LMS"]
+	path = library/LMS
+	url = https://github.com/Mario-and-Luigi-3Ds-R-D/LibMessageStudio
