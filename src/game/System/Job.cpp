@@ -14,5 +14,9 @@ bool Job::FUN_005e361c(){
     return false;
 }
 
-void Job::end(int*){
+bool Job::end(int isEnd, int end)
+{
+    int result = ((int (*)(Job*))(*(void***)this)[2])(this);
+    result &= end;
+    return result == isEnd;
 }

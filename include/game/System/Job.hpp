@@ -14,7 +14,7 @@ public:
     virtual void FUN_00485d2c();
     virtual void FUN_00485d30();
     virtual bool FUN_005e361c();
-    virtual void end(int*);
+    virtual bool end(int, int);
 };
 
 class JobMan{ // could inherit from Job, you should get one
