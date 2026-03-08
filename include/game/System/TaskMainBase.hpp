@@ -11,6 +11,6 @@ public:
     virtual ~TaskMainBase();
 
     TaskMainBase();
-    void restore(uint next, Task base){
-}
+    void FUN_0029f4f8();
+    void restore(); //TaskMan*, and Task*
 };

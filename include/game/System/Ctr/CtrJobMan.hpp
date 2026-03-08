@@ -3,7 +3,7 @@
 #include "game/types.hpp"
 #include "Ctr/CtrThread.hpp"
 //nn crit sec + light ev
-#include "Job.hpp"
+#include "System/Job.hpp"
 
 class CtrJobMan{
     s32 flag1; // 0x4

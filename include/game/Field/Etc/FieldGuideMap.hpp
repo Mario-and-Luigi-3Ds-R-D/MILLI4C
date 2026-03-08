@@ -14,3 +14,4 @@ public:
 
     FieldGuideMapButton(void);
 };
+static_assert(sizeof(FieldGuideMapButton) == 0x173, "Oh noes! BAD!");

@@ -12,3 +12,4 @@ public:
     void entry(Task * task);
 };
 
+extern TaskMan gTaskMainMan;

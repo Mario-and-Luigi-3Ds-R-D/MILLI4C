@@ -7,7 +7,7 @@
 #include "Boot/BtlBootInfo.hpp"
 #include "TaskMainBase.hpp"
 
-enum class GAME_MODE : u32{
+enum class GAME_MODE{
     REAL = 0,
     DREAM = 1,
     BATTLE_ENC = 2,

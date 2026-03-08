@@ -1,6 +1,7 @@
 #pragma once
 
 #include "game/types.hpp"
+//nn hid
 
 class CtrTp{
 public: 

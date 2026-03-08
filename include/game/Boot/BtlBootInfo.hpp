@@ -1,6 +1,6 @@
 #pragma once
 
-#include "types.hpp"
+#include "game/types.hpp"
 
 class BtlBootInfo{
     int unk_0x4;
@@ -10,3 +10,5 @@ public:
     BtlBootInfo();
     void reset(void);
 };
+
+extern BtlBootInfo gBtlBootInfo;

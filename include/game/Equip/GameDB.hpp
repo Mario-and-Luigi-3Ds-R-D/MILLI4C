@@ -3,7 +3,7 @@
 #include "game/types.hpp"
 
 class GameDB{
-    enum ItemMsgType : u8
+    enum ItemMsgType
     {
         TYPE1,
         TYPE2,

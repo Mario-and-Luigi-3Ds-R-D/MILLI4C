@@ -20,21 +20,21 @@ public:
     MoveVBase(void);
 
     void moveCosAbs(); //Vec3 const&, and float, 0x005a1e58
-    MoveVBase* moveCosAbs(int); //Vec3 const&, float, 0x005a1ee8
+    void moveCosAbs(int); //Vec3 const&, float, 0x005a1ee8
     void moveCosSin(int); //Vec3 const&, float
     void moveFrmAbs(); //Vec3 const&, float, 0x005a1fc8
-    MoveVBase* moveFrmAbs(int); //Vec3 const&, float, 0x005a2074
+    void moveFrmAbs(int); //Vec3 const&, float, 0x005a2074
     void moveSinAbs(); //Vec3 const&, float, 0x005a21cc
-    MoveVBase* moveSinAbs(int); //Vec3 const&, float, 0x005a2298
-    MoveVBase* moveSin2Abs(int); //nn::math::VEC3 const&,float,float,float
+    void moveSinAbs(int); //Vec3 const&, float, 0x005a2298
+    void moveSin2Abs(int); //nn::math::VEC3 const&,float,float,float
     void moveCosSinAbs(); //Vec3 const&, float, 0x005a2384
-    MoveVBase* moveCosSinAbs(int); //Vec3 const&, float, 0x005a2414
+    void moveCosSinAbs(int); //Vec3 const&, float, 0x005a2414
     MoveVBase* func(float);
-    MoveVBase* move(int); //Vec const&, float, 0x005a25d0
-    MoveVBase* stop(int); // 0x005a2640
-    MoveVBase* stop(void *); // 0x005a26d0
+    void move(int); //Vec const&, float, 0x005a25d0
+    void stop(int); // 0x005a2640
+    void stop(void *); // 0x005a26d0
     void wait(int, float); 
     void jumpFA(int,float,float,float); // Vec3 const&
-    MoveVBase* jumpFS(int,float,float,float); // Vec3 const&
+    void jumpFS(int,float,float,float); // Vec3 const&
     void jumpFT(int,float,float,float); // Vec3 const&
 };

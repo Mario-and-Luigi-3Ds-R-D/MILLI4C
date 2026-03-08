@@ -21,3 +21,4 @@ public: //Placeholder Labels.
     void setPos(); //nn::math::VEC3 const*,nn::math::VEC3 const*
     void update(void);
 };
+static_assert(sizeof(FieldCamera) == 0x28, "Oh noes! BAD!"); //prob more

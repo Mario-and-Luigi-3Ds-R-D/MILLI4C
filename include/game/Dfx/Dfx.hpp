@@ -6,3 +6,4 @@ class Dfx{
 public:
 
 };
+static_assert(sizeof(Dfx) == 0x9c, "Oh noes! BAD!");

@@ -11,8 +11,9 @@ public:
     void draw(CellAnime* );
     void init(CellAnime* );
 };
+static_assert(sizeof(FieldCA) == 0x118, "Oh noes! BAD!");
 
-class FieldCAData{ //FieldCAData, doesnt exist?
+class FieldCAData{ //FieldCAData, no vfunc
 };
 
 class FieldCAInfo{ //FieldCAInfo, Empty vtable

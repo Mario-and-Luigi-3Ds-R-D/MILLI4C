@@ -20,6 +20,7 @@ public:
 
     JobMan();
     void jam(Job*);
-    void FUN_0050f398(Job*);
+    void enqueue(Job*);
     bool FUN_005eda38();
+    bool isBusy(Job*);
 };

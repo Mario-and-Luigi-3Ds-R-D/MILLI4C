@@ -16,3 +16,4 @@ public:
     void clear(void);
     void term(void);
 };
+static_assert(sizeof(CmdCacheMulti) == 0x94, "Oh noes! BAD!");

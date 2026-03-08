@@ -5,9 +5,6 @@
 #include "Ctr/CtrSave.hpp"
 #include "Message.hpp"
 
-class CtrFS;
-class Message;
-
 class Backup : public CtrSaveFile{
 public:
     virtual ~Backup();

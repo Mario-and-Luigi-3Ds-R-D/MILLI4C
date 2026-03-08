@@ -12,6 +12,8 @@ public:
     BtlObjBase();
 };
 
+static_assert(sizeof(BtlObjBase) == 0x114, "Oh noes! BAD!");
+
 class BtlObjMove{
     u8 unk[0x3ac];
 public:
@@ -19,8 +21,11 @@ public:
 
     BtlObjMove();
 };
+static_assert(sizeof(BtlObjMove) == 0x3b4, "Oh noes! BAD!");
 
 class BtlObjBaseBase{
     u8 pad[64];
 public:
+    virtual ~BtlObjBaseBase();
 };
+static_assert(sizeof(BtlObjBaseBase) == 0x104, "Oh noes! BAD!");

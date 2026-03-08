@@ -6,7 +6,7 @@ class ScriptCode;
 class ScriptUnit;
 
 class ScriptSystem{
-    int mStart; // 0x4
+       int* mStart; // 0x4
 public:
     virtual ~ScriptSystem();
 

@@ -17,6 +17,6 @@ public:
     void getStatusReg(LocalEvent*, int);
     void setStatusReg(LocalEvent*, int, float);
     int execLocalEvent(LocalEvent*);
-    Unknown_x1 init(void const*, float*, uchar);
+    void init(void const*, float*, uchar);
     void execEx(LocalEvent*, ScriptCode*);
 };

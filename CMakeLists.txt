@@ -6,8 +6,8 @@ set_toolchain()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-#add_subdirectory(lib/sead)
-#add_subdirectory(lib/NintendoWare)
+#add_subdirectory(library/LMS)
+#add_subdirectory(library/NintendoWare)
 
 project(MILLI4C C CXX ASM)
 
@@ -25,16 +25,18 @@ add_library(crt0 OBJECT src/crt0.cpp)
 add_executable(MILLI4C $<TARGET_OBJECTS:crt0> ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL})
 
 #target_link_libraries(MILLI4C PUBLIC CTRSDK-4_2_5)
+#target_link_libraries(MILLI4C PUBLIC LMS)
 #target_link_libraries(MILLI4C PUBLIC NintendoWare)
 
 #target_link_options(MILLI4C PRIVATE
 #    --entry=__ctr_start --startup=__ctr_start
 #    --library_type=standardlib --no_remove --datacompressor=off
 #    --legacyalign --tailreorder --inline
-#    --verbose --mangled --symbols --paged
+#    --verbose --symbols --paged --mangled
 #    --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
 #    )
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
 target_include_directories(MILLI4C PUBLIC library/rsLib/include)
+#target_include_directories(MILLI4C PUBLIC library/LMS/include)
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/nn/include)

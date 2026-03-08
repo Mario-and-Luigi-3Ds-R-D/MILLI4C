@@ -23,5 +23,11 @@ def getElfName():
 def getElfPath():
     return str(Path(getBuildPath()) / getElfName())
 
+#SplitSys
+def getMiniSplitPath():
+    return str(Path(getProjDir()) / "ori" / "ASM-TEST")
+def getSplitOutput():
+    return str(Path(getBuildPath()) / "Split")
+
 def getPresetId():
     return 218

@@ -3,7 +3,7 @@
 
 #include "FieldSrtBase.hpp"
 #include "FieldCA.hpp"
-#include "System/Move/MoveFBase.hpp"
+#include "System/MoveBase.hpp"
 #include "types.hpp"
 
 class FieldIcon : public FieldCA{
@@ -12,6 +12,8 @@ public:
 
     FieldIcon(void);
 };
+static_assert(sizeof(FieldIcon) == 0x, "Oh noes! BAD!");
 
 class FieldActionIcon{
 };
+//static_assert(sizeof() == 0x, "Oh noes! BAD!");

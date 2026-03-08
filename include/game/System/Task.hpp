@@ -10,4 +10,7 @@ public:
 
     virtual void execute();
     virtual ~Task();
+
+    Task(void);
+    void update();
 };

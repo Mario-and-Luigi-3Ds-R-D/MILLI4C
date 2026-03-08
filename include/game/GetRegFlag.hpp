@@ -1,1 +1,0 @@
-// No Namespace only base class.
