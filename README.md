@@ -41,8 +41,6 @@ As of currently, I do not know if linux is supported yet.
 
 # How to help
 
-Currently, I'm gonna be honest its a personal project with little outside involvement as of so far. So, feel free to hit me up in case you/anybody wants to help out, please!
-
-I'm going at a snails pace but it'll work out by 2050.
+For anyone willing to help, please do so! This project is moving at a snails pace currently since, well, I'm in the setup phase kind-of when it comes to getting this up, so all help is appreciated if anyone wants to pitch in.
 
 Join the discord! https://discord.gg/dQ4xEerM9m
