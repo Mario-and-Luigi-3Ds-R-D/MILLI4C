@@ -2,25 +2,33 @@
 
 #include "types.hpp"
 
+
 class Job{
 public:
     Job* flag0; //0x4
     Job* flag1; //Job::end, 0x8
     u8 unk_0xc[4]; //0xc
 
-    int* end(int* unk_0x8);
+    virtual ~Job();
+
+    virtual void FUN_00485d2c();
+    virtual void FUN_00485d30();
+    virtual bool FUN_005e361c();
+    virtual void end(int*);
 };
 
 class JobMan{ // could inherit from Job, you should get one
-    Job* flag1; // 0x4
+    Job* mIsDone; // 0x4
     Job* flag2; // 0x8
     Job* flag3; // 0xc 
 public:
-    virtual ~JobMan();
-
     JobMan();
-    void jam(Job*);
-    void enqueue(Job*);
-    bool FUN_005eda38();
-    bool isBusy(Job*);
+    virtual void enqueue(Job*);
+    virtual void jam(Job*);
+    virtual bool release(Job*);
+    virtual Job* releaseDone(Job*, Job*);
+    virtual void term(Job*);
+    virtual bool isBusy(Job*);
+    virtual bool FUN_005eda38();
+    virtual ~JobMan();
 };

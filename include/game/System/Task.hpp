@@ -8,9 +8,9 @@ class Task{
 public:
     TaskMan* mTaskManager; //0x4
 
-    virtual void execute();
     virtual ~Task();
+    virtual void update();
 
+    void term(Task*);
     Task(void);
-    void update();
 };

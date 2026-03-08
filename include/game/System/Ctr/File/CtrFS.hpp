@@ -1,11 +1,11 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
-#include "Ctr/File/CtrFEnd.hpp"
-#include "Ctr/CtrJobMan.hpp"
-#include "Ctr/CtrSave.hpp"
-#include "MemAlcBase.hpp"
+#include "System/Ctr/File/CtrFEnd.hpp"
+#include "System/Ctr/CtrJobMan.hpp"
+#include "System/Ctr/CtrSave.hpp"
+#include "System/Memory/MemAlcBase.hpp"
 
 class CtrFS{
     int flag1; // 0x4

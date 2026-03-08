@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class CtrThread{
     s32 mOsThead; // 0x4, temp until nn::os::sdk

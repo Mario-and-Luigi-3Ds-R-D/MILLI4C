@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class CtrFEnd{
     int flag1; // 0x4 signal light event

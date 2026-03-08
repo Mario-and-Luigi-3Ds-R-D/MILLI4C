@@ -1,17 +1,17 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class ScriptCode;
 class ScriptUnit;
 
 class ScriptSystem{
-       int* mStart; // 0x4
+    int* mStart; // 0x4
 public:
     virtual ~ScriptSystem();
+    virtual void init(void const*);
 
     ScriptSystem(void);
-    void* init(void const*);
     void rewind(ScriptUnit *,ScriptCode const*);
 };
 

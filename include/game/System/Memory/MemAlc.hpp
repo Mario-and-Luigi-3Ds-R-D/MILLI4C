@@ -1,8 +1,7 @@
 //has _vptr and also maybe contains/might be used for MemAlcB, and F
 #pragma once
 
-#include "game/types.hpp"
-#include "MemAlcBase.hpp"
+#include "types.hpp"
 
 class MemAlc{
     u64 flag1; // 0x0, wrong?

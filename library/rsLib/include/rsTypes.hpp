@@ -20,10 +20,6 @@ typedef float f32;
 typedef double f64;
 typedef unsigned short ushort;
 typedef unsigned char uchar;
-//unknown
-typedef u8 Unknown_x1;
-typedef short Unknown_x2;
-typedef int Unknown_x4;
 //arm shit
 #ifdef __cplusplus
 

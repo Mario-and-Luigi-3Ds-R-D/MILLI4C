@@ -1,0 +1,84 @@
+#include <System/Job.hpp>
+
+void JobMan::jam(Job* job){
+    job->flag0 = this->mIsDone;
+    this->mIsDone = job;
+    if(!this->flag2){
+        this->flag2 = job;
+    }
+    return;
+}
+
+bool JobMan::release(Job* param_2){
+}
+
+Job* JobMan::releaseDone(Job* param_2, Job* param_3) {
+    param_2 = this->mIsDone;
+    param_3 = param_2->flag0;
+    this->mIsDone = param_3;
+
+    if(param_3 == 0){
+        param_3 = this->mIsDone;
+        param_3 = 0;
+        this->flag2 = 0;
+    }
+    else{
+        this->mIsDone = param_3;
+    }
+    return ((Job* (*)(Job*))(*(void***)param_2)[1])(param_2);
+}
+
+void JobMan::term(Job* param_2) {
+    if(this->mIsDone == 0)
+        return;
+    do
+    {
+        ((void (*)(JobMan*))(*(void***)this)[3])(this);
+    }
+    while (mIsDone != 0);
+}
+
+bool JobMan::isBusy(Job *param_2) {
+    Job *JobDone = this->mIsDone;
+
+    if (JobDone == 0)
+        goto endjob;
+    goto loop;
+loop:
+    if (JobDone != param_2)
+        goto loop_back;
+    return 1;
+loop_back:
+    JobDone = JobDone->flag1;
+    if (JobDone != 0)
+        goto loop;
+endjob:
+    return 0;
+}
+
+bool JobMan::FUN_005eda38() {
+    return this->mIsDone !=0;
+}
+
+void JobMan::enqueue(Job* param_2) {
+    
+    if (this->mIsDone){
+        this->flag2->flag0 = param_2;
+    }
+    else{
+        this->mIsDone = param_2;
+    }
+    param_2->flag0 = 0;
+    this->flag2 = param_2;
+    return;
+}
+
+JobMan::~JobMan() {
+    JobMan* self = this;
+    if (self->mIsDone != 0)
+    {
+        do {
+            ((void (*)(JobMan*))(*(void***)self)[3])(self);
+        } while (self->mIsDone != 0);
+    }
+}

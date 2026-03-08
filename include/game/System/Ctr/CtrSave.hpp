@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 //nn::fs::IPositionAble
 
 class CtrSaveFile{ // Most likely incorrect

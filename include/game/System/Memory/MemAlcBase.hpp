@@ -1,7 +1,7 @@
 #pragma once
 
-#include "game/types.hpp"
-#include "MemAlc.hpp"
+#include "types.hpp"
+#include "System/Memory/MemAlc.hpp"
 
 class MemAlcBase{
 public:

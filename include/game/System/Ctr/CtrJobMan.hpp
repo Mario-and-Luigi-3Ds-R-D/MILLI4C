@@ -1,7 +1,7 @@
 #pragma once
 
-#include "game/types.hpp"
-#include "Ctr/CtrThread.hpp"
+#include "types.hpp"
+#include "System/Ctr/CtrThread.hpp"
 //nn crit sec + light ev
 #include "System/Job.hpp"
 
@@ -26,5 +26,5 @@ public:
     void isBusy(Job *);
     void enqueue(Job *);
     void release(Job *);
-    void release(Job *);
+    void releaseDone(Job *);
 };
