@@ -2,7 +2,6 @@
 private/
 build/
 library/adsl
-library/NintendoWare
 
 # Nuh uh, not for public!
 data/US_1.0/code.bin

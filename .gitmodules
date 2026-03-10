@@ -1,3 +1,9 @@
 [submodule "library/LMS"]
 	path = library/LMS
 	url = https://github.com/Mario-and-Luigi-3Ds-R-D/LibMessageStudio
+[submodule "library/CTRSDK-4_2_5"]
+	path = library/CTRSDK-4_2_5
+	url = https://github.com/Mario-and-Luigi-3Ds-R-D/CTRSDK-4_2_5
+[submodule "library/NintendoWare"]
+	path = library/NintendoWare
+	url = https://github.com/Mario-and-Luigi-3Ds-R-D/NintendoWareRs

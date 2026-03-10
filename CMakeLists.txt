@@ -7,6 +7,7 @@ set_toolchain()
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #add_subdirectory(library/LMS)
+#add_subdirectory(library/CTRSDK-4_2_5)
 #add_subdirectory(library/NintendoWare)
 
 project(MILLI4C C CXX ASM)

@@ -23,7 +23,7 @@ else()
 endif()
 
 
-set(_OPT_TYPE --preinclude=${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/nn/include/types.h)
+set(_OPT_TYPE --preinclude=${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include/nn/types.h)
 
 add_link_options(--arm_only --cpu=MPCore --fpu=VFPv2 --vfemode=force --diag_suppress=L6314W,L6329W ${_OPT_DIAG})
 
