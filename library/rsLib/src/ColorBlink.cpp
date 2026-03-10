@@ -2,13 +2,10 @@
 
 #include "ColorBlink.hpp"
 
-extern "C" void Frm_play();//(short, int);
-extern "C" void Frm_setSpd();
-
+//allnon match
 namespace rsLib{
 ColorBlink::ColorBlink(){
     this->flag2 = 0;
-    Frm_play();
     this->flag1 = 0;
     return;
     }

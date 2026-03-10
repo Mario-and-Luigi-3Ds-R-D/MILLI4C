@@ -4,9 +4,9 @@
 
 class Task;
 class TaskMan{
+public:
     Task* currentTask; //0x00, I think?
     Task* mTask; //0x4
-public:
     TaskMan();
 
     void entry(Task * task);

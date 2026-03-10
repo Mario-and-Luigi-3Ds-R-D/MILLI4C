@@ -59,6 +59,9 @@ void JobMan::term(Job* param_2) {
     while (mIsDone != 0);
 }
 
+// My precious hack.. my precious....
+//
+// This is fucking bad, but shit it works.
 bool JobMan::isBusy(Job *param_2) {
     Job *JobDone = this->mIsDone;
 

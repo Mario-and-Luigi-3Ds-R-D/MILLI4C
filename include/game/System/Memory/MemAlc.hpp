@@ -4,13 +4,12 @@
 #include "types.hpp"
 
 class MemAlc{
-    u64 flag1; // 0x0, wrong?
+    u64 flag1; // 0x0
     u32 mCore; // 0x8
-    void* mCurrentCore; // 0xc, guess
-    uint* mCoreNumber; // 0x10
-    s32 mCriticalSect; // 0x14, nn::os::critsection
-    s32 flag5; // 0x18
-    s32 flag6; // 0x1c
+    s16 mCurrentCore; // 0xc, guess
+    uint mCoreNumber; // 0x10
+    u32 mCriticalSect; // 0x14, nn::os::critsection
+    u32 flag5; // 0x18
 public:
     virtual ~MemAlc();
 

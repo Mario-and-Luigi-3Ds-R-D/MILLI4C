@@ -5,11 +5,11 @@
 #include "System/Task.hpp"
 
 class TaskMainBase : public Task{
-    uint nextTask; // 0x8
 public:
+    Task* nextTask; // 0x8
     virtual ~TaskMainBase();
 
     TaskMainBase();
     virtual void vt_10();
-    void restore(); //TaskMan*, and Task*
+    __attribute__((noinline)) void restore(TaskMainBase* thisTask); //TaskMan*, and Task*
 };

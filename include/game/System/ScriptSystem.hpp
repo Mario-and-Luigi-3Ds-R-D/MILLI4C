@@ -16,8 +16,12 @@ public:
 };
 
 class ScriptUnit{
+public:
+    int mUnitValue;
 };
 
 class ScriptCode{
-int mUnk1;
+public: 
+ushort mCodeNum;
+uint mCodeUnit;
 };
