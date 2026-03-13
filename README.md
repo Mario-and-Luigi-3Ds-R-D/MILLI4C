@@ -5,7 +5,7 @@ This is Mario & Luigi Dream Team US 1.0 decomp that will most likely be finished
 This is currently targetting the 1.0 US Build of the game but will soon expand to other versions.
 Currently this project is going through a "setup" phase, meaning it may take while for us to get some actual work done.
 
-This project is will be going on a small hiatus to get some fundamentals figured out first, until then, stay tuned!
+This project will be going on a "Behind the scenes dev phase" for a bit, since I'm gonna be honest I barely know a LICK of ARM ASM. Work will be done, yet not released to the public.
 
 # The Goal
 
@@ -16,6 +16,7 @@ I myself don't care for a PC Port of a 3Ds game. But, once finished I will not c
 # Building the code.bin
 
 Currently, the system for building the code.bin is using the tools/Build.py file. (This method is temporary, borrowed from User Moddimations SM3DL Decomp Project) 
+
 **Windows**
 
 1) The User will *need* ARMCC_894, and DevkitARM

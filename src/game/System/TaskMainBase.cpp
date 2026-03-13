@@ -3,25 +3,23 @@
 #include <System/TaskMan.hpp>
 
 //Non-Matching
-TaskMainBase::~TaskMainBase(){
-    void* param_2;
-
-    this->restore(this);
-    this->term(this, param_2);
+TaskMainBase::~TaskMainBase(void) {
+    TaskMainBase::restore();
+    Task::term();
 }
 
 void TaskMainBase::vt_10(){
     return;
 }
 
-void TaskMainBase::restore(TaskMainBase* thisTask) {
-    TaskMan* manager = thisTask->mTaskManager;
-    Task* next = thisTask->nextTask;
-    thisTask->nextTask = 0;
+void TaskMainBase::restore(void){
+    TaskMan* manager = this->mTaskManager;
+    Task* next = this->nextTask;
+    this->nextTask = 0;
     
     if (manager != 0) {
         manager->currentTask = 0;
-        thisTask->mTaskManager = 0;
+        this->mTaskManager = 0;
     }
     if (next != 0) {
         manager->currentTask = next;

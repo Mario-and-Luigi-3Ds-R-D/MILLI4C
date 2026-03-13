@@ -1,6 +1,7 @@
 #pragma once
 
 #include "game/types.hpp"
+#include "nn/math/math_Vec3.h"
 
 class MoveVBase{
     s32 flag1; // 0x4
@@ -16,11 +17,11 @@ class MoveVBase{
 public:
     virtual ~MoveVBase();
 
-    MoveVBase(); //VEC3
+    MoveVBase(nn::math::VEC3);
     MoveVBase(void);
 
-    void moveCosAbs(); //Vec3 const&, and float, 0x005a1e58
-    void moveCosAbs(int); //Vec3 const&, float, 0x005a1ee8
+    void moveCosAbs(nn::math::VEC3 const&, float); // 0x005a1e58
+    void moveCosAbs(int, nn::math::VEC3 const&, float); // 0x005a1ee8
     void moveCosSin(int); //Vec3 const&, float
     void moveFrmAbs(); //Vec3 const&, float, 0x005a1fc8
     void moveFrmAbs(int); //Vec3 const&, float, 0x005a2074

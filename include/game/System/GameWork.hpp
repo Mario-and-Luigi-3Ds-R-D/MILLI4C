@@ -1,22 +1,24 @@
 #pragma once
 
-#include "DataPc.hpp"
-#include "game/types.hpp"
+#include "Equip/DataPc.hpp"
+#include "types.hpp"
 
 class GameWork{
+    
 public:
-    GameWork(void);
-    void initGameWork();
-    void updatePlayTime();
-    void startPlayTime();
-    void UpdatePcStatuc(DataPc* status); //not a this call
+    void initGameWork(void);
+    void initializeRO(); //param_2, and param_3
+    void finalizeRO();
+    void updatePlayTime(void);
+    void startPlayTime(void);
+    void UpdatePcStatus(DataPc* status); //not a this call
     int addItem(ushort,char);
     void equipBadge(uchar,ushort);
     int addPcStatus(uchar,PcStatusType,DataPc::ParamAddType,int,bool);
     void getPlayTime(short *,short *,short *,short *);
     void onNewPuzzle(uchar);
     int ApplyPerCent(int,int);
-    uint getRealAreaNo(uchar);
+    uchar getRealAreaNo(uchar); // 0x005F0FD0
     void onNewColosseum(uchar);
     void putBadgeBitFlag(ushort);
     int existKoopaCastle(void);
@@ -31,7 +33,7 @@ public:
     void isHardMode();
     void getEquipMax();
     bool isNewPuzzle(uchar);
-    GameWork* getRealAreaNo(void);
+    GameWork* getRealAreaNo(); // 0x0058690
     void getUseItemMax();
     int isClearPuzzle(uchar);
     void getEquipStatus(DataPc *,uchar,ushort,uchar);

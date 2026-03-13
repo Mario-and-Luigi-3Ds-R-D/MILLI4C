@@ -106,3 +106,21 @@ JobMan::~JobMan() {
         } while (self->mIsDone != 0);
     }
 }
+
+// Was gonna hack this one, but I used IDA no stinky hacks here, folks!
+
+void JobMan::cancel(Job* param_2, Job* param_3) {
+    Job* param_4 = param_2->flag0;
+    
+    if(param_3){
+        param_3->flag0 = param_4;
+        if(!param_4)
+            this->flag2 = param_3;
+    }
+    else{
+        this->mIsDone = param_4;
+        if(!param_4)
+            this->flag2 = 0;
+    }
+    param_2->FUN_00485d30();
+}

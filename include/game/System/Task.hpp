@@ -11,6 +11,6 @@ public:
     virtual ~Task();
     virtual void update();
 
-    __attribute__((noinline)) void term(void*, void*);
+    __attribute__((noinline)) void term(void);
     Task(void);
 };

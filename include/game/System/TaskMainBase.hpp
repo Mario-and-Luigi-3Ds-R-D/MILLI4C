@@ -11,5 +11,5 @@ public:
 
     TaskMainBase();
     virtual void vt_10();
-    __attribute__((noinline)) void restore(TaskMainBase* thisTask); //TaskMan*, and Task*
+    __attribute__((noinline)) void restore(void); //TaskMan*, and Task*
 };

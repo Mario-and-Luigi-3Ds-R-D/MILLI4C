@@ -1,4 +1,5 @@
 #include <System/ScriptSystem.hpp>
+extern const unsigned char unk_658108[];
 
 //extern const unsigned char unk_658108{
 //};
@@ -12,45 +13,41 @@ ScriptSystem::~ScriptSystem(){
 
 void ScriptSystem::init(const void*){
     int* param_2;
-    this->mStart = param_2;
+    this->mStart = (int)param_2;
     return;
 }
+
 //NON-MATCHING
 
-/*void ScriptSystem::rewind(ScriptUnit* unit, const ScriptCode* code) { 
-    u32 acc = 6;
-    ushort param_1 = code->mCodeNum;
-    uchar* param_2 = (unsigned char*)this->mStart; 
-    uchar* param_3 = param_2 + (param_1 << 4); //r4
-    char header = param_3[0];
-    u32 count = header & 0x7F;
-    {
-        count++;
-    }
-    if ((int)count <= 0){ 
-        goto update;
-    }
-    
-    const uchar* lookup = unk_658108; 
-    u16 mask = code->mCodeUnit;
-    uint i = 0; 
-    
-    do {u32 bit = (mask >> i) & 1;
-        if (bit){ 
-            acc += 2;
-        }
+int ScriptSystem::rewind(ScriptUnit* unit, const ScriptCode* code){
+}
 
-        else{ 
-            u32 temp = i + (i >> 31); 
-            uchar* byte_ptr = param_3 + (temp >> 1); 
-            u64 shift = ((i << 31) >> 29); 
-            uchar b = byte_ptr[1]; 
-            uchar nibble = (b >> shift) & 0xF; 
-            acc += lookup[nibble]; 
-            
-        } count--; 
-        i++; 
-       } while (count != 0); 
-update: 
-    unit->mUnitValue -= acc;
+// Hack coming up..? *Eyes emoji*
+//
+// Pain in the ass
+/*int ScriptSystem::rewind(ScriptUnit * pCurrentUnit,ScriptCode const* pCurrentCode){
+    int param_4 = this->mStart;
+    uint param_8; // r2
+    int param_r0 = 6;
+    int param_9; // r3
+    uchar* param_6 = (uchar*)param_4 + 16 * pCurrentCode->mCodeNum; // first add, param_6 could be r4
+    int param_7 = *param_6 & 0x7F; //
+
+    if((*param_6 & 0x80) != 0)
+        ++param_7;
+    
+    if(param_7 > 0){
+        param_8 = pCurrentCode->mCodeUnit;
+        param_9 = 0;
+        do{
+            if(((param_8 >> param_9) & 1) != 0)
+                param_9 += 2;
+            else
+                param_r0 += unk_658108[((uint) param_6[param_r0 / 2 + 1] >> ((4 * param_9) & 7)) & 0xF];
+                param_7--;
+                ++param_9;
+        } while(param_7);
+    }
+    pCurrentUnit->mUnitValue -= param_r0;
+    return param_r0;
 }*/

@@ -6,13 +6,13 @@ class ScriptCode;
 class ScriptUnit;
 
 class ScriptSystem{
-    int* mStart; // 0x4
+    int mStart; // 0x4
 public:
     virtual ~ScriptSystem();
     virtual void init(void const*);
 
     ScriptSystem(void);
-    void rewind(ScriptUnit *,ScriptCode const*);
+    int rewind(ScriptUnit *,ScriptCode const*);
 };
 
 class ScriptUnit{
