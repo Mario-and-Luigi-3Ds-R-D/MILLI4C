@@ -59,24 +59,21 @@ void JobMan::term(Job* param_2) {
     while (mIsDone != 0);
 }
 
-// My precious hack.. my precious....
-//
-// This is fucking bad, but shit it works.
-bool JobMan::isBusy(Job *param_2) {
+// DRATS! My Hack is gone, oh well...
+
+bool JobMan::isBusy(Job *param_2)
+{
     Job *JobDone = this->mIsDone;
 
-    if (JobDone == 0)
-        goto endjob;
-    goto loop;
-loop:
-    if (JobDone != param_2)
-        goto loop_back;
-    return 1;
-loop_back:
-    JobDone = JobDone->flag1;
-    if (JobDone != 0)
-        goto loop;
-endjob:
+    if (JobDone != NULL) {
+        do {
+            if (JobDone == param_2) {
+                return 1;
+            }
+            JobDone = JobDone->flag0;
+        } while (JobDone != 0);
+    }
+
     return 0;
 }
 
@@ -97,12 +94,16 @@ void JobMan::enqueue(Job* param_2) {
     return;
 }
 
+//  ((void (*)(JobMan*))(*(void***)this)[3])(this); 
+//
+// It looks ugly but.. it works so I'm keeping this around for now until solution.
+
 JobMan::~JobMan() {
     JobMan* self = this;
     if (self->mIsDone != 0)
     {
         do {
-            ((void (*)(JobMan*))(*(void***)self)[3])(self);
+            ((void (*)(JobMan*))(*(void***)this)[3])(this);
         } while (self->mIsDone != 0);
     }
 }

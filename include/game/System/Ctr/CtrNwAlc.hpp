@@ -3,20 +3,26 @@
 #include "game/types.hpp"
 
 class CtrNwAlc {
-    s32  mCurrentAlc;
+    s32  mSetAlc;
     u32  mOpt;
 public:
     virtual ~CtrNwAlc();
+    virtual void init(int, bool);
+    virtual void free(int);
 
+    void start(int, int);
     CtrNwAlc(void);
-    void init();
 };
 
 class CtrNullNwAlc{
 public:
-    virtual ~CtrNullNwAlc();
 
-    CtrNullNwAlc();
-    int init();
-    void FUN_0021f5e0();
+    virtual ~CtrNullNwAlc(){
+    }
+    virtual int init(){
+        return 0;
+    }
+    virtual void free(){
+    }
+
 };

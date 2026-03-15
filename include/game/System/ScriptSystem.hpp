@@ -13,6 +13,7 @@ public:
 
     ScriptSystem(void);
     int rewind(ScriptUnit *,ScriptCode const*);
+    static float loadArrayElement(ushort*, short);
 };
 
 class ScriptUnit{

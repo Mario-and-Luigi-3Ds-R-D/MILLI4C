@@ -4,16 +4,16 @@
 #include "nn/math/math_Vec3.h"
 
 class MoveVBase{
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
-    s32 flag3; // 0xc
-    s32 flag4; // 0x10
-    s32 flag5; // 0x14
-    s32 flag6; // 0x18
-    s32 flag7; // 0x1c
-    s32 flag8; // 0x20
-    s32 flag9; // 0x24
-    s32 flag10; // 0x28
+    f32 flag1; // 0x4
+    f32 flag2; // 0x8
+    f32 flag3; // 0xc
+    f32 flag4; // 0x10
+    f32 flag5; // 0x14
+    f32 flag6; // 0x18
+    f32 flag7; // 0x1c
+    f32 flag8; // 0x20
+    f32 flag9; // 0x24
+    f32 flag10; // 0x28
 public:
     virtual ~MoveVBase();
 

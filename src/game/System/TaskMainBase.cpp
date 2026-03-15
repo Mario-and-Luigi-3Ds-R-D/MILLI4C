@@ -4,6 +4,7 @@
 
 //Non-Matching
 TaskMainBase::~TaskMainBase(void) {
+    Task* param_2;
     TaskMainBase::restore();
     Task::term();
 }

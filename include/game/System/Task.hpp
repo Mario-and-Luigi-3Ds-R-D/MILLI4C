@@ -12,5 +12,4 @@ public:
     virtual void update();
 
     __attribute__((noinline)) void term(void);
-    Task(void);
 };
