@@ -1,2 +1,2 @@
-extern "C" void nnMain(){
-}
+//extern "C" void nnMain(){
+//}

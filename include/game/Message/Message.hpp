@@ -1,8 +1,8 @@
 #pragma once
 
-#include "MessageWriter.hpp"
-#include "MessageSimple.hpp"
-#include "game/types.hpp"
+#include "Message/MessageWriter.hpp"
+#include "Message/MessageSimple.hpp"
+#include "types.hpp"
 
 class Message{
 public:

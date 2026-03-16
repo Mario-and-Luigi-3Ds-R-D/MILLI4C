@@ -1,5 +1,5 @@
 #pragma once
 
-#include "MessageWriter.hpp"
+#include "types.hpp"
+#include "Message/MessageWriter.hpp"
 #include "Gfx/Prim.hpp"
-#include "game/types.hpp"

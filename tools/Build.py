@@ -11,6 +11,7 @@ import argparse
 
 from Bin.genLinkerScript import genLDScript
 from Bin.genObjdiffFile import genObjdiff
+from Bin.printReport import printBuildReport
 from Bin.utilsVer import *
 from Settings import *
 
@@ -98,6 +99,8 @@ def main() -> None:
     #busted
     #status("Generating objdiff.json ...")
     #genObjdiff()
+
+    printBuildReport()
 
 if __name__ == "__main__":
     main()

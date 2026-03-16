@@ -18,6 +18,8 @@ include_paths = [
 #    "library/NintendoWare/snd/include",
 #    "library/NintendoWare/sys/include",
 #    "library/NintendoWare/ut/include",
+    "library/LMS/include",
+    "library/LMS/src",
     "library/CTRSDK-4_2_5/include",
     "library/rsLib/include",
 ]

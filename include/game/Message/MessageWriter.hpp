@@ -1,3 +1,3 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"

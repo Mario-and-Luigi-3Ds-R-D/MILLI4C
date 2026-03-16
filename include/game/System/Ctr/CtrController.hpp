@@ -1,20 +1,21 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 //nn hid
 
 class CtrTp{
 public: 
     CtrTp(void);
+    void getTouchReader();
 };
 
 class CtrBtn{
 public:
-    CtrBtn(); //maybe
     void get(int);
-    void GetPadReader(); //bisdx ref
+    void getPadReader(); //bisdx ref
 };
 
 class CtrAcl{
 public:
+    void getAcelReader();
 };

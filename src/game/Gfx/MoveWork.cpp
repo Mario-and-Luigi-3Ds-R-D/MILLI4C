@@ -1,4 +1,4 @@
-#include <System/MoveWork.hpp>
+#include <Gfx/MoveWork.hpp>
 
 MoveWorkF::MoveWorkF(){
     this->flag2 = 0;

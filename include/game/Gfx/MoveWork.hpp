@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class MoveC{
 public:
@@ -36,16 +36,6 @@ class MoveV{
     u8 pad[36]; // 0x4
     f32 flag1; // 0x28
     f32 flag2; // 0x2c
-    MoveWorkV mWorkV; // 0x30
-public:
-    virtual ~MoveV<u1>();
-};
-
-template <class u2> // 2u
-class MoveV{
-    u8 pad[36]; // 0x4
-    s32 flag1; // 0x28
-    s32 flag2; // 0x2c
     MoveWorkV mWorkV; // 0x30
 public:
     virtual ~MoveV<u1>();

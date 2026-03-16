@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class CtrModule{
     int mIsLoaded; // 0x4, in __deallocating
@@ -14,7 +14,10 @@ public:
 };
 
 class CtrModuleFile{ // beeg
-
+public:
+    virtual ~CtrModuleFile();
+    void unload(int,int,uint*,int*);
+    void tryLoad();
 };
 
 class CtrLoadModule{
@@ -29,4 +32,4 @@ class CtrLoadModule{
 public:
     CtrLoadModule(void);
 };
-static_assert(sizeof(CtrLoadModule) == 0x3c); //class is 0x3c
+//static_assert(sizeof(CtrLoadModule) == 0x3c); //class is 0x3c

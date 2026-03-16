@@ -1,6 +1,6 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class CtrNwAlc {
     s32  mSetAlc;
@@ -10,19 +10,14 @@ public:
     virtual void init(int, bool);
     virtual void free(int);
 
-    void start(int, int);
+    static void start(int, int, int);
     CtrNwAlc(void);
 };
 
 class CtrNullNwAlc{
 public:
 
-    virtual ~CtrNullNwAlc(){
-    }
-    virtual int init(){
-        return 0;
-    }
-    virtual void free(){
-    }
-
+    virtual ~CtrNullNwAlc();
+    virtual int init();
+    virtual void free();
 };

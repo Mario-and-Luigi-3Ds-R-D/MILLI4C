@@ -1,4 +1,4 @@
 #pragma once
 
-#include "Memory/MemAlcBase.hpp"
-#include "game/types.hpp"
+#include "System/Memory/MemAlcBase.hpp"
+#include "types.hpp"

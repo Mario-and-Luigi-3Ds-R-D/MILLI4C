@@ -1,5 +1,5 @@
 Address,Rank,Size,Symbol,Tag
-0x00100000,U,000036,__ctr_start,gdef
+0x00000000,U,000036,__ctr_start,gdef
 0x00100024,U,000028,nninitRegion,
 0x00100048,U,000068,__c89vswprintf,
 0x00100090,U,000018,wcslen,
@@ -901,7 +901,7 @@ Address,Rank,Size,Symbol,Tag
 0x00123C70,U,000056,Frm::play,
 0x00123CA8,U,000064,,
 0x00123CE8,U,000076,Frm::setSpd,
-0x00123D34,O,000120,JobMan::release,
+0x00123D34,O,000120,JobMan::releaseDone,
 0x00123DD8,U,000268,,
 0x00123EE8,U,000008,,
 0x00123EF0,U,000364,,

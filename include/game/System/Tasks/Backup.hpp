@@ -1,9 +1,9 @@
 #pragma once
 
-#include "game/types.hpp"
-#include "Ctr/File/CtrFS.hpp"
-#include "Ctr/CtrSave.hpp"
-#include "Message.hpp"
+#include "types.hpp"
+#include "System/Ctr/File/CtrFS.hpp"
+#include "System/Ctr/CtrSave.hpp"
+#include "Message/Message.hpp"
 
 class Backup : public CtrSaveFile{
 public:

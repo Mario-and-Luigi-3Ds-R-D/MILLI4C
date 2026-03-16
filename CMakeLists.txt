@@ -12,6 +12,10 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 project(MILLI4C C CXX ASM)
 
+#target_link_libraries(MILLI4C PUBLIC CTRSDK-4_2_5)
+#target_link_libraries(MILLI4C PUBLIC LMS)
+#target_link_libraries(MILLI4C PUBLIC NintendoWare)
+
 set(CMAKE_EXECUTABLE_SUFFIX ".axf")
 
 __compiler_armcc(C)
@@ -22,22 +26,19 @@ file(GLOB_RECURSE SOURCES_GAME ${CMAKE_SOURCE_DIR}/src/game/*.c ${CMAKE_SOURCE_D
 file(GLOB_RECURSE SOURCES_RSLIB ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.c ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.cpp) 
 file(GLOB_RECURSE SOURCES_ADSL ${CMAKE_SOURCE_DIR}/library/adsl/src/*.c ${CMAKE_SOURCE_DIR}/library/adsl/src/*.cpp)
 
-add_library(crt0 OBJECT src/crt0.cpp)
+add_library(crt0 OBJECT src/Application.cpp)
 add_executable(MILLI4C $<TARGET_OBJECTS:crt0> ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL})
 
-#target_link_libraries(MILLI4C PUBLIC CTRSDK-4_2_5)
-#target_link_libraries(MILLI4C PUBLIC LMS)
-#target_link_libraries(MILLI4C PUBLIC NintendoWare)
-
-#target_link_options(MILLI4C PRIVATE
-#    --entry=__ctr_start --startup=__ctr_start
-#    --library_type=standardlib --no_remove --datacompressor=off
-#    --legacyalign --tailreorder --inline
-#    --verbose --symbols --paged --mangled
-#    --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
-#    )
+target_link_options(MILLI4C PRIVATE
+    --entry=__ctr_start --startup=__ctr_start
+    --library_type=standardlib --no_remove --datacompressor=off
+    --legacyalign --tailreorder --inline
+    --verbose --symbols --paged --mangled
+    --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
+    )
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
 target_include_directories(MILLI4C PUBLIC library/rsLib/include)
-#target_include_directories(MILLI4C PUBLIC library/LMS/include)
-target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/nn/include)
+target_include_directories(MILLI4C PUBLIC library/LMS/include)
+target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include)
+target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/include/game)

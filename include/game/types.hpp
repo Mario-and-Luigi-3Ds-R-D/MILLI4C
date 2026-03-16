@@ -20,6 +20,7 @@ typedef float f32;
 typedef double f64;
 typedef unsigned short ushort;
 typedef unsigned char uchar;
+typedef char byte;
 //unknown
 typedef u8 Unknown_x1;
 typedef short Unknown_x2;

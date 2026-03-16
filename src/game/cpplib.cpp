@@ -1,4 +1,6 @@
 #include <stddef.h>
+//#include <locale>
+#include <string.h>
 #include "System/Memory/MemAlcBase.hpp"
 
 void operator delete(void* ptr)
@@ -7,5 +9,4 @@ void operator delete(void* ptr)
 }
 
 void operator delete[](void* ptr){
-
 }

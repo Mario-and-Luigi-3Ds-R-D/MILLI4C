@@ -1,5 +1,5 @@
 #include <System/ScriptSystem.hpp>
-extern const unsigned char ScriptTable[16];
+extern const unsigned char ScriptTable[16] = {};
 
 ScriptSystem::ScriptSystem(){
     this->mStart = 0;
