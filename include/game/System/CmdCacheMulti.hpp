@@ -6,8 +6,7 @@ class CmdCacheMulti{
     u8 pad1[128]; //garbage
     u8 pad2[8]; //used alot 0x80-0x88
 public:
-    virtual ~CmdCacheMulti();
-
+    ~CmdCacheMulti();
     CmdCacheMulti(void);
     void init(int,int);
     void beginSave(void);

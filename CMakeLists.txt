@@ -7,14 +7,11 @@ set_toolchain()
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #add_subdirectory(library/LMS)
-#add_subdirectory(library/CTRSDK-4_2_5)
+add_subdirectory(library/CTRSDK-4_2_5)
 #add_subdirectory(library/NintendoWare)
 
 project(MILLI4C C CXX ASM)
 
-#target_link_libraries(MILLI4C PUBLIC CTRSDK-4_2_5)
-#target_link_libraries(MILLI4C PUBLIC LMS)
-#target_link_libraries(MILLI4C PUBLIC NintendoWare)
 
 set(CMAKE_EXECUTABLE_SUFFIX ".axf")
 
@@ -36,6 +33,10 @@ target_link_options(MILLI4C PRIVATE
     --verbose --symbols --paged --mangled
     --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
     )
+
+target_link_libraries(MILLI4C PUBLIC CTRSDK)
+#target_link_libraries(MILLI4C PUBLIC LMS)
+#target_link_libraries(MILLI4C PUBLIC NintendoWare)
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
 target_include_directories(MILLI4C PUBLIC library/rsLib/include)

@@ -33,7 +33,9 @@ bool JobMan::release(Job* job)
     return false;
 }
 
-Job* JobMan::releaseDone(Job* param_2, Job* param_3) {
+Job* JobMan::releaseDone(Job* param_2) {
+    Job* param_3;
+    
     param_2 = this->mIsDone;
     param_3 = param_2->flag0;
     this->mIsDone = param_3;
@@ -123,5 +125,5 @@ void JobMan::cancel(Job* param_2, Job* param_3) {
         if(!param_4)
             this->flag2 = 0;
     }
-    param_2->FUN_00485d30();
+    param_2->term();
 }

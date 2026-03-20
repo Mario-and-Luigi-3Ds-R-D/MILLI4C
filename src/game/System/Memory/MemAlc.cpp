@@ -1,4 +1,4 @@
-#include <System/Memory/MemAlc.hpp>
+/*#include <System/Memory/MemAlc.hpp>
 //NON MATCHING
 MemAlc::MemAlc(){
     flag1 = 0;          // 0x0
@@ -32,4 +32,4 @@ MemAlcB::MemAlcB(){
 // Start MemAlcH
 
 MemAlcH::MemAlcH(){
-}
+}*/

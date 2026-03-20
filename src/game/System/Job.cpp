@@ -2,16 +2,16 @@
 
 extern void operator delete(void*);
 
-void Job::FUN_00485d2c(){
+void Job::start(){
     return;
 }
 
-void Job::FUN_00485d30(){
+void Job::term(){
     return;
 }
 
-bool Job::FUN_005e361c(){
-    return false;
+int Job::vt_0xc(){
+    return 0;
 }
 
 bool Job::end(int isEnd, int end)

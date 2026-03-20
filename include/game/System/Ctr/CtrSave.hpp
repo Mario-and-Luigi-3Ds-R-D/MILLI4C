@@ -1,15 +1,14 @@
 #pragma once
 
 #include "types.hpp"
+#include "System/Job.hpp"
 //nn::fs::IPositionAble
-//Job
 
 class CtrSaveFile{ // Most likely incorrect
     int flag2; // 0x4
     int mCloseFile; // 0x8
 public: 
     virtual ~CtrSaveFile();
-
     CtrSaveFile();
 };
 
@@ -25,25 +24,19 @@ public:
     virtual int* FUN_005ce604(); // enum
 };
 
-class CtrSaveRead{
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
-    s32 flag3; // 0xc
-    s32 flag4; // 0x10
-    s32 flag5; // 0x14
-    s32 flag6; // 0x18
-    s32 flag7; // 0x1c
-    s32 flag8; // 0x20
+class CtrSaveRead : public Job{
+    s32 flag2; // 0x10
+    s32 flag3; // 0x14
+    s32 flag4; // 0x18
+    s32 flag5; // 0x1c
+    s32 flag6; // 0x20
 public:
     CtrSaveRead();
     virtual void start();
-    virtual int* FUN_005c7498();
+    virtual int vt_0xc();
 };
 
-class CtrSaveWrite{
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
-    u8 pad1[4]; // 0xc
+class CtrSaveWrite : public Job{
     s32 flag3; // 0x10
     u8 pad2[4]; // 0x14
     s32 flag4; // 0x18
@@ -52,5 +45,5 @@ class CtrSaveWrite{
 public:
     CtrSaveWrite();
     virtual void start(); //lots of params man
-    virtual int* FUN_005c9434();
+    virtual int vt_0xc();
 };

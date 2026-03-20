@@ -1,6 +1,8 @@
 #pragma once
 
 #include "types.hpp"
+#include "Message/MessageSys.hpp"
+#include "System/Ctr/CtrJobMan.hpp"
 #include "System/Ctr/File/CtrFS.hpp"
 #include "System/TaskMainBase.hpp"
 

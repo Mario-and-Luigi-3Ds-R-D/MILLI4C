@@ -1,27 +1,34 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
+#include "System/Job.hpp"
 
 class CtrFRead{
 };
 //WRONG WRONG! Come back to!!!
-class CtrFReadBase{
-    int flag1; // 0x4
-    int flag2; // 0x8
-    u8 pad[0x8]; // 0xc
+class CtrFReadBase : public Job{
+    int flag2; // 0x10
     int flag3; // 0x14
     int flag4; // 0x18
-    u8 pad2[0x4]; // 0x1c
-    uint flag5; // 0x20
-    ushort flag6; // 0x24
+    int flag5; // 0x1c
+    uint flag6; // 0x20
+    uint flag7; // 0x24
 public:
-    virtual ~CtrFReadBase();
-
-    CtrFReadBase(void);
+    ~CtrFReadBase();
+    CtrFReadBase();
+    
+    virtual void term();
+    virtual int vt_0xc();
 };
 
 class CtrFReadEx : public CtrFReadBase{
     int flag5; //
+public:
+    CtrFReadEx();
+
+    virtual void start();
+    virtual void term();
+    virtual int vt_0xc();
 };
 
 class CtrFReadSimple : public CtrFReadBase{

@@ -11,9 +11,10 @@ import argparse
 
 from Bin.genLinkerScript import genLDScript
 from Bin.genObjdiffFile import genObjdiff
-from Bin.printReport import printBuildReport
 from Bin.utilsVer import *
 from Settings import *
+#from SplitSys import *
+#from ModuleSys import *
 
 def main() -> None:
     def status(msg: str):
@@ -100,7 +101,14 @@ def main() -> None:
     #status("Generating objdiff.json ...")
     #genObjdiff()
 
-    printBuildReport()
+    status("Report Build System: Success!")
+
+    #status("Generating CROs..")
+    #genModule
+
+    #status("Running Split Sys...")
+    #gen split
+    #printSplitReport
 
 if __name__ == "__main__":
     main()

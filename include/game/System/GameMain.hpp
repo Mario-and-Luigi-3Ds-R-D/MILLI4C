@@ -25,13 +25,15 @@ enum class GAME_MODE{
 class GameMain : public TaskMainBase{ //0x4180 large, big
     int flag1; // 0x10
 public:
+    virtual void init(CtrModule*);
     virtual ~GameMain();
-
     GameMain();
+
+    void start(int,TaskMan*,uint);
     GameMain* gameModeOld(void);
-    Unknown_x1 back(void); 
-    void change(GAME_MODE mode);
-    void init(CtrModule* module);
+    void back(void); 
+    void change(GAME_MODE);
     void changeBgm(BtlBootInfo*);
+    void getFlags();  
 };
 

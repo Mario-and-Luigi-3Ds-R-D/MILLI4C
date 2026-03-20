@@ -3,9 +3,11 @@
 #include "types.hpp"
 
 class CtrThread{
-    s32 mOsThead; // 0x4, temp until nn::os::sdk
-    int mThreadNum; // 0x8
 public:
+    int mCurrentThreadNum; // 0x4
+    int mLastThreadNum; // 0x8
+    int mThreadNum; // 0xC
+    
     virtual void StartThread();
     virtual ~CtrThread();
 

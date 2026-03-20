@@ -21,7 +21,7 @@ CtrSaveRead::CtrSaveRead(){
 void CtrSaveRead::start(){
 }
 
-int* CtrSaveRead::FUN_005c7498(){
+int CtrSaveRead::vt_0xc(){
 }
 
 // Start CtrSaveWrite
@@ -32,5 +32,5 @@ CtrSaveWrite::CtrSaveWrite(){
 void CtrSaveWrite::start(){
 }
 
-int* CtrSaveWrite::FUN_005c9434(){
+int CtrSaveWrite::vt_0xc(){
 }

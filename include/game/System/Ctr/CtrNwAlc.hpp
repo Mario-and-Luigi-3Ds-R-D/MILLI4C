@@ -1,9 +1,10 @@
 #pragma once
 
 #include "types.hpp"
+#include "System/Memory/MemAlcBase.hpp"
 
 class CtrNwAlc {
-    s32  mSetAlc;
+    MemAlcBase* mSetAlc;
     u32  mOpt;
 public:
     virtual ~CtrNwAlc();

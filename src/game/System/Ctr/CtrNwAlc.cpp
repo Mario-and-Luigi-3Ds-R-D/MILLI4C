@@ -13,7 +13,7 @@ CtrNwAlc::~CtrNwAlc(){
 void CtrNwAlc::free(int){
 }
 
-void CtrNwAlc::init(int, bool){
+void CtrNwAlc::init(int param_2, bool param_3){
 }
 
 void CtrNwAlc::start(int param_1, int param_2, int param_3) {

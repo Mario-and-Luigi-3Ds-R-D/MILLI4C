@@ -11,9 +11,9 @@ public:
 
     ~Job();
 
-    virtual void FUN_00485d2c();
-    virtual void FUN_00485d30();
-    virtual bool FUN_005e361c();
+    virtual void start();
+    virtual void term();
+    virtual int vt_0xc();
     virtual bool end(int, int);
 };
 
@@ -25,7 +25,7 @@ public:
     virtual void enqueue(Job*);
     virtual void jam(Job*);
     virtual bool release(Job*);
-    virtual Job* releaseDone(Job*, Job*);
+    virtual Job* releaseDone(Job*);
     virtual void term(Job*);
     virtual bool isBusy(Job*);
     virtual bool FUN_005eda38();

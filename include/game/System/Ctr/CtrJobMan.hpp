@@ -6,28 +6,31 @@
 #include "System/Job.hpp"
 
 class CtrJobMan{
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
+    int flag1; // 0x4
+    int flag2; // 0x8
     CtrThread mThread; //0xc
-    s32 flag3; //0x18
-    int mLightEvent; //0x1c
-    s32 flag4; // 0x20;
-    int mCriticalSection; // 0x24
-    s32 flag5; // 0x28
-    s32 flag6; // 0x2c
-    Job mJob; // 0x30
+    int flag3; //0x1c
+    int mLightEvent; //0x20
+    int flag4; // 0x24
+    int mCriticalSection; // 0x28
+    int flag6; // 0x2c
+    int flag7; // 0x30
+    Job mJob; // 0x34
+    int flag8; // 0x38
 public:
     CtrJobMan(void);
+
     virtual void enqueue(Job *);
     virtual void jam(Job *);
-    virtual void release(Job *);
+    virtual bool release(Job *);
     virtual void releaseDone(Job *);
     virtual void term(void);
-    virtual void isBusy(Job *);
+    virtual bool isBusy(Job *);
+    virtual int vt_0x14();
+    //virtual ~CtrJobMan();
     virtual int startLightEvent();
-    virtual ~CtrJobMan();
 
     int startCtrThread();
     void start(int, int, int);
-    void init(void *,int,int);
+    void init(void*,int,int);
 };

@@ -24,6 +24,7 @@ public:
     virtual ~CtrFS();
     void cancel(void);
     void unmountSaveData(void);
+    void mountSaveData();
     void initCore(CtrJobMan *,void *, int);
 };
 

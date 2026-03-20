@@ -5,4 +5,5 @@
 
 class MemAlcBase{
 public:
+    int getOpt(int,bool,uint);
 };
