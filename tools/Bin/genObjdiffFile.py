@@ -33,7 +33,7 @@ def get_paths_for (file):
     return "",""
 
 def makeCtxFile(src, obj):
-    out = obj.rsplit('.', 1)[0] + '.ctx'
+    out = str(obj).rsplit('.', 1)[0] + '.ctx'
 
     data, main = genCtx(src)
     if len(data) < 10:
@@ -50,29 +50,29 @@ def genObjdiffJson():
     for file in files:
         src = file[0]
         obj = file[1]
-#        name = file[1][len(getProjDir())+1:].partition('.dir/')[2].rsplit(".", 1)[0]
-        name = file[1].rssplit(".", 1)[0]
-        ctx = obj.rsplit('.', 1)[0] + '.ctx'
+        name = str(file[1]).replace("\\", "/").partition('.dir/')[2].rsplit(".", 1)[0]
+        name = str(file[1]).rsplit(".", 1)[0]
+        ctx = str(obj).rsplit('.', 1)[0] + '.ctx'
         ctx = makeCtxFile(src, obj)
         data +=  "    {\n"
-        data += f'      \"name\": "{name}",\n'
-        data += f"      \"target_path\": \"{getElfPath()}\",\n"
-        data += f"      \"base_path\": \"{obj}\",\n"
+        data += f'      \"name\": "{name.replace(chr(92), "/")}",\n'
+        data += f"      \"target_path\": \"{str(getElfPath()).replace(chr(92), '/')}\",\n"
+        data += f"      \"base_path\": \"{str(obj).replace(chr(92), '/')}\",\n"
         data +=  "      \"scratch\": {\n"
         data +=  "        \"platform\": \"n3ds\",\n"
-        data += f"        \"ctx_path\": \"{ctx}\",\n"
+        data += f"        \"ctx_path\": \"{str(ctx).replace(chr(92), '/')}\",\n"
         data += f"        \"preset_id\": {getPresetId()},\n"
         data +=  "        \"build_ctx\": true\n"
         data +=  "      },\n"
         data +=  "      \"metadata\": {\n"
-        data += f"        \"source_path\": \"{src}\",\n"
+        data += f"        \"source_path\": \"{str(src).replace(chr(92), '/')}\",\n"
         data +=  "        \"auto_generated\": false\n"
         data +=  "      }\n"
         data +=  "    },\n"
         #print(Fore.LIGHTBLUE_EX + "objdiff.json: " + src + Fore.RESET + Style.RESET_ALL)
     data = data[:-2] + "\n"
 
-    with open(Path(getProjDir()) / "data" / "template" / "objdiff.json", 'r') as template:
+    with open(Path(getProjDir()) / "data" / "objdiff.json", 'r') as template:
         with open(Path(getProjDir()) / "objdiff.json", 'w') as out:
             out.write(template.read().replace("$$$", data))
 
@@ -80,10 +80,9 @@ def genObjdiffMakeRules():
     paths = get_paths()
 
     with open(Path(getBuildPath()) / "Makefile.ctx", 'w') as f:
-        f.write("main:\n\t$(MAKE) --no-print-directory -f Makefile $(MAKECMDGOALS)\n\n")
 
         for src, obj in paths:
-            ctx_path = obj.rsplit(".", 1)[0] + ".ctx"
+            ctx_path = str(obj).rsplit(".", 1)[0] + ".ctx"
             f.write(f"{ctx_path}:\n")
             f.write(f"\t@echo \"Generating {ctx_path} ...\"\n")
             f.write(f"\t@python ../tools/__genObjdiffFile.py {src}\n\n")

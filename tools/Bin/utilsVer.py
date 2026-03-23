@@ -19,7 +19,7 @@ def _getProjDir():
     return Path(os.path.realpath(__file__).split("tools")[0].rstrip(os.sep))
 
 def _getExeFile(version):
-    return str(Path(_getProjDir()) / "data"  / version / "code.bin")
+    return str(Path(_getProjDir()) / "data"  / "Version" / version / "code.bin")
 
 def is_ver_valid(version):
     if not is_ver_name(version):
@@ -53,6 +53,6 @@ def sort_bin_if_exist():
     dest_file_path = _getExeFile(ver)
     os.rename(try_bin_path, dest_file_path)
 
-    print("found loose code.bin in data/, identified as " + ver + "version and moved to data/"+ver+"/code.bin")
+    print("found loose code.bin in data/, identified as " + ver + "version and moved to data/Version/"+ver+"/code.bin")
 
     return ver

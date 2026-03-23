@@ -1,0 +1,5 @@
+symbol_name,patch_seg,patch_offset,reloc_type,addend
+_ZN10RealSystemC1EPK13FieldBootInfo,0,0x00,2,0
+_ZN7TaskMan5entryEP4Task,0,0x04,28,0
+_ZnwjP10MemAlcBasePKcj,0,0x08,28,0
+gTaskMainMan,0,0xC,2,0

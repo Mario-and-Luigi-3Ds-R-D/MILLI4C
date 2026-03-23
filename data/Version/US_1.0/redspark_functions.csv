@@ -1,4 +1,4 @@
-Address,Rank,Size,Symbol,Tag
+tempAddress,Rank,Size,Symbol,Tag
 0x00000000,U,000036,__ctr_start,gdef
 0x00100024,U,000028,nninitRegion,
 0x00100048,U,000068,__c89vswprintf,
@@ -6139,7 +6139,6 @@ Address,Rank,Size,Symbol,Tag
 0x002FE3A8,U,000014,_is_digit,
 0x002FE3B8,U,000048,,
 0x002FE3F0,U,000148,,
-0x002FE484,U,000004,nndbgPanic,
 0x002FE488,U,000284,,
 0x002FE5A4,U,000016,__rt_ctype_table,
 0x002FE5B8,U,000008,,
@@ -16500,6 +16499,7 @@ Address,Rank,Size,Symbol,Tag
 0x00613034,U,000016,,
 0x00613044,U,000036,,
 0x00613068,U,000080,nnroAeabiAtexit_,
+0x006130B8,U,000004,,
 0x006130BC,U,000428,shm_deleteBinaryObject,
 0x00613270,U,000412,shm_deleteProgramObject,
 0x00613414,U,018296,,

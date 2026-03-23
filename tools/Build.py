@@ -12,9 +12,9 @@ import argparse
 from Bin.genLinkerScript import genLDScript
 from Bin.genObjdiffFile import genObjdiff
 from Bin.utilsVer import *
+from ModuleSys import *
 from Settings import *
 #from SplitSys import *
-#from ModuleSys import *
 
 def main() -> None:
     def status(msg: str):
@@ -35,8 +35,6 @@ def main() -> None:
     if not version or found_version or ("code.bin" in version):
         version = found_version or old_version
     else:
-        if version == "US_1.0":
-            version = "US_1.0"
         if not is_ver_name(version):
             print (f"Passed argument \'{version}\' is not a valid version!")
             print (f"Available versions: {get_versions()}")
@@ -44,13 +42,13 @@ def main() -> None:
 
         if found_version and (found_version is not version):
             print ("found unsorted code.bin in data/, but parameter version differs.")
-            print ("data/code.bin: " + found_version + ", specified: " + version)
+            print ("data/Version/code.bin: " + found_version + ", specified: " + version)
             sys.exit(1)
 
         set_ver(version)
 
     if not is_ver_exist(version):
-        print(f"data/{version}/code.bin missing. Please provide the code.bin for the {version} version.")
+        print(f"data/Version/{version}/code.bin missing. Please provide the code.bin for the {version} version.")
         return
 
     if not is_ver_valid(version):
@@ -70,7 +68,6 @@ def main() -> None:
         except subprocess.CalledProcessError:
             exit(1)
 
-    status ("Generating Linker File...")
     genLDScript()
     if not os.path.exists(Path(getBuildPath()) / "linker.ld"):
         status ("No linker file generated.")
@@ -85,7 +82,7 @@ def main() -> None:
         exit(result)
 
     def fromelf():
-        status("Generating code.bin...")
+        status("Report Build System: MILLI4C/build/US_1.0/MILLI4C.axf Successful! Targeting executable.")
         subprocess.run([
             str(Path(os.environ['ARMCC_PATH'], 'bin', 'fromelf').with_suffix('.exe' if sys.platform == 'win32' else '')),
             '--bincombined', str(Path(getBuildPath()) / getElfName()),
@@ -96,19 +93,19 @@ def main() -> None:
 
     if os.path.exists(f'compile_commands.json'):
         shutil.copyfile(f'compile_commands.json', '../compile_commands.json')
+    
+    # Sub
 
-    #busted
-    #status("Generating objdiff.json ...")
-    #genObjdiff()
+    status("Report Build System: Generating objdiff.json...")
+    genObjdiff()
 
-    status("Report Build System: Success!")
+    status("Report ROSys: Building RO Modules...")
+    build_all_modules(version=version, verbose=args.v)
 
-    #status("Generating CROs..")
-    #genModule
+    #status("Report SplitSys: Building Split Files...")
+    #genSplitAll()
 
-    #status("Running Split Sys...")
-    #gen split
-    #printSplitReport
+    status("Generated the Mario & Luigi Dream Team US 1.0 Decompilation Project.")
 
 if __name__ == "__main__":
     main()

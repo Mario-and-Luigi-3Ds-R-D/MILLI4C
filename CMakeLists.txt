@@ -6,6 +6,7 @@ set_toolchain()
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
+#add_subdirectory(src/ro)
 #add_subdirectory(library/LMS)
 add_subdirectory(library/CTRSDK-4_2_5)
 #add_subdirectory(library/NintendoWare)
@@ -43,3 +44,5 @@ target_include_directories(MILLI4C PUBLIC library/rsLib/include)
 target_include_directories(MILLI4C PUBLIC library/LMS/include)
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include)
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/include/game)
+
+add_subdirectory(src/ro)

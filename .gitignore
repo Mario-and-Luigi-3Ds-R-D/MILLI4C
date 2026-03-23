@@ -4,6 +4,6 @@ build/
 library/adsl
 
 # Nuh uh, not for public!
-data/US_1.0/code.bin
+data/Version/US_1.0/code.bin
 data/Info/
 ori/

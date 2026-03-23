@@ -13,7 +13,7 @@ versions = {
 def _getProjDir():
     return Path(os.path.realpath(__file__).split("tools")[0].rstrip(os.sep))
 def getVerFile():
-    return str(Path(_getProjDir()) / "data" / ".version")
+    return str(Path(_getProjDir()) / "data" / "Version" / ".version")
 def getDefaultVer():
     return 'US_1.0'
 

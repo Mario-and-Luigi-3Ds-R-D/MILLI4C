@@ -36,6 +36,23 @@ ARMCC41INC = C:\path\2\folder\ARMCC\894\include\windows
 
 3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several *.o files.
 
+# CRO Building Features & Config
+
+
+1) All CROs will have an imports CSV in data/RO/ModuleName/imports.csv to which this format is: "_ZN10RealSystemC1EPK13FieldBootInfo,0,0x00,2,0" "Symbol,Patch,NumberBy0x4,RelocType,Add0"
+
+
+2) All CROs will also have a SHA config too, which edits the SHA256 of the RO header. "data/RO/ModuleName/SHA256.csv" hash0,1,2,3:whateversha256
+
+
+3) The static.crs will be generated via "data/Version/<VER>/static_symbols.csv" the format being: "_ZN2nn2ro10InitializeEPvjS0_jb,0,0" "SymbolMangledOrNot,index,offset" (they get generated in order so)
+
+
+4) Lastly the CRO vtable config per RO. This is in development so it does not work as of yet.
+
+
+Oh and, CROs can use ModuleLib as most import from there.
+
 **Linux**
 
 As of currently, I do not know if linux is supported yet.
