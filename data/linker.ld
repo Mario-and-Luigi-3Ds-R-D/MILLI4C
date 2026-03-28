@@ -1,14 +1,14 @@
-$$$
-
-&&&
-
-RO_SECTION 0x003a2000
+CODE_SECTION 0x00100000
 {
-    RO +0
+    CODE 0x00100000
+    {
+        * (+CODE)
+    }
+    RODATA 0x0063d000
     {
         * (+CONST)
     }
-    STATIC_INIT  +0 
+    STATIC_INIT +0
     {
         * (.static_init)
     }
@@ -18,31 +18,21 @@ RO_SECTION 0x003a2000
         * (.ARM.extab)
     }
 }
-
-RW_SECTION 0x003e1000
+RW_SECTION 0x006c9000
 {
-    RW +0
+    RW 0x006c9000
     {
         * (+RW-DATA)
     }
-    ZI +0
+    ZI 0x006e14a8
     {
         * (+ZI)
     }
 }
-
-MODULE_INFO     (0x00100000 + (0x04000000 - 0x00100000))
+MODULE_INFO (0x00100000 + (0x04000000 - 0x00100000))
 {
-    .module_id  (0x00100000 + (0x04000000 - 0x00100000))
+    .module_id (0x00100000 + (0x04000000 - 0x00100000))
     {
         * (.module_id)
-    }
-}
-
-GARBAGE_SECTION 0x00432000
-{
-    REST_SECTION 0x00432000
-    {
-        * (+CODE)
     }
 }

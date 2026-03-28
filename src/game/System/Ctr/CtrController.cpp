@@ -7,7 +7,7 @@
 CtrTp::CtrTp(){
 }
 
-void CtrTp::getTouchReader(){
+void CtrTp::read(){
 }
 
 // Start CtrBtn
@@ -15,10 +15,10 @@ void CtrTp::getTouchReader(){
 void CtrBtn::get(int){
 }
 
-void CtrBtn::getPadReader(){
+void CtrBtn::read(){
 }
 
 // Start Acl
 
-void CtrAcl::getAcelReader(){
+void CtrAcl::read(){
 }

@@ -2,7 +2,7 @@
 
 
 
-/*RO Library, all of the CROS can use these.*/
+# RO Library
 
 
 MCellAnime
@@ -75,7 +75,7 @@ MEquipStatusPanel
 
 
 
-*RO/BootMenu.cro, doesn't use common AlphaDream CRO Libraries*
+# RO/BootMenu.cro, doesn't use common AlphaDream CRO Libraries
 BootMenu
 
 BtlBootMenu
@@ -115,7 +115,7 @@ MColoChrTxt
 MColoMdl
 
 
-*RO/HugeBattle.cro, doesn't use common AlphaDream CRO Libraries*
+# RO/HugeBattle.cro, doesn't use common AlphaDream CRO Libraries
 
 
 HBDreamMng
@@ -145,13 +145,13 @@ HBMEssageDrawer
 HBEnvInGameReader
 
 
-*RO/Load.cro*
+# RO/Load.cro
 
 
 LoadMenu
 
 
-*RO/Menu.cro*
+# RO/Menu.cro
 
 
 MenuEventSys
@@ -161,7 +161,7 @@ MenuEventBase
 MenuEventBaseSys
 
 
-*RO/MiniGame.cro*
+# RO/MiniGame.cro
 
 
 MiniGamePanel
@@ -170,7 +170,7 @@ MiniGameResultPanel
 
 
 
-*RO/Puzzle.cro*
+# RO/Puzzle.cro
 
 
 PuzzleGame
@@ -190,13 +190,13 @@ PuzzleCA
 PuzzleSys
 
 
-*RO/Save.cro*
+# RO/Save.cro
 
 
 SaveMenu
 
 
-*RO/Shop.cro*
+# RO/Shop.cro
 
 
 ShopBadgeDial
@@ -212,7 +212,7 @@ ShopEquipStatusPanelLite
 ShopSys
 
 
-*RO/StaffRoll.cro*
+# RO/StaffRoll.cro
 
 
 TextManager
@@ -224,7 +224,7 @@ BGManager
 BGModel
 
 
-*RO/Title.cro*
+# RO/Title.cro
 
 
 LowerModel
@@ -250,3 +250,42 @@ DoubleScnModel
 UnderLuigiHige
 
 UnderLuigiPartTask
+
+
+
+# RomFS:/RO/
+
+
+BNormal - Battle Manager, pointer to BtlMainProxy::BtlMainProxy
+
+
+BootMenu - USA 1.0 Exclusive; Debug Menu - Debug Menu, has some pretty good things in it. Debug symbols do not exist in static.crs sadly.
+
+
+Colosseum - Colosseum Code
+
+
+FDream - Dream Manager, pointer to DreamSystem::DreamSystem
+
+
+FReal - Real Manager, pointer to RealSystem::RealSystem
+
+
+HugeBattle - Huge Battle Code, not produced by AlphaDream*
+
+
+Load - Loading Code
+
+Menu - Menu Code
+
+MiniGame - MiniGame code
+
+Puzzle - Puzzle Code
+
+Save  - Save code
+
+Shop - Shop Code
+
+StaffRoll - StaffRoll Code
+
+Title - Title Menu Code

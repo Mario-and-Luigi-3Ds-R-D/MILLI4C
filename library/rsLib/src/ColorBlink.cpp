@@ -8,7 +8,7 @@ ColorBlink::ColorBlink(){
     this->flag2 = 0;
     this->flag1 = 0;
     return;
-    }
+}
 
 ColorBlink::~ColorBlink(){
     this->flag2 = 0;

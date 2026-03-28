@@ -3,15 +3,18 @@
 #include "types.hpp"
 #include "System/Memory/MemAlcBase.hpp"
 
+// -COMPLETED NAMESPACES-
+
 class CtrNwAlc {
+public:
     MemAlcBase* mSetAlc;
     u32  mOpt;
-public:
+
     virtual ~CtrNwAlc();
     virtual void init(int, bool);
     virtual void free(int);
-
     static void start(int, int, int);
+
     CtrNwAlc(void);
 };
 

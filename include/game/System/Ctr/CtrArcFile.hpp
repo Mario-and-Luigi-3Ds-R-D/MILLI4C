@@ -3,6 +3,7 @@
 #include "types.hpp"
 #include "System/Ctr/File/CtrFRead.hpp"
 #include "System/Ctr/File/CtrFileBase.hpp"
+#include "System/Ctr/File/CtrFS.hpp"
 
 class CtrArcFile : public CtrFileBase{
 public:
@@ -14,4 +15,6 @@ public:
     void isBusy(uint);
     void getSize(uint);
     void readCore(CtrFRead *, int,uint,uint);
+    int uncomp(int);
+    void getSize(CtrFSEx*,char*,uint,void*,uint); // guess on the CtrFSEx
 };

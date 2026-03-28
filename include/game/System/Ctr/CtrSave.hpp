@@ -4,46 +4,49 @@
 #include "System/Job.hpp"
 //nn::fs::IPositionAble
 
-class CtrSaveFile{ // Most likely incorrect
+class CtrSaveFile{ // : public nn::fs::FileStream
+public:
     int flag2; // 0x4
     int mCloseFile; // 0x8
-public: 
+
     virtual ~CtrSaveFile();
     CtrSaveFile();
+    void start(int,uint,int,uint); // param_2 sum important
+    int mount(); // 100%
 };
 
-class CtrSaveFormat {
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
-    s32 flag3; // 0xc
-    s32 flag4; // 0x10
-    s32 flag5; // 0x14
+class CtrSaveFormat : public Job{
 public:
-    void close(int*, bool); //this call
-    virtual uint start(int, int, int); // int params are temp
-    virtual int* FUN_005ce604(); // enum
+    int flag4; // 0x10
+    int flag5; // 0x14
+
+    void close(int*, bool);
+    virtual uint start(int, int, int);
+    virtual int vt_0xc(); // enum
 };
 
 class CtrSaveRead : public Job{
-    s32 flag2; // 0x10
-    s32 flag3; // 0x14
-    s32 flag4; // 0x18
-    s32 flag5; // 0x1c
-    s32 flag6; // 0x20
 public:
-    CtrSaveRead();
+    int flag2; // 0x10
+    int flag3; // 0x14
+    int flag4; // 0x18
+    int flag5; // 0x1c
+    int flag6; // 0x20
+
+    CtrSaveRead(); // 100%
     virtual void start();
-    virtual int vt_0xc();
+    virtual int vt_0xc(); // 100%
 };
 
 class CtrSaveWrite : public Job{
-    s32 flag3; // 0x10
-    u8 pad2[4]; // 0x14
-    s32 flag4; // 0x18
-    s32 flag5; // 0x1c
-    s32 flag6; // 0x20
 public:
-    CtrSaveWrite();
+    int flag3; // 0x10
+    u8 pad2[4]; // 0x14
+    int flag4; // 0x18
+    int flag5; // 0x1c
+    int flag6; // 0x20
+
+    CtrSaveWrite(); // 100%
     virtual void start(); //lots of params man
-    virtual int vt_0xc();
+    virtual int vt_0xc(); // 100%
 };

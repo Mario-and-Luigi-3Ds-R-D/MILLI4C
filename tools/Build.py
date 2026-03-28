@@ -102,7 +102,6 @@ def main() -> None:
     status("Report ROSys: Building RO Modules...")
     build_all_modules(version=version, verbose=args.v)
 
-    #status("Report SplitSys: Building Split Files...")
     #genSplitAll()
 
     status("Generated the Mario & Luigi Dream Team US 1.0 Decompilation Project.")

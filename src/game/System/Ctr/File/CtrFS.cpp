@@ -13,7 +13,7 @@ void CtrFS::cancel(){
 
 // Match
 
-void CtrFS::unmountSaveData(){
+int CtrFS::unmountSaveData(){
 }
 
 // End Match
@@ -24,9 +24,9 @@ void CtrFS::mountSaveData(){
 // Match
 
 void CtrFS::initCore(CtrJobMan* pJobManager, void* param_2, int param_3){
-    this->flag2 = (int)pJobManager;
-    this->flag3 = (int)param_2;
-    this->flag4 = param_3;
+    this->mJobMan = pJobManager;
+    this->mCoreStatus = param_2;
+    this->mCoreNumber = param_3;
 }
 
 // Start CtrFSEx

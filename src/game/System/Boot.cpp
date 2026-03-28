@@ -1,9 +1,9 @@
 #include <System/Boot.hpp>
 
-//Boot::Boot(){
-//    this->mTaskManager = 0;
-//    this->flag1 = 0;
-//}
+/*Boot::Boot(){
+    this->mTaskManager = 0;
+    this->flag1 = 0;
+}
 
 Boot::~Boot(){
 }
@@ -25,3 +25,4 @@ bool Boot::beginState(){
 
 void Boot::entry(){
 }
+*/

@@ -32,7 +32,7 @@ def getModuleImportsFile(module_name: str):
 
 #SplitSys
 def getMiniSplitPath():
-    return str(Path(getProjDir()) / "ori" / "ASM-TEST")
+    return str(Path(getProjDir()) / "ori" / "ASM")
 def getSplitOutput():
     return str(Path(getBuildPath()) / "Split")
 

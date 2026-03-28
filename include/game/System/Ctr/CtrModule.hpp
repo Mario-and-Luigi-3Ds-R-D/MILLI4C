@@ -1,35 +1,52 @@
 #pragma once
 
 #include "types.hpp"
+#include "System/Job.hpp"
+#include "System/Ctr/File/CtrFRead.hpp"
+#include "System/Ctr/File/CtrFS.hpp"
+#include "nn/fs/fs_FileStream.h"
 
 class CtrModule{
-    int mIsLoaded; // 0x4, in __deallocating
+    int mModuleNum; // 0x4
     u8 pad[0x14]; // 0x8
-    int flag1; // 0x1c, in __deallocating
-    int flag2; // 0x20, in __deallocating
+    int flag1; // 0x1c
+    int flag2; // 0x20
 public:
     virtual ~CtrModule();
 
     CtrModule(void);
 };
 
-class CtrModuleFile{ // beeg
+// Revisit
+
+class CtrModuleFile : public nn::fs::FileInputStream, CtrModule{
 public:
     virtual ~CtrModuleFile();
     void unload(int,int,uint*,int*);
-    void tryLoad();
+    void read();
 };
 
-class CtrLoadModule{
-    s32 flag1; // 0x4
-    s32 flag2; // 0x8
-    u8 pad[0x1c]; // 0xc
-    s32 flag3; // 0x24
-    u8 pad2[0x4]; // 0x28
-    s32 flag4; // 0x2c
-    u8 pad3[0x8];
-    s32 flag5; // 0x38
+class CtrLoadModule : public CtrFReadBase{
 public:
+    short flag1; // 0x26
+    CtrFS* mFileSystem; // 0x28
+    int flag4; // 0x2c
+    int flag5; // 0x30
+    int flag6; // 0x38
+
     CtrLoadModule(void);
+    virtual void start();
 };
-//static_assert(sizeof(CtrLoadModule) == 0x3c); //class is 0x3c
+
+class CtrUnloadModule : public Job{
+public:
+    CtrUnloadModule();
+
+    virtual void start(); // temp
+    virtual int vt_0xc(); // 100%
+};
+
+class CtrLoadModuleEx : public CtrLoadModule{
+public:
+    virtual void term();
+};

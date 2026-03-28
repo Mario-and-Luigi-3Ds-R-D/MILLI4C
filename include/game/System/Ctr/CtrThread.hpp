@@ -5,11 +5,11 @@
 class CtrThread{
 public:
     int mCurrentThreadNum; // 0x4
-    int mLastThreadNum; // 0x8
+    bool mLastThreadNum; // 0x8
     int mThreadNum; // 0xC
     
-    virtual void StartThread();
+    virtual void StartThread(); // 100%
     virtual ~CtrThread();
 
-    int startCtrThread();
+    int startCtrThread(); // 100%
 };

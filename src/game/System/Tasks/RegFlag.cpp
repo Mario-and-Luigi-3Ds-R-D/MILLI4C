@@ -1,5 +1,5 @@
-void PutRegFlag(){
+/*void PutRegFlag(){
 }
 
 float GetRegFlag(){
-}
+}*/

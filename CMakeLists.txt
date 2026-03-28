@@ -7,7 +7,7 @@ set_toolchain()
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 #add_subdirectory(src/ro)
-#add_subdirectory(library/LMS)
+add_subdirectory(library/LMS)
 add_subdirectory(library/CTRSDK-4_2_5)
 #add_subdirectory(library/NintendoWare)
 
@@ -24,8 +24,8 @@ file(GLOB_RECURSE SOURCES_GAME ${CMAKE_SOURCE_DIR}/src/game/*.c ${CMAKE_SOURCE_D
 file(GLOB_RECURSE SOURCES_RSLIB ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.c ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.cpp) 
 file(GLOB_RECURSE SOURCES_ADSL ${CMAKE_SOURCE_DIR}/library/adsl/src/*.c ${CMAKE_SOURCE_DIR}/library/adsl/src/*.cpp)
 
-add_library(crt0 OBJECT src/Application.cpp)
-add_executable(MILLI4C $<TARGET_OBJECTS:crt0> ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL})
+add_library(crt0 OBJECT library/CTRSDK-4_2_5/src/nn/crt0/MPCore/crt0.cpp)
+add_executable(MILLI4C ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL} $<TARGET_OBJECTS:crt0>)
 
 target_link_options(MILLI4C PRIVATE
     --entry=__ctr_start --startup=__ctr_start
@@ -36,12 +36,12 @@ target_link_options(MILLI4C PRIVATE
     )
 
 target_link_libraries(MILLI4C PUBLIC CTRSDK)
-#target_link_libraries(MILLI4C PUBLIC LMS)
+target_link_libraries(MILLI4C PUBLIC LibMessageStudio)
 #target_link_libraries(MILLI4C PUBLIC NintendoWare)
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
 target_include_directories(MILLI4C PUBLIC library/rsLib/include)
-target_include_directories(MILLI4C PUBLIC library/LMS/include)
+target_include_directories(MILLI4C PUBLIC library/LMS/include/LMS)
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include)
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/include/game)
 

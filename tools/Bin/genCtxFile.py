@@ -18,10 +18,12 @@ include_paths = [
 #    "library/NintendoWare/snd/include",
 #    "library/NintendoWare/sys/include",
 #    "library/NintendoWare/ut/include",
-    "library/LMS/include",
-    "library/LMS/src",
+    "library/LMS/Include",
+    "library/LMS/Source",
     "library/CTRSDK-4_2_5/include",
+    "library/CTRSDK-4_2_5/src",
     "library/rsLib/include",
+    "library/rsLib/src"
 ]
 
 def get_type_inc(sym=None, main_data=None, traversed=None):

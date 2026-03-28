@@ -10,7 +10,7 @@ void CtrSaveFormat::close(int* param_1, bool param_2){
 uint CtrSaveFormat::start(int param_1, int param_2, int param_3){
 }
 
-int* CtrSaveFormat::FUN_005ce604(){
+int CtrSaveFormat::vt_0xc(){
 }
 
 // Start CtrSaveRead

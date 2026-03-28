@@ -16,30 +16,30 @@ CtrJobMan::CtrJobMan(){
 // End Nonmatch, start finished
 
 void CtrJobMan::enqueue(Job* pJob) {
-    nn::os::CriticalSection::Enter((int)&this->mCriticalSection);
+    this->mCriticalSection.Enter();
     ((JobMan*)this)->JobMan::enqueue(pJob);
-    nn::os::LightEvent::Signal((int)&this->flag4);
-    nn::os::CriticalSection::Leave((int)&this->mCriticalSection);
+    this->mLightEvent.Signal();
+    this->mCriticalSection.Leave();
 }
 
 void CtrJobMan::jam(Job* pJob){
-    nn::os::CriticalSection::Enter((int)&this->mCriticalSection);
+    this->mCriticalSection.Enter();
     ((JobMan*)this)->JobMan::jam(pJob);
-    nn::os::LightEvent::Signal((int)&this->flag4);
-    nn::os::CriticalSection::Leave((int)&this->mCriticalSection);
+    this->mLightEvent.Signal();
+    this->mCriticalSection.Leave();
 }
 
 bool CtrJobMan::release(Job* pJob) {
     bool pIsDone;
 
-    nn::os::CriticalSection::Enter((int)&this->mCriticalSection);
+    this->mCriticalSection.Enter();
     pIsDone = ((JobMan*)this)->JobMan::isBusy(pJob);
-    nn::os::CriticalSection::Leave((int)&this->mCriticalSection);
+    this->mCriticalSection.Leave();
     return pIsDone;
 }
 
 // 75%
-void CtrJobMan::releaseDone(Job* pJob){
+Job* CtrJobMan::releaseDone(Job* pJob){
 }
 
 // Not finished/started
@@ -49,17 +49,24 @@ void CtrJobMan::term(){
 bool CtrJobMan::isBusy(Job* pJob) {
     bool pIsBusy;
 
-    nn::os::CriticalSection::Enter((int)&this->mCriticalSection);
+    this->mCriticalSection.Leave();
     pIsBusy = ((JobMan*)this)->JobMan::isBusy(pJob);
-    nn::os::CriticalSection::Leave((int)&this->mCriticalSection);
+    this->mCriticalSection.Leave();
     return pIsBusy;
 }
 
-int CtrJobMan::vt_0x14(){
+int CtrJobMan::vt_0x14() {
+    int param_1;
+
+    param_1 = (int)this->mIsDone;
+    if (param_1 != 0) {
+        param_1 = 1;
+    }
+    return param_1;
 }
 
 int CtrJobMan::startLightEvent(){
-    return ((int)this->flag4 >> 0x1f) + 1;
+    return ((int)this->mLightEvent.mCounter.mValue.mValueType >> 0x1f) + 1;
 }
 
 int CtrJobMan::startCtrThread() {

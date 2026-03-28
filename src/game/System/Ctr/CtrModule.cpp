@@ -14,3 +14,6 @@ CtrModule::~CtrModule(){
 
 CtrLoadModule::CtrLoadModule(){
 }
+
+void CtrLoadModule::start(){
+}

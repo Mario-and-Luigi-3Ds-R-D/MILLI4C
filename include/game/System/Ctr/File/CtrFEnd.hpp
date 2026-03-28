@@ -1,11 +1,10 @@
 #pragma once
 
 #include "types.hpp"
+#include "System/Job.hpp"
 
-class CtrFEnd{
-    int flag1; // 0x4 signal light event
+class CtrFEnd : public Job{
 public:
     virtual ~CtrFEnd();
-
-    void signal();
+//    void term(); // 100%
 };
