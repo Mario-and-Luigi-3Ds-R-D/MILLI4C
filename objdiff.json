@@ -573,32 +573,32 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Impl",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Impl",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Impl.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Impl.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Impl.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Impl.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/LMS/Source/LMS_Impl.c",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/LMS/src/LMS_Impl.cpp",
         "auto_generated": false
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Message",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Message",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Message.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Message.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/Source/LMS_Message.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/LMS/CMakeFiles/LibMessageStudio.dir/src/LMS_Message.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/LMS/Source/LMS_Message.c",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/LMS/src/LMS_Message.cpp",
         "auto_generated": false
       }
     },
@@ -629,6 +629,21 @@
       },
       "metadata": {
         "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/crt0/MPCore/crt0.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/err/CTR/err_Api",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/err/CTR/err_Api.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/err/CTR/err_Api.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/err/CTR/err_Api.cpp",
         "auto_generated": false
       }
     },
@@ -764,6 +779,21 @@
       },
       "metadata": {
         "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_SimpleLock.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_WaitableCounter",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_WaitableCounter.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_WaitableCounter.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_WaitableCounter.cpp",
         "auto_generated": false
       }
     },

@@ -1,11 +1,18 @@
 # Mario and Luigi Dream Team Decompilation / Project MILLI4C
 
-This is Mario & Luigi Dream Team US 1.0 decomp that will most likely be finished by 2032 minimum.
+This is currently targetting the 1.0 US Build of the game but will soon expand to other versions, so stay tuned on that!
 
-This is currently targetting the 1.0 US Build of the game but will soon expand to other versions.
-Currently this project is going through a "setup" phase, meaning it may take while for us to get some actual work done.
+This is currently being ran by one person, so it may take a while, but rest assured I'm committed to finishing this. Probably gonna be done by 2032 minimum, lmao.
 
-This project will be going on a "Behind the scenes dev phase" for a bit, since I'm gonna be honest I barely know a LICK of ARM ASM. Work will be done, yet not released to the public.
+# Disclaimer
+
+You *will* need your legally obtained copy of Mario & Luigi Dream Team to Build the project.
+
+The relevant path to place legally obtained files is located at `data/*version*/code.bin` decompressed. On obtaining your code.bin is not my reponsibility ethier.
+
+Supported Versions:
+
+`US_1.0`
 
 # The Goal
 
@@ -34,7 +41,7 @@ ARMCC41LIB = C:\path\2\folder\ARMCC\894\lib
 ARMCC41INC = C:\path\2\folder\ARMCC\894\include\windows
 
 
-3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several *.o files.
+3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several object files.
 
 # CRO Building Features & Config
 
@@ -60,5 +67,7 @@ As of currently, I do not know if linux is supported yet.
 # How to help
 
 For anyone willing to help, please do so! This project is moving at a snails pace currently since, well, I'm in the setup phase kind-of when it comes to getting this up, so all help is appreciated if anyone wants to pitch in.
+
+Any help counts, ethier it be ghidra work or anything.
 
 Join the discord! https://discord.gg/dQ4xEerM9m

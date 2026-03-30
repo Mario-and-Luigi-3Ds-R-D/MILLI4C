@@ -1,7 +1,5 @@
 #include <System/Job.hpp>
 
-extern void operator delete(void*);
-
 void Job::start(){
     return;
 }

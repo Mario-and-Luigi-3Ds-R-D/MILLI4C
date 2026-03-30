@@ -28,7 +28,7 @@ def write_release_txt(ver: str, u: str, o: str, m: str, mm: str, total: str, byt
 **Total**: *{total}*
 """
 
-    with open(str(Path("data") / get_ver() / 'stats' / "release.txt"), 'w') as f:
+    with open(str(Path("data") / 'info' / get_ver() / "release.txt"), 'w') as f:
         f.write(textt)
 
 def get_matching_bytes(orig: str, other: str):
@@ -74,7 +74,7 @@ def main():
             "color": color,
             "schemaVersion": 1
         }
-        with open(str(Path('data') / ver / 'stats' / 'release.txt'), 'w') as f:
+        with open(str(Path("data") / 'info' / get_ver() / "release.txt"), 'w') as f:
             f.write(json.dumps(out))
 
     bytes_ok_str = "{:.4f}% ({:,} bytes/{:,} bytes)".format((bytes_ok / code_bin_size) * 100, int(bytes_ok), int(code_bin_size))

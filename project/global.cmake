@@ -32,8 +32,8 @@ add_compile_options($<$<COMPILE_LANGUAGE:C>:--c99> $<$<COMPILE_LANGUAGE:CXX>:--c
 add_compile_options(--arm --split_sections -c ${_OPT_DIAG} ${_OPT_TYPE} ${_OPT_LANG})
 add_compile_options(--cpu=MPCore --fpmode=fast --apcs=interwork -O3 -Otime --data_reorder)
 add_compile_options(--sys_include --signed_chars --dollar --no_vla --multibyte_chars)
-add_compile_options(--force_new_nothrow --no_rtti)
-add_compile_options(--no_exceptions --no_rtti_data --forceinline --no_vfe)
+add_compile_options(--force_new_nothrow)
+add_compile_options(--no_exceptions --cpp --no_rtti --no_vfe --no_rtti_data)
 
 add_compile_definitions(NN_PLATFORM_CTR)
 if (NOT ONLY_MATCHING)

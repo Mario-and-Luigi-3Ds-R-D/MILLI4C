@@ -5,7 +5,7 @@
 #include "game/types.hpp"
 #include "Ctr/CtrModule.hpp"
 #include "Boot/BtlBootInfo.hpp"
-#include "TaskMainBase.hpp"
+#include "Task.hpp"
 
 enum class GAME_MODE{
     REAL = 0,

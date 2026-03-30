@@ -11,25 +11,25 @@ void JobMan::jam(Job* job){
 
 bool JobMan::release(Job* job)
 {
-    Job* param_2 = mIsDone;
-    if (param_2 == job) {
+    Job* cur = mIsDone;
+    if (cur == job) {
         ((void (*)(JobMan*))(*(void***)this)[3])(this);
         return true;
     }
-    if (!param_2)
+    if (!cur)
         return false;
     do {
-        Job* next = param_2->flag0;
+        Job* next = cur->flag0;
         if (next == job) {
             Job* nextNext = job->flag0;
-            param_2->flag0 = nextNext;
+            cur->flag0 = nextNext;
             if (nextNext == 0)
-                flag2 = param_2;
-            ((void (*)(Job*))(*(void***)job)[1])(job);
+                flag2 = cur;
+            job->term();
             return true;
         }
-        param_2 = next;
-    } while (param_2);
+        cur = next;
+    } while (cur);
     return false;
 }
 
