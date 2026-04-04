@@ -2,7 +2,6 @@
 
 #include "types.hpp"
 #include "System/Ctr/CtrThread.hpp"
-//nn crit sec + light ev
 #include "System/Job.hpp"
 #include "nn/os/os_CriticalSection.h"
 #include "nn/os/os_LightEvent.h"
@@ -21,11 +20,11 @@ public:
     virtual void jam(Job *); // 100%
     virtual bool release(Job *); // 100%
     virtual Job* releaseDone(Job *); // 75%
-    virtual void term(void);
+    virtual void term(Job*);
     virtual bool isBusy(Job *); // 100%
-    virtual int vt_0x14(); // 100% (esstenially its LIGHT)
+    virtual int end(); // 100% (esstenially its LIGHT)
     //virtual ~CtrJobMan();
-    virtual int startLightEvent(); // 100%
+    virtual int startCounter(); // 100%
     virtual int startCtrThread(); // 100%
 
     void start(int, int, int);

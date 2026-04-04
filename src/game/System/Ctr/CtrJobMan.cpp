@@ -43,7 +43,7 @@ Job* CtrJobMan::releaseDone(Job* pJob){
 }
 
 // Not finished/started
-void CtrJobMan::term(){
+void CtrJobMan::term(Job* pJob){
 }
 
 bool CtrJobMan::isBusy(Job* pJob) {
@@ -55,7 +55,7 @@ bool CtrJobMan::isBusy(Job* pJob) {
     return pIsBusy;
 }
 
-int CtrJobMan::vt_0x14() {
+int CtrJobMan::end() {
     int param_1;
 
     param_1 = (int)this->mIsDone;
@@ -65,7 +65,7 @@ int CtrJobMan::vt_0x14() {
     return param_1;
 }
 
-int CtrJobMan::startLightEvent(){
+int CtrJobMan::startCounter(){
     return ((int)this->mLightEvent.mCounter.mValue.mValueType >> 0x1f) + 1;
 }
 

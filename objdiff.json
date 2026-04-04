@@ -33,21 +33,6 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/Act/IMiracleChrAct",
-      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/Act/IMiracleChrAct.o",
-      "scratch": {
-        "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/Act/IMiracleChrAct.ctx",
-        "preset_id": 218,
-        "build_ctx": true
-      },
-      "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/Act/IMiracleChrAct.cpp",
-        "auto_generated": false
-      }
-    },
-    {
       "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/Boot/BtlBootInfo",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
       "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/Boot/BtlBootInfo.o",
@@ -108,17 +93,17 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Boot",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Backup",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Boot.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Backup.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Boot.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Backup.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Boot.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Backup.cpp",
         "auto_generated": false
       }
     },
@@ -318,17 +303,17 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameMain",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameEvent",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameMain.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameEvent.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameMain.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/GameEvent.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/GameMain.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/GameEvent.cpp",
         "auto_generated": false
       }
     },
@@ -423,36 +408,6 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcBase",
-      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcBase.o",
-      "scratch": {
-        "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcBase.ctx",
-        "preset_id": 218,
-        "build_ctx": true
-      },
-      "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Memory/MemAlcBase.cpp",
-        "auto_generated": false
-      }
-    },
-    {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcEtc",
-      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcEtc.o",
-      "scratch": {
-        "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Memory/MemAlcEtc.ctx",
-        "preset_id": 218,
-        "build_ctx": true
-      },
-      "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Memory/MemAlcEtc.cpp",
-        "auto_generated": false
-      }
-    },
-    {
       "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/RandSys",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
       "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/RandSys.o",
@@ -464,6 +419,21 @@
       },
       "metadata": {
         "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/RandSys.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/RegFlag",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/RegFlag.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/RegFlag.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/RegFlag.cpp",
         "auto_generated": false
       }
     },
@@ -498,47 +468,92 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Backup",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Boot",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Backup.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Boot.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Backup.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/Boot.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/Backup.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/Boot.cpp",
         "auto_generated": false
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameEvent",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/BtlMainProxy",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameEvent.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/BtlMainProxy.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameEvent.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/BtlMainProxy.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/GameEvent.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/BtlMainProxy.cpp",
         "auto_generated": false
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RegFlag",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/DreamSystem",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RegFlag.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/DreamSystem.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RegFlag.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/DreamSystem.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/RegFlag.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/DreamSystem.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/FieldSystem",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/FieldSystem.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/FieldSystem.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/FieldSystem.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameMain",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameMain.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/GameMain.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/GameMain.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RealSystem",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RealSystem.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/CMakeFiles/MILLI4C.dir/src/game/System/Tasks/RealSystem.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/src/game/System/Tasks/RealSystem.cpp",
         "auto_generated": false
       }
     },
@@ -603,17 +618,47 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/cpplib",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Api",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/cpplib.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Api.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/cpplib.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Api.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
       "metadata": {
-        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/cpplib.cpp",
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/applet/applet_Api.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Info",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Info.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Info.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/applet/applet_Info.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Wrapper",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Wrapper.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/applet/applet_Wrapper.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/applet/applet_Wrapper.cpp",
         "auto_generated": false
       }
     },
@@ -629,6 +674,21 @@
       },
       "metadata": {
         "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/crt0/MPCore/crt0.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/dbg/dbg_Break",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/dbg/dbg_Break.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/dbg/dbg_Break.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/dbg/dbg_Break.cpp",
         "auto_generated": false
       }
     },
@@ -738,6 +798,51 @@
       }
     },
     {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/nstd/ARMv6/nstd_Mem",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/nstd/ARMv6/nstd_Mem.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/nstd/ARMv6/nstd_Mem.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/nstd/ARMv6/nstd_Mem.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/CTR/os_ErrorHandler",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/CTR/os_ErrorHandler.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/CTR/os_ErrorHandler.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/CTR/os_ErrorHandler.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Api",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Api.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Api.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_Api.cpp",
+        "auto_generated": false
+      }
+    },
+    {
       "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_CriticalSection",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
       "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_CriticalSection.o",
@@ -753,6 +858,21 @@
       }
     },
     {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Initialize",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Initialize.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Initialize.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_Initialize.cpp",
+        "auto_generated": false
+      }
+    },
+    {
       "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_LightEvent",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
       "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_LightEvent.o",
@@ -764,6 +884,36 @@
       },
       "metadata": {
         "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_LightEvent.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Memory",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Memory.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Memory.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_Memory.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Semaphore",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Semaphore.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/os/os_Semaphore.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/os/os_Semaphore.cpp",
         "auto_generated": false
       }
     },
@@ -813,12 +963,27 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/util/detail/util_Symbol",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/util/detail/util_Symbol.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/library/CTRSDK-4_2_5/CMakeFiles/CTRSDK.dir/src/nn/util/detail/util_Symbol.ctx",
+        "preset_id": 218,
+        "build_ctx": true
+      },
+      "metadata": {
+        "source_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/library/CTRSDK-4_2_5/src/nn/util/detail/util_Symbol.cpp",
+        "auto_generated": false
+      }
+    },
+    {
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime",
+      "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime.o",
+      "scratch": {
+        "platform": "n3ds",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/ModuleLib.dir/ModuleLib/MCellAnime.ctx",
         "preset_id": 218,
         "build_ctx": true
       },
@@ -828,12 +993,12 @@
       }
     },
     {
-      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/FReal.dir/FReal/FReal",
+      "name": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/FReal.dir/FReal/FReal",
       "target_path": "/C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/MILLI4C.axf",
-      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/FReal.dir/FReal/FReal.o",
+      "base_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/FReal.dir/FReal/FReal.o",
       "scratch": {
         "platform": "n3ds",
-        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/ro/CMakeFiles/FReal.dir/FReal/FReal.ctx",
+        "ctx_path": "C:/Users/BruhM/Desktop/Project/MILLI4C/build/US_1.0/src/RO/CMakeFiles/FReal.dir/FReal/FReal.ctx",
         "preset_id": 218,
         "build_ctx": true
       },

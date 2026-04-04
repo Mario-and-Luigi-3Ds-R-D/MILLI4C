@@ -1,14 +1,14 @@
 #include <System/MComSys.hpp>
+int sAreaNo;
 
-int AreaNo;
 uchar MComSys::getPrevAreaNo(void) {
-    return (uchar) AreaNo;
+    return (uchar) sAreaNo;
 }
 
 void MComSys::initPrevAreaNo(){
-    AreaNo = 0;
+    sAreaNo = 0;
 }
 
 void MComSys::setPrevAreaNo(int pPrevArea){
-    AreaNo = pPrevArea;
+    sAreaNo = pPrevArea;
 }

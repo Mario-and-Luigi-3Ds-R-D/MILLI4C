@@ -3,14 +3,7 @@ import csv
 from pathlib import Path
 from typing import BinaryIO
  
-from ROSys.roUtil import (
-    HDR, HEADER_SIZE, CRO_MAGIC, CRO_ALIGN, CRO_PAD, INVALID_SEG,
-    SIZEOF_SEGMENT_ENTRY, SIZEOF_NAMED_EXPORT, SIZEOF_INDEXED_EXPORT,
-    SIZEOF_TRIE_NODE,
-    SegType, SegmentEntry, NamedExportEntry, IndexedExportEntry, CROModule,
-    read_u32, write_u32, align_up, pad_to, compute_cro_hashes,
-    build_export_trie, pack_trie_nodes, make_seg_tag, decode_seg_tag,
-)
+from ROSys.roUtil import *
 
 STATIC_TEXT_VA   = 0x00100000
 STATIC_RODATA_VA = 0x00000000  # may vary; often contiguous after .text

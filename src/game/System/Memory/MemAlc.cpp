@@ -1,4 +1,8 @@
 /*#include <System/Memory/MemAlc.hpp>
+#include <System/Memory/MemAlcBase.hpp>
+#include <System/Memory/MemAlcLockImpl.hpp>
+#include <System/Memory/MemAlcUnit.hpp>
+
 //NON MATCHING
 MemAlc::MemAlc(){
     flag1 = 0;          // 0x0

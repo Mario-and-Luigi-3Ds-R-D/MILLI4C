@@ -1,40 +1,36 @@
 //has _vptr and also maybe contains/might be used for MemAlcB, and F
-#pragma once
+/*#pragma once
 
 #include "types.hpp"
+#include "System/Memory/MemAlcBase.hpp"
 
-class MemAlc{
-    u64 flag1; // 0x0
-    u32 mCore; // 0x8
-    s16 mCurrentCore; // 0xc, guess
-    uint mCoreNumber; // 0x10
-    u32 mCriticalSect; // 0x14, nn::os::critsection
-    u32 flag5; // 0x18
+class MemAlc : public MemAlcBase{
 public:
-    virtual ~MemAlc();
-
+    ~MemAlc();
     MemAlc(void);
-    void free();
-    int allocCore(uint, uint);
     void initCore(void*, uint);
+
+
+    virtual void free(uint);
+    virtual MemAlcBase* allocCore(uint,uint);
 };
 
-class MemAlcB{
-    s32 flag1; // 0x0
-    s32 flag2; // 0x4
-    u8 vtable[4]; // 0x8
-    int mCore; // 0xc
-    void* mCurrentCore; // 0x10
-public:
-    MemAlcB(void);
-};
-
-class MemAlcF{
+class MemAlcF : public MemAlcBase{
 public:
     MemAlcF(void);
+
+    virtual void free(uint);
+    virtual MemAlcBase* allocCore(uint,uint);
 };
 
-class MemAlcH{
+class MemAlcB : public MemAlcF{
+public:
+    MemAlcB(void);
+
+    virtual MemAlcBase* allocCore(uint,uint); // Legit the same except for orr added lmao
+};
+
+class MemAlcH : public MemAlc{
 public:
     MemAlcH(void);
-};
+};*/

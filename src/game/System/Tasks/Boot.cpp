@@ -1,4 +1,5 @@
-#include <System/Boot.hpp>
+#include <System/Tasks/Boot.hpp>
+#include <nn/applet/applet_Wrapper.h>
 
 /*Boot::Boot(){
     this->mTaskManager = 0;

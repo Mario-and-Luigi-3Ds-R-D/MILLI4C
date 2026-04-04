@@ -1,73 +1,98 @@
-# Mario and Luigi Dream Team Decompilation / Project MILLI4C
+# MILLI4C
 
-This is currently targetting the 1.0 US Build of the game but will soon expand to other versions, so stay tuned on that!
+A work-in-progress decompilation of **Mario & Luigi: Dream Team** targeting the US 1.0 release, with plans to expand to additional versions over time.
 
-This is currently being ran by one person, so it may take a while, but rest assured I'm committed to finishing this. Probably gonna be done by 2032 minimum, lmao.
+This is currently maintained by one person, so progress will be steady but slow. Hoping to get done by 2032, lmao.
 
-# Disclaimer
+---
 
-You *will* need your legally obtained copy of Mario & Luigi Dream Team to Build the project.
+## Disclaimer
 
-The relevant path to place legally obtained files is located at `data/*version*/code.bin` decompressed. On obtaining your code.bin is not my reponsibility ethier.
+You must provide your own legally obtained copy of Mario & Luigi: Dream Team. Place the decompressed `code.bin` at:
 
-Supported Versions:
+```
+data/<version>/code.bin
+```
 
-`US_1.0`
+**Supported versions:** `US_1.0`
 
-# The Goal
+---
 
-1:1 Matching of the US 1.0 release, and later down the line other releases.
-As of currently,  only the code.bin is being targeted. No CROs *yet*. Nor will be building of the RomFS be targeted ethier.
-I myself don't care for a PC Port of a 3Ds game. But, once finished I will not care if someone forks it and makes a PC Port for themselves.
+## Goals
 
-# Building the code.bin
+- 1:1 matching decompilation of the US 1.0 `code.bin`
+- Expand to additional regional versions over time
+- CRO support is planned but not yet targeted
+- RomFS building is out of scope
+- A PC port is not a goal of this project, though forks are welcome once complete
 
-Currently, the system for building the code.bin is using the tools/Build.py file. (This method is temporary, borrowed from User Moddimations SM3DL Decomp Project) 
+---
 
-**Windows**
+## Building
 
-1) The User will *need* ARMCC_894, and DevkitARM
+### Requirements
 
-2) Set ARMCC Path enviornments for windows
-Example:
+- ARMCC 4.1 Build 894, you can obtain this at developer.arm
+- DevkitARM
+- Windows (Linux support is untested and may not work)
 
+### Setup
 
-ARMCC_PATH = C:\path\2\folder\ARMCC\894
+Set the following environment variables:
 
+| Variable Name (Not op) | Example Path |
+|---|---|
+| `ARMCC_PATH` | `C:\path\to\ARMCC\894` |
+| `ARMCC41LIB` | `C:\path\to\ARMCC\894\lib` |
+| `ARMCC41INC` | `C:\path\to\ARMCC\894\include\windows` |
 
-ARMCC41LIB = C:\path\2\folder\ARMCC\894\lib
+### Building
 
+Run `tools/Build.py`. This will produce:
+- `code.bin`
+- `MILLI4C.axf`
+- Various object files
 
-ARMCC41INC = C:\path\2\folder\ARMCC\894\include\windows
+> Note: The `Build.py` method is temporary, borrowed from [Moddimations' SM3DL Decomp](https://github.com/Moddimation) project.
 
+---
 
-3) Run Build.py, and a *code.bin* and a matching *MILLI4C.axf* file will be produced. As well as several object files.
+## CRO Creator Config
 
-# CRO Building Features & Config
+Each CRO module has the following config files under `data/RO/<ModuleName>/`:
 
+**`imports.csv`** — Defines imported symbols. Format:
+```
+Symbol,Patch,NumberBy0x4,RelocType,Add0
+_ZN10RealSystemC1EPK13FieldBootInfo,0,0x00,2,0
+```
 
-1) All CROs will have an imports CSV in data/RO/ModuleName/imports.csv to which this format is: "_ZN10RealSystemC1EPK13FieldBootInfo,0,0x00,2,0" "Symbol,Patch,NumberBy0x4,RelocType,Add0"
+**`SHA256.csv`** — Overrides the SHA256 in the RO header. Format:
+```
+hash0,1,2,3:<sha256value>
+```
 
+**`static.crs`** — Generated from `data/Version/<VER>/static_symbols.csv`. Format:
+```
+SymbolMangledOrNot,index,offset
+_ZN2nn2ro10InitializeEPvjS0_jb,0,0
+```
+Symbols are generated in order of appearance.
 
-2) All CROs will also have a SHA config too, which edits the SHA256 of the RO header. "data/RO/ModuleName/SHA256.csv" hash0,1,2,3:whateversha256
+**VTable config** — enable_rtti = true if the user desires to enable RTTI generation.
 
+CROs can import from a `ModuleLib` which can used by all CROs.
 
-3) The static.crs will be generated via "data/Version/<VER>/static_symbols.csv" the format being: "_ZN2nn2ro10InitializeEPvjS0_jb,0,0" "SymbolMangledOrNot,index,offset" (they get generated in order so)
+---
 
+## Contributing
 
-4) Lastly the CRO vtable config per RO. This is in development so it does not work as of yet.
+All contributions are appreciated — whether that's Ghidra work, decompilation, tooling, or documentation. 
 
+Join the Discord to get involved:
 
-Oh and, CROs can use ModuleLib as most import from there.
+**https://discord.gg/dQ4xEerM9m**
 
-**Linux**
+as well as 3DS Game Decompilation:
 
-As of currently, I do not know if linux is supported yet.
-
-# How to help
-
-For anyone willing to help, please do so! This project is moving at a snails pace currently since, well, I'm in the setup phase kind-of when it comes to getting this up, so all help is appreciated if anyone wants to pitch in.
-
-Any help counts, ethier it be ghidra work or anything.
-
-Join the discord! https://discord.gg/dQ4xEerM9m
+**https://discord.gg/mYq7Ebt6Hh**

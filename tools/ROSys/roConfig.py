@@ -1,9 +1,9 @@
  #Example config.txt
 #------------------
-#  Shop.cro config
+#  Shop/config.txt
 #  split_rodata = true
-#  enable_rtti = true ("do we wanna do this, with vtable names?"")
-#  bss_size = 0x1a0 do i need this?
+#  enable_rtti = true
+#  bss_size = 0x1a0
  
 from __future__ import annotations
 from pathlib import Path

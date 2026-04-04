@@ -1,12 +1,12 @@
 #pragma once
 
-#include "game/types.hpp"
-#include "MemAlc.hpp"
+#include "types.hpp"
+#include "System/Memory/MemAlc.hpp"
 
 template <typename MemAlcH>
-class MemAlcLockImpl : public MemAlc{
+class MemAlcLockImpl : public MemAlcH{
 public:
     MemAlcLockImpl();
-    void free(int);
-    int* allocCore(int, uint);
+    virtual void free(uint flags);
+    virtual MemAlcBase* allocCore(uint, uint);
 };

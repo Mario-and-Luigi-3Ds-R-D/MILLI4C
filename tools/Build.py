@@ -11,10 +11,10 @@ import argparse
 
 from Bin.genLinkerScript import genLDScript
 from Bin.genObjdiffFile import genObjdiff
+from Bin.genMapFile import genMapFile
 from Bin.utilsVer import *
 from ModuleSys import *
 from Settings import *
-#from SplitSys import *
 
 def main() -> None:
     def status(msg: str):
@@ -95,6 +95,9 @@ def main() -> None:
         shutil.copyfile(f'compile_commands.json', '../compile_commands.json')
     
     # Sub
+
+    status("Report Build System: Generating All Target Address Map...")
+    genMapFile()
 
     status("Report Build System: Generating objdiff.json...")
     genObjdiff()

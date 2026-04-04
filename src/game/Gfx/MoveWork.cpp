@@ -15,6 +15,3 @@ MoveWorkF::~MoveWorkF(){
 // To yet be started on.
 //
 // First Switch decomp statement of mine.
-
-void MoveWorkF::calc(float param_1){
-}

@@ -13,13 +13,10 @@ from ROSys.genModuleFile import build_module
 from ROSys.genStaticFile import build_static_crs
 from ROSys.roUtil import HDR
 from ROSys.roConfig import load_config
-from Settings import (
-    getProjDir, getBuildPath,
-    getFuncSymFile, getDataSymFile, getStaticFile, getModuleImportsFile,
-)
+from Settings import *
  
  
-MODULE_SRC_ROOT  = "src/ro"
+MODULE_SRC_ROOT  = "src/RO"
 MODULE_LIB_NAME  = "ModuleLib"
 ELF_SUFFIX       = ".axf"
 BIN_SUFFIX       = ".bin"
@@ -70,9 +67,9 @@ def discover_modules(project_dir: str) -> list[tuple[str, Path]]:
  
 def _elf_path_for(module_name: str, build_path: str) -> str:
     candidates = [
-        Path(build_path) / "src" / "ro" / (module_name + ELF_SUFFIX),
+        Path(build_path) / "src" / "RO" / (module_name + ELF_SUFFIX),
         Path(build_path) / (module_name + ELF_SUFFIX),
-        Path(build_path) / "ro" / (module_name + ELF_SUFFIX),
+        #Path(build_path) / "ro" / (module_name + ELF_SUFFIX),
     ]
     for c in candidates:
         if c.exists():
@@ -81,7 +78,7 @@ def _elf_path_for(module_name: str, build_path: str) -> str:
  
  
 def _cro_out_path(module_name: str, build_path: str) -> str:
-    return str(Path(build_path) / "ro" / (module_name + CRO_SUFFIX))
+    return str(Path(build_path) / "RomFS" / "RO" / (module_name + CRO_SUFFIX))
  
  
 def _sha256_csv_for(module_name: str, project_dir: str) -> str | None:
@@ -257,7 +254,7 @@ def build_single_module(
 def build_static(version: str, build_path: str, project_dir: str,
                  verbose: bool = False) -> bool:
     out = str(Path(build_path) / CRS_FILENAME)
-    _info(f"Building {CRS_FILENAME} …")
+    _info(f"Report ROSys: Building RO Static Module...")
     try:
         build_static_crs(
             version=version,
@@ -284,14 +281,10 @@ def build_all_modules(
     project_dir = str(getProjDir())
     build_path  = getBuildPath()
  
-    ro_out = Path(build_path) / "ro"
+    ro_out = Path(build_path) / "RomFS" / "RO"
     if clean and ro_out.exists():
         shutil.rmtree(ro_out)
     ro_out.mkdir(parents=True, exist_ok=True)
- 
-    _info("=" * 60)
-    _info(f"CRO Build System  –  version: {version}")
-    _info("=" * 60)
  
     success = True
  
@@ -305,10 +298,10 @@ def build_all_modules(
     # 2. Dynamic CRO modules
     modules = discover_modules(project_dir)
     if not modules:
-        _warn("No CRO modules found under src/ro/")
+        _warn("No CRO modules found under src/RO/")
         return success
  
-    _info(f"\nFound {len(modules)} CRO module(s): {[m[0] for m in modules]}\n")
+    _info(f"\nReport ROSys: Found {len(modules)} RO module(s): {[m[0] for m in modules]}\n")
  
     for module_name, module_src in modules:
         if only_module and module_name != only_module:

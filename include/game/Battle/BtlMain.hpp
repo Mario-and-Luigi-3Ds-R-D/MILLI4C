@@ -40,6 +40,3 @@ class AbortTaskEndCallBack{
 
 };
 }; //BtlMainFunc
-
-class BtlMainProxy{
-};

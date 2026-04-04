@@ -4,13 +4,10 @@ import csv
 import struct
 from pathlib import Path
 import argparse
-from Settings import getBuildPath
-from ROSys.staticUtil import build_crs, save_crs
-from ROSys.roDemangler import demangle
-from ROSys.roUtil import (
-    NamedExportEntry, IndexedExportEntry,
-    make_seg_tag, SegType, INVALID_SEG,
-)
+from Settings import*
+from ROSys.staticUtil import *
+from ROSys.roDemangler import*
+from ROSys.roUtil import*
  
 # seg
 

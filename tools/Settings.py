@@ -22,6 +22,8 @@ def getElfName():
     return "MILLI4C.axf"
 def getElfPath():
     return "/" + str(Path(getBuildPath()) / getElfName()).replace("\\", "/")
+def getArmLinkMap():
+    return str(Path(getBuildPath()) / "MILLI4C.map")
 def getSymMapOut():
     return str(Path(getBuildPath()) / "RedSparkAllTargetAddrMap.smap")
 def getVMapOut():
@@ -32,12 +34,6 @@ def getStaticFile():
     return str(Path(getProjDir()) / "data" / "Version" / get_ver() / "static_symbols.csv")
 def getModuleImportsFile(module_name: str):
     return str(Path(getProjDir()) / "data" / "RO" / module_name / "imports.csv")
-
-#SplitSys
-def getMiniSplitPath():
-    return str(Path(getProjDir()) / "ori" / "ASM")
-def getSplitOutput():
-    return str(Path(getBuildPath()) / "Split")
 
 def getPresetId():
     return 218
