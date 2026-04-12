@@ -1,5 +1,0 @@
-/*void PutRegFlag(){
-}
-
-float GetRegFlag(){
-}*/

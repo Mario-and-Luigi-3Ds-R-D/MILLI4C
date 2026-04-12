@@ -2,18 +2,26 @@
 
 // Start Non Match
 //
-// Start CtrModule
+#ifdef CTRMODULE
+#endif
 
 CtrModule::CtrModule(){
+    this->mModuleNum = 0;
+    this->flag1 = 0;
+    this->flag2 = 0;
 }
 
 CtrModule::~CtrModule(){
 }
 
-// Start CtrLoadModule
+#ifdef CTRLOADMODULE
+#endif
+/*
 
 CtrLoadModule::CtrLoadModule(){
 }
 
 void CtrLoadModule::start(){
 }
+
+*/

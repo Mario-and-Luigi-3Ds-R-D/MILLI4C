@@ -1,29 +1,33 @@
 #include <System/Ctr/CtrNwAlc.hpp>
+#include <System/Memory/MemAlcBase.hpp>
+#include <System/Memory/Mem.hpp>
+
+#ifdef CTRNWALC
+#endif
 
 CtrNwAlc::CtrNwAlc(){
     this->mSetAlc = 0;
-    this->mOpt = 0;
+    this->mOperator = 0;
 }
 
 CtrNwAlc::~CtrNwAlc(){
     this->mSetAlc = 0;
 }
-// Start Non match
 
-void CtrNwAlc::free(int){
+void CtrNwAlc::free(void* size){
+    Mem::Free(size);
 }
 
 void CtrNwAlc::init(int param_2, bool param_3){
 }
 
-void CtrNwAlc::start(int param_1, int param_2, int param_3) {
-    *(int*)(param_1 + 4) = param_2;
-    *(int*)(param_1 + 8) = param_3;
+void CtrNwAlc::start(MemAlcBase* pAlcBase, int arg2) {
+    this->mSetAlc = pAlcBase;
+    this->mOperator = arg2;
 }
 
-// End Non matching
-
-// Start CtrNullNwAlc
+#ifdef CTRNULLNWALC
+#endif
 
 CtrNullNwAlc::~CtrNullNwAlc(){
 }

@@ -7,6 +7,7 @@ class LocalEvent{ // has something at 0x24
 };
 
 class GlobalEvent : public ScriptSystem{
+protected:
     int flag1; // 0x10
     int flag2; // 0x14
 public:

@@ -10,7 +10,7 @@ public:
     virtual ~Task();
     virtual void update();
 
-    __attribute__((noinline)) void term(void);
+    void term(void);
 };
 
 class TaskMan{
@@ -25,6 +25,7 @@ public:
 extern TaskMan gTaskMainMan;
 
 class TaskList{
+protected:
     TaskList* mListFinished; // 0x4
     TaskList* mListNum; // 0x8
 public:
@@ -32,7 +33,7 @@ public:
     virtual ~TaskList();
     virtual void finish();
 
-    __attribute__((noinline)) void startList(); //Force ~TaskList to call it instead of copy it.
+    void startList(); //Force ~TaskList to call it instead of copy it.
 };
 
 class TaskMainBase : public Task{
@@ -42,5 +43,5 @@ public:
 
     TaskMainBase();
     virtual void vt_10();
-    __attribute__((noinline)) void restore(void); //TaskMan*, and Task*
+    void restore(void); //TaskMan*, and Task*
 };

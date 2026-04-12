@@ -1,1 +1,5 @@
-// No Namespace only base class.
+// No Namespace only base class
+
+extern "C"{
+
+}

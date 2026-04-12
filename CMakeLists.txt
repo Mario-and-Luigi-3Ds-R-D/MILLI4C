@@ -35,6 +35,7 @@ file(GLOB_RECURSE SOURCES_ADSL ${CMAKE_SOURCE_DIR}/library/adsl/src/*.c ${CMAKE_
 add_library(crt0 OBJECT library/CTRSDK-4_2_5/src/nn/crt0/MPCore/crt0.cpp)
 add_subdirectory(library/LMS)
 add_subdirectory(library/CTRSDK-4_2_5)
+add_subdirectory(library/NintendoWare)
 add_executable(MILLI4C ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL} $<TARGET_OBJECTS:crt0>)
 
 # Targets
@@ -45,13 +46,14 @@ target_link_options(MILLI4C PRIVATE
     --legacyalign --tailreorder --inline --map --symdefs=${CMAKE_CURRENT_BINARY_DIR}/MILLI4C.map
     --verbose --symbols --paged --mangled
     --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
+    --libpath=${ARMCC41LIB}
     )
 
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:CXX>:
     --apcs=//interwork --cpu=MPCore --fpmode=fast --cpp --arm --force_new_nothrow
     --signed_chars --multibyte-chars --no_vfe 
     --diag_suppress=1 --diag_suppress=177 --diag_suppress=541 --diag_suppress=1134 --diag_suppress=3017
-    --no_rtti_data --no_rtti --no_exceptions -O3 -Otime --data-reorder --split_sections --forceinline
+    --rtti --rtti_data --no_exceptions -O3 -Otime --data-reorder --split_sections
     >)
 
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:C>:
@@ -63,11 +65,13 @@ target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:C>:
 
 target_link_libraries(MILLI4C PUBLIC CTRSDK)
 target_link_libraries(MILLI4C PUBLIC LibMessageStudio)
-#target_link_libraries(MILLI4C PUBLIC NintendoWare)
+target_link_libraries(MILLI4C PUBLIC NintendoWare)
 
 target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/include/game)
-target_include_directories(MILLI4C PUBLIC library/rsLib/include)
-target_include_directories(MILLI4C PUBLIC library/LMS/include/LMS)
+target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/rsLib/include)
+target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/LMS/include/LMS)
+target_include_directories(MILLI4C PUBLIC ${CMAKE_SOURCE_DIR}/library/NintendoWare/include)
+
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/library/CTRSDK-4_2_5/include)
 target_include_directories(crt0 PRIVATE ${CMAKE_SOURCE_DIR}/include/game)
 

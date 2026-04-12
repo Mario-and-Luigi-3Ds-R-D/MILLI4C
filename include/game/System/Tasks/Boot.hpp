@@ -7,16 +7,16 @@
 #include "System/Task.hpp"
 
 class Boot : public TaskMainBase{
+protected:
     int flag1; // 0xc
+    CtrFSEx mCtrFSExLoader;
 public:
-    virtual void LoadSave();
+    virtual void startSaveSys();
     virtual ~Boot();
 
     Boot(void);
-    void initMessage();
-    int startApplication(); // Return could be Boot*
-    void startCtr(); //holy GUAC theres a lot
-    void term(); //unk
-    bool beginState();
-    void entry();
+    void initalizeMemory();
+    int initialize(); // 100%
+    void startMessageSys();
+    void entry(); // Ez
 };

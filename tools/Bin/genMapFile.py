@@ -26,6 +26,10 @@ def demangle(name):
 
 def is_vtable(name):
     return name.startswith('_ZTV')
+def is_TypeInfo(name):
+    return name.startswith('_ZTI')
+def is_TypeName(name):
+    return name.startswith('_ZTS')
 
 def parse_axf_map(map_file_path):
     symbols = []
@@ -70,6 +74,8 @@ def write_vmap(vtables, out_path):
     with open(out_path, 'w') as f:
         for addr, name in sorted(vtables, key=lambda x: x[0]):
             display = name.replace('vtable for ', '') + '::vtable'
+            display = name.replace('typeinfo for ', '') + '::typeinfo'
+            display = name.replace('typeinfo name for ', '') + ''
             f.write(f'0x{addr:08X},{display}\n')
 
 

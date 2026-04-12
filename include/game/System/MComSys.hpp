@@ -2,7 +2,9 @@
 
 class MComSys{
 public:
-    uchar getPrevAreaNo();
+    int getPrevAreaNo();
     void initPrevAreaNo();
     void setPrevAreaNo(int);
+
+    static int _sAreaNo;
 };

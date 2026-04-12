@@ -2,7 +2,7 @@
 extern const unsigned char ScriptTable[16] = {};
 
 ScriptSystem::ScriptSystem(){
-    this->mStart = 0;
+    this->mCommandMetaData = 0;
 }
 
 ScriptSystem::~ScriptSystem(){
@@ -10,7 +10,7 @@ ScriptSystem::~ScriptSystem(){
 
 void ScriptSystem::init(const void*){
     int* param_2;
-    this->mStart = (int)param_2;
+    this->mCommandMetaData = (int)param_2;
     return;
 }
 
@@ -20,7 +20,7 @@ void ScriptSystem::init(const void*){
 int ScriptSystem::rewind(ScriptUnit* pCurrentUnit, ScriptCode const* pCurrentCode) {
     unsigned short codeNum = pCurrentCode->mCodeNum;
     int tmp = 6;
-    uchar *base = ((16 * codeNum) + (uchar*)this->mStart);
+    uchar *base = ((16 * codeNum) + (uchar*)this->mCommandMetaData);
 
     int count = *base & 0x7F;
     if ((*base & 0x80) != 0)

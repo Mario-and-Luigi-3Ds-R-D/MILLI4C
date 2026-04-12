@@ -1,20 +1,17 @@
 #include <System/Job.hpp>
 
 void Job::start(){
-    return;
 }
 
 void Job::term(){
-    return;
 }
 
-int Job::vt_0xc(){
-    return 0;
-}
-
-bool Job::end(int isEnd, int end)
-{
-    int result = ((int (*)(Job*))(*(void***)this)[2])(this);
+bool Job::end(int jobId, int end){
+    int result = this->getJobId();
     result &= end;
-    return result == isEnd;
+    return result == jobId;
+}
+
+JobReturnCode Job::getJobId(){
+    return JOB;
 }

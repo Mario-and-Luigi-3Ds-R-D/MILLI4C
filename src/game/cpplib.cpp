@@ -1,18 +1,22 @@
-#include <stddef.h>
-#include <typeinfo>
-#include <string>
-#include <stdlib.h>
-#include <locale.h>
-#include <wchar.h>
-#include <ctype.h>
-#include <rt_locale.h>
-#include <errno.h>
 #include <System/Memory/MemAlcBase.hpp>
 
-void operator delete(void* ptr)
-{
-    (void)ptr;
+void* operator new(uint size, MemAlcBase* heap, char const* alignment,uint flags){
+    heap->allocCore(size, flags);
 }
 
-void operator delete[](void* ptr){
+void* operator new[](uint size, MemAlcBase* heap, char const* alignment,uint flags){
+    heap->allocCore(size, flags);
 }
+
+void operator delete(void* ptr) {
+    void* allocator = *(void**)((char*)ptr - 4);
+    void** vtable = *(void***)allocator;
+
+    ((void (*)(void*, void*))vtable[0])(allocator, ptr);
+}
+
+//void free(void* heap){
+//
+//}
+
+//void malloc()

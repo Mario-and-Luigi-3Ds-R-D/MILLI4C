@@ -7,5 +7,3 @@
         }
 
 #undef STUB
-
-STUB( __cxa_pure_virtual )

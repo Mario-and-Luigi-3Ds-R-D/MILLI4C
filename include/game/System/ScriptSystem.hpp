@@ -6,7 +6,8 @@ class ScriptCode;
 class ScriptUnit;
 
 class ScriptSystem{
-    int mStart; // 0x4
+protected:
+    int mCommandMetaData; // 0x4
 public:
     virtual ~ScriptSystem();
     virtual void init(void const*);
@@ -23,6 +24,6 @@ public:
 
 class ScriptCode{
 public: 
-ushort mCodeNum;
-uint mCodeUnit;
+    ushort mCodeNum;
+    uint mCodeUnit;
 };

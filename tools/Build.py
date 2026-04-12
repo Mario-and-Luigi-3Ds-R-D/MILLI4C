@@ -32,6 +32,11 @@ def main() -> None:
     old_version = get_ver()
     version = args.version
 
+    if not os.environ.get('ARMCC41LIB'):
+        armcc_path = os.environ.get('ARMCC_PATH', '')
+        if armcc_path:
+            os.environ['ARMCC41LIB'] = str(Path(armcc_path) / 'lib')
+
     if not version or found_version or ("code.bin" in version):
         version = found_version or old_version
     else:
@@ -57,7 +62,8 @@ def main() -> None:
 
     if not os.path.isdir(getBuildPath()) or args.c or (version != old_version):
         shutil.rmtree(getBuildPath(), ignore_errors=True)
-        cmake_args = ['cmake', "-B", getBuildPath(), '-G', 'Unix Makefiles', f"-DRP_VERSION={version.upper()}"]
+        #cmake_args = ['cmake', "-B", getBuildPath(), '-G', 'Unix Makefiles', f"-DRP_VERSION={version.upper()}"]
+        cmake_args = ['cmake', "-B", getBuildPath(), '-G', 'Unix Makefiles', f"-DRP_VERSION={version.upper()}", f"-DARMCC41LIB={os.environ.get('ARMCC41LIB', '')}"]
         if args.m == True:
             cmake_args.append("-DONLY_MATCHING=1")
         if args.w == True:
@@ -99,11 +105,11 @@ def main() -> None:
     status("Report Build System: Generating All Target Address Map...")
     genMapFile()
 
-    status("Report Build System: Generating objdiff.json...")
-    genObjdiff()
+    #status("Report Build System: Generating objdiff.json...")
+    #genObjdiff()
 
-    status("Report ROSys: Building RO Modules...")
-    build_all_modules(version=version, verbose=args.v)
+    #status("Report ROSys: Building RO Modules...")
+    #build_all_modules(version=version, verbose=args.v)
 
     #genSplitAll()
 

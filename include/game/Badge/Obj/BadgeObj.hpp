@@ -1,1 +1,0 @@
-//base, bg, btn overlay, confirm, list

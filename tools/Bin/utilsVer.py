@@ -43,7 +43,7 @@ def sort_bin_if_exist():
 
     ver = get_file_ver(try_bin_path)
     if not ver:
-        print("data/code.bin does not correspond to any known version.")
+        print("data/Version/./code.bin does not correspond to any known version.")
         print("list of versions with SHA256:")
         for k, v in versions.items():
             print(k + ": " + v)

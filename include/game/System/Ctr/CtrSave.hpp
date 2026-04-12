@@ -2,13 +2,10 @@
 
 #include "types.hpp"
 #include "System/Job.hpp"
-//nn::fs::IPositionAble
+#include "nn/fs/fs_FileStream.h"
 
-class CtrSaveFile{ // : public nn::fs::FileStream
+class CtrSaveFile : public nn::fs::FileStream{
 public:
-    int flag2; // 0x4
-    int mCloseFile; // 0x8
-
     virtual ~CtrSaveFile();
     CtrSaveFile();
     void start(int,uint,int,uint); // param_2 sum important
@@ -16,37 +13,37 @@ public:
 };
 
 class CtrSaveFormat : public Job{
-public:
+protected:
     int flag4; // 0x10
     int flag5; // 0x14
-
-    void close(int*, bool);
-    virtual uint start(int, int, int);
-    virtual int vt_0xc(); // enum
+public:
+    void close();
+    virtual void start();
+    virtual JobReturnCode getJobId(); // 100%
 };
 
 class CtrSaveRead : public Job{
-public:
+protected:
     int flag2; // 0x10
     int flag3; // 0x14
     int flag4; // 0x18
     int flag5; // 0x1c
     int flag6; // 0x20
-
+public:
     CtrSaveRead(); // 100%
     virtual void start();
-    virtual int vt_0xc(); // 100%
+    virtual JobReturnCode getJobId(); // 100%
 };
 
 class CtrSaveWrite : public Job{
-public:
+protected:
     int flag3; // 0x10
-    u8 pad2[4]; // 0x14
+    int unk_0x14; // 0x14
     int flag4; // 0x18
     int flag5; // 0x1c
     int flag6; // 0x20
-
+public:
     CtrSaveWrite(); // 100%
-    virtual void start(); //lots of params man
-    virtual int vt_0xc(); // 100%
+    virtual void start();
+    virtual JobReturnCode getJobId(); // 100%
 };

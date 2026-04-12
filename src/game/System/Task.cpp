@@ -1,18 +1,17 @@
 #include <System/Task.hpp>
-// nonmatch
+// NONMATCH
 Task::~Task(){
     this->term();
 }
-// end nonmatch
-
+// MATCH
 void Task::update(){
         ((void (*)(Task*))(*(void***)this)[2])(this);
 }
 
 void Task::term(void) {
-    if (mTaskManager) {
-        *(void**)mTaskManager = 0;
-        mTaskManager = 0;
+    if (this->mTaskManager) {
+        *(void**)this->mTaskManager = 0;
+        this->mTaskManager = 0;
     }
 }
 
@@ -42,13 +41,13 @@ void TaskList::startList()
 
 // TaskMainBase
 
-// Start Non-Matching
+// NONMATCH
 TaskMainBase::~TaskMainBase(void) {
     Task* param_2;
     TaskMainBase::restore();
     Task::term();
 }
-// End NonMatch
+// MATCH
 
 void TaskMainBase::vt_10(){
     return;
@@ -74,5 +73,4 @@ void TaskMainBase::restore(void){
 void TaskMan::entry(Task* task) {
     this->currentTask = task;
     task->mTaskManager = this;
-    return;
 }

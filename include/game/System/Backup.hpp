@@ -7,9 +7,9 @@
 
 class Backup : public CtrSaveFile{
 public:
-    virtual ~Backup();
-
+    ~Backup();
     Backup(void);
+
     void isBusyCoping(void);
     void writeInitData(void);
     int copySaveData(short,short);
@@ -27,7 +27,7 @@ public:
     void init(CtrFS *);
     void term(void);
     void mount(void);
-    void format(void);
+    bool format(void);
     void addCoin(int);
     void addItem(ushort,signed char);
     void errorCode(void);

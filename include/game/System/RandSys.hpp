@@ -6,3 +6,5 @@ class RandSys{
 public:
     static int get(int*);
 };
+
+extern RandSys gRand;

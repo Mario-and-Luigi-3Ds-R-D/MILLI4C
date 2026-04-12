@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ColorBlink.hpp"
-
+/*
 //allnon match
 namespace rsLib{
 ColorBlink::ColorBlink(){
@@ -14,11 +14,11 @@ ColorBlink::~ColorBlink(){
     this->flag2 = 0;
 }
 
-/*ColorBlink::init(uint param_2){
+ColorBlink::init(uint param_2){
     Frm_play(this,param_2);
     this->flag1 = 0;
 }*/
 
 
 
-} // rsLib
+//} // rsLib

@@ -11,7 +11,3 @@ MoveWorkF::MoveWorkF(){
 
 MoveWorkF::~MoveWorkF(){
 }
-
-// To yet be started on.
-//
-// First Switch decomp statement of mine.

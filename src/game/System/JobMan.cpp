@@ -13,7 +13,7 @@ bool JobMan::release(Job* job)
 {
     Job* cur = mIsDone;
     if (cur == job) {
-        ((void (*)(JobMan*))(*(void***)this)[3])(this);
+        this->release();
         return true;
     }
     if (!cur)
@@ -33,7 +33,8 @@ bool JobMan::release(Job* job)
     return false;
 }
 
-Job* JobMan::releaseDone(Job* param_2) {
+Job* JobMan::release() {
+    Job* param_2;
     Job* param_3;
     
     param_2 = this->mIsDone;
@@ -54,11 +55,9 @@ Job* JobMan::releaseDone(Job* param_2) {
 void JobMan::term(Job* param_2) {
     if(this->mIsDone == 0)
         return;
-    do
-    {
-        ((void (*)(JobMan*))(*(void***)this)[3])(this);
-    }
-    while (mIsDone != 0);
+    do{
+        this->release();
+    } while (mIsDone != 0);
 }
 
 // DRATS! My Hack is gone, oh well...
@@ -79,7 +78,7 @@ bool JobMan::isBusy(Job *param_2)
     return 0;
 }
 
-bool JobMan::FUN_005eda38() {
+int JobMan::end() {
     return this->mIsDone !=0;
 }
 
@@ -96,21 +95,15 @@ void JobMan::enqueue(Job* param_2) {
     return;
 }
 
-//  ((void (*)(JobMan*))(*(void***)this)[3])(this); 
-//
-// It looks ugly but.. it works so I'm keeping this around for now until solution.
-
 JobMan::~JobMan() {
-    JobMan* self = this;
-    if (self->mIsDone != 0)
+    JobMan* currentJob = this;
+    if (currentJob->mIsDone != 0)
     {
         do {
-            ((void (*)(JobMan*))(*(void***)this)[3])(this);
-        } while (self->mIsDone != 0);
+            currentJob->release();
+        } while (currentJob->mIsDone != 0);
     }
 }
-
-// Was gonna hack this one, but I used IDA no stinky hacks here, folks!
 
 void JobMan::cancel(Job* param_2, Job* param_3) {
     Job* param_4 = param_2->flag0;

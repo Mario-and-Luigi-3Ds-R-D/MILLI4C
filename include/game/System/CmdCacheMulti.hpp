@@ -1,18 +1,29 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class CmdCacheMulti{
-    u8 pad1[128]; //garbage
-    u8 pad2[8]; //used alot 0x80-0x88
+protected:
+    void* mMemoryAddress;
+    void* mAppMemorySize;
+    void* mStartAddr;
+    void* mEndAddr;
+    void* mRamEndAddr;
+    void* mMemoryRamEndAddr;
+    void* unk_0x18;
+    void* unk_0x1c;
+    u8 unk_pad[96];
+    void* mActiveCadhe;
+    void* mCmdList;
+    void* mBindList;
 public:
     ~CmdCacheMulti();
-    CmdCacheMulti(void);
+    CmdCacheMulti();
     void init(int,int);
-    void beginSave(void);
+    void beginSave();
     void useSave(int,uint,bool);
     void endSave(int);
-    void clear(void);
-    void term(void);
+    void clear();
+    void term();
+    void startup();
 };
-static_assert(sizeof(CmdCacheMulti) == 0x94, "Oh noes! BAD!");

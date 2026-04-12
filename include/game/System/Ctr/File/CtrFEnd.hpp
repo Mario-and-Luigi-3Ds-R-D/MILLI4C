@@ -5,6 +5,5 @@
 
 class CtrFEnd : public Job{
 public:
-    virtual ~CtrFEnd();
-//    void term(); // 100%
+    virtual void term();
 };
