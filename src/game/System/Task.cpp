@@ -4,11 +4,11 @@ Task::~Task(){
     this->term();
 }
 // MATCH
-void Task::update(){
+void Task::destroy(){
         ((void (*)(Task*))(*(void***)this)[2])(this);
 }
 
-void Task::term(void) {
+__attribute__((noinline)) void Task::term(void) {
     if (this->mTaskManager) {
         *(void**)this->mTaskManager = 0;
         this->mTaskManager = 0;
@@ -29,14 +29,13 @@ void TaskList::finish(){
     ((void (*)(TaskList*))(*(void***)this)[3])(this);
 }
 
-void TaskList::startList()
-{
-    if (!mListFinished)
+__attribute__((noinline)) void TaskList::startList(){
+    if (!this->mListFinished)
         return;
-    if (mListNum)
-        mListNum->mListFinished = mListFinished;
-    mListFinished->mListNum = mListNum;
-    mListFinished = 0;
+    if (this->mListNum)
+        this->mListNum->mListFinished = this->mListFinished;
+    this->mListFinished->mListNum = this->mListNum;
+    this->mListFinished = 0;
 }
 
 // TaskMainBase
@@ -53,7 +52,7 @@ void TaskMainBase::vt_10(){
     return;
 }
 
-void TaskMainBase::restore(void){
+__attribute__((noinline)) void TaskMainBase::restore(void){
     TaskMan* manager = this->mTaskManager;
     Task* next = this->nextTask;
     this->nextTask = 0;

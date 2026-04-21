@@ -1,5 +1,6 @@
 #pragma once
 
+#include "nn/applet/applet_All.h"
 #include "nn/os/os_CriticalSection.h"
 #include "nn/os/os_LightEvent.h"
 
@@ -17,7 +18,7 @@ class Sleep{
         static bool _isSleep;
     public:
         int update(); // 100%
-        void startup(); // 100%
+        static void startup(); // 100%
         bool func(); //
         bool beginState();
         void beginFromSleep();
@@ -35,6 +36,9 @@ class NixSign{
         void getNixState(int state, uint);
     };
 }
+
+void Main();
+
 }
 
 extern "C"{

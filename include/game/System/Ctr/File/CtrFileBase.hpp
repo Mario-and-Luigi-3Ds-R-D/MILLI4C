@@ -17,7 +17,7 @@ protected:
     CtrModule* mModule; // 0x3c
 public:
     CtrFileBase(void);
-    ~CtrFileBase();
+    virtual ~CtrFileBase();
     void close(void); // 100%
     void cancel(void); 
     void open(wchar_t const*); // 48%

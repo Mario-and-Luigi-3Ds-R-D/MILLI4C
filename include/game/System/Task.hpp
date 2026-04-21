@@ -7,8 +7,11 @@ class Task{
 public:
     TaskMan* mTaskManager; //0x4
 
+    //virtual void update() = 0;
     virtual ~Task();
-    virtual void update();
+    virtual void destroy();
+    //virtual void vt_0x10() = 0;
+
 
     void term(void);
 };

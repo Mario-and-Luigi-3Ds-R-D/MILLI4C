@@ -1,5 +1,5 @@
 #include <Equip/GameWork.hpp>
-
+GameWork gGameWork;
 
 /*void GameWork::initGameWork(void){
 }

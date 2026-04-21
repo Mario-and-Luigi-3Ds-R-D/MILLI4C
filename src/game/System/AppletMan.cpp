@@ -1,8 +1,4 @@
 #include <System/AppletMan.hpp>
-#include <nn/applet/applet_Api.h>
-#include <nn/applet/applet_Info.h>
-#include <nn/applet/applet_Wrapper.h>
-#include <nn/applet/applet_Paramaters.h>
 
 // Prepare for sti plus make armcc no cry
 

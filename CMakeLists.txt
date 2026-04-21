@@ -42,7 +42,7 @@ add_executable(MILLI4C ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL} $<TARGET
 
 target_link_options(MILLI4C PRIVATE
     --entry=__ctr_start --startup=__ctr_start
-    --library_type=standardlib --ref_cpp_init --scanlib --no_remove --datacompressor=off
+    --library_type=standardlib --ref_cpp_init --scanlib --no_exceptions --no_remove --datacompressor=off
     --legacyalign --tailreorder --inline --map --symdefs=${CMAKE_CURRENT_BINARY_DIR}/MILLI4C.map
     --verbose --symbols --paged --mangled
     --scatter=${CMAKE_CURRENT_BINARY_DIR}/linker.ld
@@ -57,7 +57,7 @@ target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:CXX>:
     >)
 
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:C>:
-    --apcs=//interwork --cpu=MPCore --fpmode=fast --c99 --arm
+    --apcs=//interwork/double8 --cpu=MPCore --fpmode=fast --c99 --arm
     --signed_chars --multibyte-chars 
     --diag_suppress=1 --diag_suppress=177 --diag_suppress=541 --diag_suppress=1134 --diag_suppress=3017
     -Otime --data-reorder --split_sections

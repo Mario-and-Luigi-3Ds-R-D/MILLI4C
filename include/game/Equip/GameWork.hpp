@@ -151,4 +151,4 @@ class GameWork{
     GameWork* getColosseumBestTurn(uchar);
 };
 
-GameWork gGameWork;
+extern GameWork gGameWork;

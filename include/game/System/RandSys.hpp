@@ -4,7 +4,9 @@
 
 class RandSys{
 public:
-    static int get(int*);
+    int mState;
+
+    int get(int*);
 };
 
 extern RandSys gRand;

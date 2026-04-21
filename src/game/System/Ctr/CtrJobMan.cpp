@@ -62,7 +62,7 @@ int CtrJobMan::end() {
 }
 
 int CtrJobMan::startCounter(){
-    return ((int)this->mLightEvent.mCounter.mValue.mValueType >> 0x1f) + 1;
+    return (static_cast<s32>(*this->mLightEvent.mCounter) >> 0x1f) + 1;
 }
 
 int CtrJobMan::startCtrThread() {

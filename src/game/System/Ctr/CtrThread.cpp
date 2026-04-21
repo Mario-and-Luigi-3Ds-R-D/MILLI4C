@@ -5,9 +5,9 @@
 
 /*CtrThread::~CtrThread() {
     nn::os::Thread* pThread;
-    if (this->mThreadNum) {
-        Mem::Free((void*)this->mThreadNum);
-        this->mThreadNum = 0;
+    if (this->mThreadStatus) {
+        Mem::Free((void*)this->mThreadStatus);
+        this->mThreadStatus = 0;
     }
     pThread = (nn::os::Thread*)&this->mCurrentThreadNum; 
     pThread->FinalizeImpl();
@@ -19,9 +19,8 @@
     return ;
 }*/
 
-// ARMCC Hates creating some things, so oopsy poopsy.
-
 CtrThread::~CtrThread(){
+    
 }
 
 void CtrThread::freeThread(){
