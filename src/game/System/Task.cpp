@@ -1,11 +1,11 @@
 #include <System/Task.hpp>
-// NONMATCH
+
 Task::~Task(){
     this->term();
 }
 // MATCH
 void Task::destroy(){
-        ((void (*)(Task*))(*(void***)this)[2])(this);
+    ((void (*)(Task*))(*(void***)this)[2])(this); // Call Task::__deallocating, or ~Task.
 }
 
 __attribute__((noinline)) void Task::term(void) {
@@ -16,20 +16,22 @@ __attribute__((noinline)) void Task::term(void) {
 }
 
 // TaskList
+//
+//
 
-TaskList::~TaskList(void) {
-    startList();
-}
-
-bool TaskList::vt_0x4(){
+bool TaskList::isFinish(){
     return 0;
 }
 
-void TaskList::finish(){
-    ((void (*)(TaskList*))(*(void***)this)[3])(this);
+TaskList::~TaskList(void) {
+    this->term();
 }
 
-__attribute__((noinline)) void TaskList::startList(){
+void TaskList::destroy(){
+    ((void (*)(TaskList*))(*(void***)this)[3])(this); // Call TaskList::__deallocating, or ~TaskList.
+}
+
+__attribute__((noinline)) void TaskList::term(){
     if (!this->mListFinished)
         return;
     if (this->mListNum)
@@ -39,16 +41,15 @@ __attribute__((noinline)) void TaskList::startList(){
 }
 
 // TaskMainBase
+//
+//
 
-// NONMATCH
+
 TaskMainBase::~TaskMainBase(void) {
-    Task* param_2;
-    TaskMainBase::restore();
-    Task::term();
+    this->TaskMainBase::restore();
 }
-// MATCH
 
-void TaskMainBase::vt_10(){
+void TaskMainBase::vt_0x10(){
     return;
 }
 
@@ -65,11 +66,4 @@ __attribute__((noinline)) void TaskMainBase::restore(void){
         manager->currentTask = next;
         next->mTaskManager = manager;
     }
-}
-
-// TaskMan
-
-void TaskMan::entry(Task* task) {
-    this->currentTask = task;
-    task->mTaskManager = this;
 }

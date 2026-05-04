@@ -1,22 +1,31 @@
 
 #include <System/Ctr/File/CtrFileBase.hpp>
+#include <nn/fs/CTR/MPCore/fs_UserFileSystem.h>
 
-/*CtrFileBase::CtrFileBase(){
+CtrFileBase::CtrFileBase(){
+    this->mUncompFile.mLightEvent.Initialize(false);
 }
 
 CtrFileBase::~CtrFileBase(){
-
-}*/
-
-//void CtrFileBase::open(wchar_t const* pFile){
-//}
-
-/*void CtrFileBase::close(){
+//  this->close();
 }
 
-void CtrFileBase::cancel(void){
-}
-
-void CtrFileBase::isBusy(void){
+/*
+void CtrFileBase::open(wchar_t const* __file){
+    CtrFUncompSize* pUncompSize;
+    // End
+    this->SetFlagsImpl();
+    this->TryGetSize(__file, 1);
 }
 */
+void CtrFileBase::close(){
+    CtrSaveFormat::close();
+    this->Finalize();
+}
+
+//void CtrFileBase::cancel(void){
+//}
+
+//bool CtrFileBase::isBusy(void){
+
+//}

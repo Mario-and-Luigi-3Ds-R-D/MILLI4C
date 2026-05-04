@@ -1,10 +1,11 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 
 struct BinGlu3AcsIdxHdr{
 protected:
+    s32* currentOf;
 public:
-    int getOfs(uint,uint *,uchar *);
+    int getOfs(int,uint *,uchar *);
 };

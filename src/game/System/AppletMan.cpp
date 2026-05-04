@@ -2,12 +2,9 @@
 
 // Prepare for sti plus make armcc no cry
 
-nn::os::CriticalSection AppletMan::Sleep::_callback;
-nn::os::LightEvent AppletMan::Sleep::_lightEventCallback;
-nn::os::LightEvent AppletMan::Sleep::_lightCallback;
-char AppletMan::Sleep::_callbackSleep = 0;
-
-
+nn::os::CriticalSection AppletMan::Sleep::_callback = *(nn::os::CriticalSection*)0;
+nn::os::LightEvent AppletMan::Sleep::_lightEventCallback = *(nn::os::LightEvent*)0;
+nn::os::LightEvent AppletMan::Sleep::_lightCallback = *(nn::os::LightEvent*)0;
 
 // Global funcs for Applet
 void awakeCallback(void) {
@@ -24,36 +21,35 @@ int sleepQueryCallback() {
 }
 
 
-
 namespace AppletMan{
+namespace Sleep{
 
-int Sleep::update(){
+int update(){
+    int canRec;
+    bool isReceived;
+    nn::applet::CTR::OrderToCloseState pState;
 
-int param_1;
-bool isReceived;
-nn::applet::CTR::OrderToCloseState pState;
-
-    AppletMan::Sleep::_callback.Initialize();
-    AppletMan::Sleep::_lightEventCallback.Initialize(1);
-    AppletMan::Sleep::_lightCallback.Initialize(1);
-    AppletMan::Sleep::_lightEventCallback.Signal();
-    AppletMan::Sleep::_lightCallback.Signal();
-    nn::applet::CTR::SetSleepQueryCallback((nn::applet::CTR::AppletSleepQueryCallback)&sleepQueryCallback, 0);
-    nn::applet::CTR::SetAwakeCallback((nn::applet::CTR::AppletAwakeCallback)&awakeCallback,0);
-    nn::applet::CTR::detail::Enable(0);
-    pState = nn::applet::CTR::detail::GetOrderToCloseState();
-    if(pState == 0){
-        isReceived = nn::applet::CTR::IsReceivedWakeupByCancel();
-        param_1 = isReceived;
-        if(param_1 == 0)
-            goto ret;
-    }
-    param_1 = 1;
-ret:
-    return param_1 ^ 1;
+        AppletMan::Sleep::_callback.Initialize();
+        AppletMan::Sleep::_lightEventCallback.Initialize(1);
+        AppletMan::Sleep::_lightCallback.Initialize(1);
+        AppletMan::Sleep::_lightEventCallback.Signal();
+        AppletMan::Sleep::_lightCallback.Signal();
+        nn::applet::CTR::SetSleepQueryCallback((nn::applet::CTR::AppletSleepQueryCallback)&sleepQueryCallback, 0);
+        nn::applet::CTR::SetAwakeCallback((nn::applet::CTR::AppletAwakeCallback)&awakeCallback,0);
+        nn::applet::CTR::detail::Enable(0);
+        pState = nn::applet::CTR::detail::GetOrderToCloseState();
+        if(pState == 0){
+            isReceived = nn::applet::CTR::IsReceivedWakeupByCancel();
+            canRec = isReceived;
+            if(canRec == 0)
+                goto ret;
+        }
+        canRec = 1;
+    ret:
+        return canRec ^ 1;
 }
 
-void Sleep::startup(){
+void startup(){
     nn::applet::CTR::SetSleepQueryCallback(0,0);
     nn::applet::CTR::SetAwakeCallback(0,0);
     nn::applet::CTR::DisableSleep(1);
@@ -62,10 +58,14 @@ void Sleep::startup(){
     nn::applet::CTR::detail::CloseApplication(0, 0, nn::applet::CTR::HANDLE_NONE);
 }
 
-#ifdef APPLETMAN_HOMEMENU
-#endif
+void beginFromSleep(){
+
+}
+
+} // Sleep
 
 namespace HomeMenu{
+namespace NixSign{
 /*
 void getNixState(uint param_2){
     if(AppletMan::HomeMenu::NixSign::_state != 0){
@@ -77,6 +77,7 @@ void getNixState(int state, uint){
     // TODO
 }
 */
-}
+} // NixSign
+} // HomeMenu
 
 }

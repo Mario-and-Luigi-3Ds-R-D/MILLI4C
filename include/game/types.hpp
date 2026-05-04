@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <stdlib.h>
 #include <limits>
+#include <new>
 
 #define NULL 0
 
@@ -37,4 +38,13 @@ typedef s32 intptr_t;
 
 #endif
 
-#define split(S) __attribute__((section("i." #S))) S
+#define splits(S) __attribute__((section("i." #S))) S
+
+#define NONMATCHING
+
+// Global Operators
+
+class MemAlcBase;
+
+void* operator new(unsigned int size, MemAlcBase* heap, const char* tag, unsigned int flags) throw();
+void* operator new[](unsigned int size, MemAlcBase* heap, const char* tag, unsigned int flags) throw();

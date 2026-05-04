@@ -5,27 +5,25 @@
 
 /*CtrThread::~CtrThread() {
     nn::os::Thread* pThread;
-    if (this->mThreadStatus) {
-        Mem::Free((void*)this->mThreadStatus);
-        this->mThreadStatus = 0;
+    if (this->mThread.mHandle != 0) {
+        Mem::Free((void*)&this->mThread.mHandle);
+        this->mThread.mHandle = 0;
     }
-    pThread = (nn::os::Thread*)&this->mCurrentThreadNum; 
+    pThread = &this->mThread;
     pThread->FinalizeImpl();
-    if (pThread->mHandle != 0) {
-        svcCloseHandle((int)pThread);
-        pThread->mHandle = 0;
-    }
-    pThread --;
-    return ;
+    pThread->Close();
+    return;
 }*/
 
 CtrThread::~CtrThread(){
-    
+    // STUB 4 VTABLE
 }
 
 void CtrThread::freeThread(){
-    if (this->mThreadStatus != 0) {
-        Mem::Free(this->mThreadStatus);
-        this->mThreadStatus = 0;
+    void* src;
+    *(nn::Handle*)src = this->mThread.mHandle;
+    if (src != 0) {
+        Mem::Free(src);
+        this->mThread.mHandle = 0;
     }
 }

@@ -14,16 +14,17 @@ CtrNwAlc::~CtrNwAlc(){
     this->mSetAlc = 0;
 }
 
-void CtrNwAlc::free(void* size){
+void CtrNwAlc::Free(void* size){
     Mem::Free(size);
 }
 
-void CtrNwAlc::init(int param_2, bool param_3){
+void* CtrNwAlc::Alloc(size_t size, u8 alignment) {
+
 }
 
-void CtrNwAlc::start(MemAlcBase* pAlcBase, int arg2) {
+void CtrNwAlc::init(MemAlcBase* pAlcBase, int op) {
     this->mSetAlc = pAlcBase;
-    this->mOperator = arg2;
+    this->mOperator = op;
 }
 
 #ifdef CTRNULLNWALC
@@ -32,9 +33,9 @@ void CtrNwAlc::start(MemAlcBase* pAlcBase, int arg2) {
 CtrNullNwAlc::~CtrNullNwAlc(){
 }
 
-int CtrNullNwAlc::init(){
+void* CtrNullNwAlc::Alloc(){
     return 0;
 }
 
-void CtrNullNwAlc::free(){
+void CtrNullNwAlc::Free(){
 }

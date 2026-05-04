@@ -1,10 +1,11 @@
 #include <Equip/GameWork.hpp>
+
 GameWork gGameWork;
 
-/*void GameWork::initGameWork(void){
+void GameWork::initGameWork(void){
 }
 
-void GameWork::updatePlayTime(void){
+/*void GameWork::updatePlayTime(void){
 }
 
 void GameWork::updateEquip(DataPc* pData,ushort param_2,ushort param_3,int param_4){

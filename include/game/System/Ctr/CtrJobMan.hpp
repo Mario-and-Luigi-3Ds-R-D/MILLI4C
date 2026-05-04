@@ -8,8 +8,7 @@
 
 class CtrJobMan : public JobMan{
 public:
-    CtrThread mThread; //0xc
-    int flag3; //0x1c
+    CtrThread mCtrThread; //0xC
     nn::os::LightEvent mLightEvent; //0x20
     nn::os::CriticalSection mCriticalSection; // 0x28
     Job mJob; // 0x34
@@ -21,10 +20,10 @@ public:
     virtual void jam(Job *); // 100%
     virtual bool release(Job *); // 100%
     virtual Job* release(); // 100%
-    virtual void term(Job*);
+    virtual void term();
     virtual bool isBusy(Job *); // 100%
     virtual int end(); // 100%
-    //virtual ~CtrJobMan();
+    virtual ~CtrJobMan();
     virtual int startCounter(); // 100%
     virtual int startCtrThread(); // 100%
 

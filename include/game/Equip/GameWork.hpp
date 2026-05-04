@@ -4,6 +4,7 @@
 #include "types.hpp"
 
 class GameWork{
+public:
     u8 pad_1[6]; // 0x0
     ushort flag1_0x6; // 0x6
     ushort flag2_0x8; // 0x8

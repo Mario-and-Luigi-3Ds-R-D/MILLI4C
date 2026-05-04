@@ -1,13 +1,14 @@
 #include <System/Ctr/CtrSave.hpp>
 
 CtrSaveRead::CtrSaveRead(){
-    this->flag0 = 0;
-    this->flag1 = 0;
+    this->mCurrentJob = 0;
+    this->mTerminateStatus = 0;
     this->flag5 = 0;
     this->flag6 = 0;
 }
 
 void CtrSaveRead::start(){
+    // TODO
 }
 
 JobReturnCode CtrSaveRead::getJobId(){

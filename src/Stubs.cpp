@@ -7,3 +7,5 @@
         }
 
 #undef STUB
+
+STUB(TestSymbol)

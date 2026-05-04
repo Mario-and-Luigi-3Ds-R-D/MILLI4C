@@ -4,6 +4,7 @@
 #include "System/Ctr/File/CtrFEnd.hpp"
 #include "System/Ctr/CtrJobMan.hpp"
 #include "System/Ctr/CtrSave.hpp"
+//#include "System/Ctr/File/CtrFileTmp.hpp"
 #include "System/Memory/MemAlcBase.hpp"
 
 class CtrFS{
@@ -22,9 +23,6 @@ public:
     s32 mCoreNumber; // 0x20
     CtrFS::MountedStatus mFSMountStatus; // 0x24
     CtrSaveFormat mCtrSaveFormat; // 0x28
-    int flag2; // 0x40
-    int flag3; // 0x44
-    int flag4; // 0x48
 
     CtrFS(void); // 78%
     virtual ~CtrFS(); 
@@ -35,10 +33,13 @@ public:
 };
 
 class CtrFSEx : public CtrFS{
+public:
+//    CtrFileTmp<CtrFSEx>* mFileTmp; // 0x40
+    void* flag3; // 0x44
+    Job* mFileJob; // 0x48
 public: 
-    CtrFSEx(void);
-    virtual ~CtrFSEx();
-    int read(uint,MemAlcBase *,uint,uint,uint,uint); // 0x00532600, 68%
+    virtual ~CtrFSEx(); // 100%
+    int read(uint,MemAlcBase *,uint,uint,uint,uint); // 0x00532600
     void* read(uint,void *,uint,uint,uint); // 0x005326dc
     void read(uint,int,MemAlcBase *,uint,uint,uint); // 0x00532794 
     int read(uint,uint,uint,uint,uint); // 0x00532898

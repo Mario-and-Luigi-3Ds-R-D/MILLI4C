@@ -17,7 +17,7 @@ protected:
     int flag4; // 0x10
     int flag5; // 0x14
 public:
-    void close();
+    static void close();
     virtual void start();
     virtual JobReturnCode getJobId(); // 100%
 };

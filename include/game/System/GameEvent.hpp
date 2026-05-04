@@ -21,3 +21,8 @@ public:
     void init(void const*, float*, uchar);
     void execEx(LocalEvent*, ScriptCode*);
 };
+
+extern "C"{
+    float GetRegFlag(ushort,GlobalEvent *,LocalEvent *);
+    void PutRegFlag(ushort,float,GlobalEvent *,LocalEvent *);
+}

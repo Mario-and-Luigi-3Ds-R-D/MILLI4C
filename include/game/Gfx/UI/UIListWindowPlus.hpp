@@ -7,23 +7,8 @@
 #include "Prim.hpp"
 //fix namespace issues but yuh yuh
 
-namespace UIListWindowPlus{ //uses SOMETHING as a base
-class InitParam{
-    //addwork here
-public:
-    InitParam(void);
-}; //end initparam
-class Item : public UIListWindowPlus{ //unk
-    //addwork
-public:
-    Item(void);
-}; //end item
-}; //namespace UIListWindowPlus
-
 class UIListWindowPlus{
-
 public:
-    virtual ~UIListWindowPlus();
 
     UIListWindowPlus(void);
     void update(); //unk
@@ -35,6 +20,7 @@ public:
     void tpCtrl(UIListWindowPlus::Item** item,short,short,char,char);
     void tpCtrlStart(short,short); //void is unkown
     void tpCtrlCnt(short,short); //void is unk
+    virtual ~UIListWindowPlus();
     void tpCtrlEnd(short,short); //void is unk
     void keyCtrl(uint,uint,uint,uint,float);
 };

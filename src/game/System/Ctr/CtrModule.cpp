@@ -1,4 +1,6 @@
 #include <System/Ctr/CtrModule.hpp>
+#include <System/Memory/Mem.hpp>
+#include <nn/ro/ro_Api.h>
 
 // Start Non Match
 //

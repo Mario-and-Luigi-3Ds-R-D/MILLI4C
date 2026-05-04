@@ -9,15 +9,15 @@ enum JobReturnCode{
     UNLOAD_MODULE = 0x80000000,
     FUNCOMP_SIZE = 0x81000000,
     FREAD_BASE = 0x81000001,
-    FREAD_EX = 0x81000003,
+    FREAD_SIMPLE = 0x81000003,
     SAVE_READ = 0x82000001,
     SAVE_WRITE = 0x82000002,
 };
 
 class Job{
 public:
-    Job* flag0; // 0x4
-    Job* flag1; // 0x8
+    Job* mCurrentJob; // 0x4
+    Job* mTerminateStatus; // 0x8
 
     virtual void start();
     virtual void term();
@@ -28,15 +28,15 @@ public:
 class JobMan{ // could inherit from Job, you should get one
 public:
     Job* mIsDone; // 0x4
-    Job* flag2; // 0x8
+    Job* mJammedJob; // 0x8
 
     virtual void enqueue(Job*);
     virtual void jam(Job*);
     virtual bool release(Job*);
     virtual Job* release();
-    virtual void term(Job*);
+    virtual void term();
     virtual bool isBusy(Job*);
     virtual int end();
     virtual ~JobMan();
-    void cancel(Job* param_2, Job* param_3);
+    void cancel(Job*,Job*);
 };

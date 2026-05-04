@@ -1,4 +1,11 @@
 #include <System/Ctr/File/CtrFRead.hpp>
 
-CtrFRead::CtrFRead(){
+void CtrFRead::start(){
+    // TODO
+}
+
+// Base FReadSimple getJobId()
+
+JobReturnCode CtrFReadSimple::getJobId(){
+    return FREAD_SIMPLE;
 }

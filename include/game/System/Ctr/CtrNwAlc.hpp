@@ -12,9 +12,9 @@ protected:
     u32  mOperator;
 public:
     virtual ~CtrNwAlc(); // 100%
-    virtual void init(int, bool); // 92%
-    virtual void free(void*); // 100%
-    void start(MemAlcBase*, int); // 100% in dc
+    virtual void* Alloc(size_t, u8); // 92%
+    virtual void Free(void*); // 100%
+    void init(MemAlcBase*, int); // 100% in dc
 
     CtrNwAlc(void); // 100%
 };
@@ -22,6 +22,6 @@ public:
 class CtrNullNwAlc{
 public:
     virtual ~CtrNullNwAlc();
-    virtual int init();
-    virtual void free();
+    virtual void* Alloc();
+    virtual void Free();
 };

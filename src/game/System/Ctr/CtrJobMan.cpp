@@ -4,10 +4,19 @@
 #include <nn/os/CTR/os_ErrorHandler.h>
 #include <nn/svc/svc_Api.h>
 
-#ifdef CTRJOBMAN
-#endif
-
 CtrJobMan::CtrJobMan(){
+/*    this->mIsDone = 0;
+    this->mJammedJob = 0;
+    this->mCtrThread.mCurrentThreadNum = 0;
+    this->mCtrThread.mIsActiveThread = true;
+    this->mCtrThread.mThread = *(nn::os::Thread*)0;
+    this->mLightEvent.mCounter.mValue = 0;
+    this->mLightEvent.mLock.mCounter.mValue = 0;
+    this->mCriticalSection.mThreadUniqueValue = 0;
+    this->mCriticalSection.mLockCount = -1;
+    this->mJob.mCurrentJob = 0;
+    this->mLightEvent.Initialize(1);
+    this->mCriticalSection.Initialize();*/
 }
 
 //CtrJobMan::~CtrJobMan(){
@@ -42,7 +51,7 @@ Job* CtrJobMan::release(){
     this->mCriticalSection.Leave();
 }
 
-void CtrJobMan::term(Job* pJob){
+void CtrJobMan::term(){
 }
 
 bool CtrJobMan::isBusy(Job* pJob) {
@@ -68,15 +77,49 @@ int CtrJobMan::startCounter(){
 int CtrJobMan::startCtrThread() {
     int pThreadNumber;
 
-    pThreadNumber = this->mThread.mCurrentThreadNum;
+    *(nn::Handle*)pThreadNumber = this->mCtrThread.mCurrentThread.mHandle;
     if (pThreadNumber != 0) {
         pThreadNumber = 1;
     }
     return pThreadNumber;
 }
 
-//void CtrJobMan::init(void* pBuffer, int, int){
-//}
+void CtrJobMan::init(void* pBuffer, int size, int priority){
+}
 
-//void CtrJobMan::enter(){
-//}
+CtrJobMan::~CtrJobMan(){
+
+}
+
+void CtrJobMan::enter(){
+    Job* pJob;
+
+    this->mCriticalSection.Enter();
+    if(this->mIsDone == 0){
+        this->mLightEvent.ClearSignal();
+        this->mCriticalSection.Leave();
+        this->mLightEvent.Wait();
+    } else{
+        this->mCriticalSection.Leave();
+    }
+    pJob = this->mIsDone;
+    while(pJob != &this->mJob){
+        this->mCriticalSection.Enter();
+        pJob = this->mIsDone;
+        this->mCriticalSection.Leave();
+        pJob->start();
+        this->mCriticalSection.Enter();
+        this->JobMan::release(pJob);
+        this->mCriticalSection.Leave();
+        this->mCriticalSection.Enter();
+        if(this->mIsDone == 0){
+            this->mLightEvent.ClearSignal();
+            this->mCriticalSection.Leave();
+            this->mLightEvent.Wait();
+        } else{
+            this->mCriticalSection.Leave();
+        }
+        pJob = this->mIsDone;
+    }
+    return;
+}

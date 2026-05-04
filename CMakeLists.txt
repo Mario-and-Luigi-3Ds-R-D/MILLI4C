@@ -41,7 +41,7 @@ add_executable(MILLI4C ${SOURCES_GAME} ${SOURCES_RSLIB} ${SOURCES_ADSL} $<TARGET
 # Targets
 
 target_link_options(MILLI4C PRIVATE
-    --entry=__ctr_start --startup=__ctr_start
+    --entry=__ctr_start --startup=__ctr_start --keep=nnMain
     --library_type=standardlib --ref_cpp_init --scanlib --no_exceptions --no_remove --datacompressor=off
     --legacyalign --tailreorder --inline --map --symdefs=${CMAKE_CURRENT_BINARY_DIR}/MILLI4C.map
     --verbose --symbols --paged --mangled

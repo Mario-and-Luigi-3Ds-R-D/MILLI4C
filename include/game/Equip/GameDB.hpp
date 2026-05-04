@@ -1,10 +1,9 @@
 #pragma once
 
-#include "game/types.hpp"
+#include "types.hpp"
 
 class GameDB{
-    enum ItemMsgType
-    {
+    enum ItemMsgType{
         TYPE1,
         TYPE2,
         TYPE3
@@ -34,4 +33,6 @@ public:
     void GetExpertChallengeMsgFile(void);
     void GetBadge(ushort);
     void GetEquip(ushort);
+
+    static void openMsg();
 };

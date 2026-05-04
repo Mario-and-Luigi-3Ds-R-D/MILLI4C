@@ -4,16 +4,16 @@
 
 class CmdCacheMulti{
 protected:
-    void* mMemoryAddress;
-    void* mAppMemorySize;
-    void* mStartAddr;
-    void* mEndAddr;
-    void* mRamEndAddr;
-    void* mMemoryRamEndAddr;
+    void* unk_0x0;
+    void* unk_0x4;
+    void* unk_0x8;
+    void* unk_0xC;
+    void* unk_0x10;
+    void* unk_0x14;
     void* unk_0x18;
     void* unk_0x1c;
     u8 unk_pad[96];
-    void* mActiveCadhe;
+    void* mActiveCache;
     void* mCmdList;
     void* mBindList;
 public:
@@ -25,5 +25,4 @@ public:
     void endSave(int);
     void clear();
     void term();
-    void startup();
 };

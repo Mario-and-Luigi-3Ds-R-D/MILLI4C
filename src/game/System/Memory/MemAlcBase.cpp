@@ -5,8 +5,7 @@ int MemAlcBase::GetOpt(int currentOpt, bool isNew, uint param_3) {
 
     if (currentOpt <= 4){
         newOperator = 0;
-    } 
-    else{
+    } else{
         newOperator = currentOpt - 1;
     }
     if (isNew != 0){

@@ -9,8 +9,8 @@ ScriptSystem::~ScriptSystem(){
 }
 
 void ScriptSystem::init(const void*){
-    int* param_2;
-    this->mCommandMetaData = (int)param_2;
+    int* data;
+    this->mCommandMetaData = (int)data;
     return;
 }
 

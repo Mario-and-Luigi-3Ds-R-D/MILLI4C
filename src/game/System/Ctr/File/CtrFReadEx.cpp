@@ -3,19 +3,15 @@
 CtrFReadEx::CtrFReadEx(void){ 
 }
 
-void CtrFReadEx::start(){
-}
-
+// TODO: CtrFSEx doesnt go here, ARMCC is a FUCKING BITCHASS CUNT WHO CAN SUCK MY FUCKING DICK.
+//
+// I felt mad in the moment, ant I am still.
 void CtrFReadEx::term() {
-    CtrFS* pFileSystem;
+    CtrFSEx* pFileSystem;
 
-    pFileSystem = (CtrFS*)this->mFileSystem->mRomPath;
-    (int)this->flag0 = pFileSystem->flag4;
-    pFileSystem->flag4 = (int)this;
+    pFileSystem = (CtrFSEx*)this->mpFileSystem->mRomPath;
+    this->mCurrentJob = pFileSystem->mFileJob;
+    pFileSystem->mFileJob = this;
 
     CtrFReadBase::term();
-}
-
-JobReturnCode CtrFReadEx::getJobId(){
-    return FREAD_EX;
 }

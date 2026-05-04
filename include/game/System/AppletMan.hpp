@@ -4,38 +4,45 @@
 #include "nn/os/os_CriticalSection.h"
 #include "nn/os/os_LightEvent.h"
 
+using namespace nn::os;
+
 namespace AppletMan{
+namespace Sleep{
+namespace{
+        char _callbackSleep;
+        bool _disable;
+        s8 _state;
+        bool _isSleep;
+}
+        extern CriticalSection _callback;
+        extern LightEvent _lightEventCallback;
+        extern LightEvent _lightCallback;
 
-class Sleep{
-    public:
-        static nn::os::CriticalSection _callback;
-        static nn::os::LightEvent _lightEventCallback;
-        static nn::os::LightEvent _lightCallback;
-
-        static char _callbackSleep;
-        static bool _disable;
-        static s8 _state;
-        static bool _isSleep;
-    public:
         int update(); // 100%
-        static void startup(); // 100%
-        bool func(); //
+        void startup(); // 100%
+        bool func();
         bool beginState();
         void beginFromSleep();
-    };
+
+} // namespace Sleep
 
 namespace HomeMenu{
+namespace NixSign{
+namespace{
+        int unk2;
+        void* _callbackFunc;
+        void* _state;
+}
+namespace{
+// RomFS path.
+        static wchar_t* ROMFS_NIXSIGN_PATH = L"rom:/Common/NixSign.cg";
+        // static wchar_t* ROMFS_YOURMOTHER_PATH = L"rom:/Common/YourMother.cg"; // 1 trillion gb!??! DAMN! I didn't know your mom was THIS BIG!
+}
 
-class NixSign{
-    public:
-        static int unk2;
-        static int _callbackFunc;
-        static void* _state;
-    public:
         void setNixState(int state, uint);
         void getNixState(int state, uint);
-    };
-}
+} // namespace NixSign
+} // namespace HomeMenu
 
 void Main();
 

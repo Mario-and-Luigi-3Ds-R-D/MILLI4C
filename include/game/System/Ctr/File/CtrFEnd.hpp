@@ -5,5 +5,5 @@
 
 class CtrFEnd : public Job{
 public:
-    virtual void term();
+    virtual void term(); // 100%
 };

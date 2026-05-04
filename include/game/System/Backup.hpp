@@ -31,4 +31,22 @@ public:
     void addCoin(int);
     void addItem(ushort,signed char);
     void errorCode(void);
+
+    struct bufHead{
+
+    };
+
+    struct errCode{
+
+    };
+
+    struct fs{
+
+    };
+
+    static errCode* _errCode;
+    static fs* _fs;
+    static Backup* s_Instance;
+
 };
+    static Backup::bufHead* _bufHead;
