@@ -8,7 +8,7 @@
 #endif
 
 CtrModule::CtrModule(){
-    this->mModuleNum = 0;
+    this->mModuleOffset = 0;
     this->flag1 = 0;
     this->flag2 = 0;
 }

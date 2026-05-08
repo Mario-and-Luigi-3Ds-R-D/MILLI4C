@@ -1,7 +1,7 @@
 #include "System/Memory/VramAlcRange.hpp"
 
 VramAlcRange::VramAlcRange(){
-    *(byte*)&this->mpMemAlc = 0;
+    this->mRange = 0;
     this->mStatus = 0;
 }
 
@@ -13,20 +13,24 @@ VramAlcRange::~VramAlcRange(){
 //    this->term();
 }
 
-u32 VramAlcRange::allocSize(u32 allocedSize, u32 inVaildSize) {
-    u32 newSize;
+uint VramAlcRange::getRangeIndexFor(uint size, uint indexFor64K) {
+    uint result = 0xFFFFFFFF;
 
-    newSize = 0xFFFFFFFF;
-    switch (allocedSize) {
-    case 0x10000:
-        return inVaildSize;
-    case 0x20000:
-        return 0;
-    case 0x30000:
-        newSize = 1;
-    default:
-        return newSize;
+    switch (size) {
+    case 64 * 1024:
+        result = indexFor64K;
+        break;
+        
+    case 128 * 1024:
+        result = 0;
+        break;
+        
+    case 192 * 1024:
+        result = 1;
+        break;
     }
+    
+    return result;
 }
 
 void VramAlcRange::initCore(void* buf,u32 size,u32 param_2){
@@ -40,12 +44,12 @@ void VramAlcRange::split(u32 size){
     // TODO
 }
 
-/*void VramAlcRange::term(){
+/*void VramAlcRange::term() {
     int addOnto = 0;
-    if(*(byte*)&this->mpMemAlc > addOnto){ // Ts isnt signed but no BLE if it isnt.. idk
-        do{
+    if ((int)this->mStatus > addOnto) {
+        do {
             addOnto += 1;
-        }while ((int)(uint)*(byte *)&this->mpMemAlc > addOnto);
+        } while ((int)this->mStatus > addOnto);
     }
     this->mStatus = 0;
 }*/

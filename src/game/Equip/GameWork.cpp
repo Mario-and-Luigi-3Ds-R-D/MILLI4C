@@ -1,5 +1,12 @@
 #include <Equip/GameWork.hpp>
 
+// TODO:
+//
+// Fix this.. please..
+// This shit looks worse than your mothers coochie does.
+//
+// Half of these are fuckin' consts (ZNK) that idas BITCHASS cant see, identify these!
+
 GameWork gGameWork;
 
 void GameWork::initGameWork(void){

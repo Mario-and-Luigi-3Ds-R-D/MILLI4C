@@ -4,13 +4,14 @@ CtrArcFile::~CtrArcFile(){
 
 }
 
-/*CtrArcFile::cancel(int* pOut){
+/*
+
+CtrArcFile::cancel(int* pOut){
 
 }
 
 size_t CtrArcFile::getSize(void* pBuf){
-    size_t fileSize;
-    bool canFlush;
+
 }
 
 */

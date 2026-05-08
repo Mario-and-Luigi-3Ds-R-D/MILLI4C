@@ -12,6 +12,8 @@ void* operator new[](uint size, MemAlcBase* heap, const char* tag,uint flags){
     heap->allocCore(size, flags);
 }
 
+// TODO: Fix this
+
 void operator delete(void* ptr) {
     void* allocator = *(void**)((char*)ptr - 4);
     void** vtable = *(void***)allocator;

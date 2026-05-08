@@ -26,11 +26,10 @@ JobReturnCode CtrFReadBase::getJobId(){
     return FREAD_BASE;
 }
 
-int CtrFReadBase::initRead(int memory){
-    int read;
-    read = (int)this->mpActiveMem;
+int CtrFReadBase::initRead(int flag){
+    int read = (int)this->mpActiveMem;
 
-    if(memory != 0){
+    if(flag != 0){
         this->mpActiveMem = 0;
     }
     return read;

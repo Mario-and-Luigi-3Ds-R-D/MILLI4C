@@ -11,18 +11,16 @@ public:
     static u32 GetLcdHeight(u32);
     static u32 GetLcdWidth(u32);
     float* GetProjOrtho(nn::math::MTX44*, u32, bool, bool, float, float);
-    void Initialize(MemAlc*, u32);
-    void mergeVram(u32);
-    void restoreDefVramAlc(u32);
+    void Initialize(MemAlc*, size_t);
+    void mergeVram(size_t);
+    void restoreDefVramAlc(size_t);
     void simpleSwapBufVSync(u32);
-    void splitVram(u32);
-    void swapDispBuf(u32);
+    void splitVram(size_t);
+    void swapDispBuf(size_t);
     void term();
-    void waitVSync(u32);
+    void waitVSync(size_t);
 
-    VramAlcRange vramRanges[2];  // or VramAlcRange vramRanges[N]
-
-// statics
-public:
-
+    VramAlcRange vramRanges[2];
 };
+
+extern Grp gGrp;

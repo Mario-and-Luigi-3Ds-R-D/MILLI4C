@@ -1,15 +1,15 @@
 #include <System/Memory/MemAlcBase.hpp>
 
-int MemAlcBase::GetOpt(int currentOpt, bool isNew, uint param_3) {
-    int newOperator;
+int MemAlcBase::GetOpt(int flag, bool isNewOp, uint alignment) {
+    int result;
 
-    if (currentOpt <= 4){
-        newOperator = 0;
-    } else{
-        newOperator = currentOpt - 1;
-    }
-    if (isNew != 0){
-        newOperator |= 0x800000;
-    }
-    return newOperator | param_3;
+    if (flag <= 4)
+        result = 0;
+    else
+        result = flag - 1;
+
+    if (isNewOp != 0)
+        result |= 0x800000;
+
+    return result | alignment;
 }

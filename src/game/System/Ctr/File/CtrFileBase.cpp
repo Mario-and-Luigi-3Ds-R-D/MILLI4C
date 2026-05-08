@@ -7,7 +7,7 @@ CtrFileBase::CtrFileBase(){
 }
 
 CtrFileBase::~CtrFileBase(){
-//  this->close();
+
 }
 
 /*

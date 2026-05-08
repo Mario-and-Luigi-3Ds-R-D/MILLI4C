@@ -6,7 +6,7 @@
 class MemAlc : public MemAlcBase{
 protected:
     int flag3;
-    int flag4;
+    uint mMemoryCmdList; // 0x18
     int flag5;
 public:
     MemAlc(void);
@@ -27,7 +27,9 @@ extern MemAlc gMem;
 public:
     MemAlcF();
 
-    virtual void free(uint);
+    virtual void free(uint ptr){
+        this->MemAlcBase::free(ptr);
+    }
     virtual MemAlcBase* allocCore(uint,uint);
 };
 
@@ -35,7 +37,10 @@ class MemAlcB : public MemAlcF{
 public:
     MemAlcB();
 
-    virtual MemAlcBase* allocCore(uint,uint); // Legit the same except for orr added lmao
+    virtual MemAlcBase* allocCore(uint size,uint size){
+        MemAlcBase* heap = this;
+        heap->allocCore(size, flags | 0x800000);
+    }
 };
 
 class MemAlcH : public MemAlc{

@@ -4,7 +4,7 @@
 #include "nn/os/os_CriticalSection.h"
 
 class MemAlcBase{
-public:
+protected:
     void* mCoreNumber; // 0x4
     void* mCoreStatus; // 0x8
     void* mHeap; // 0xc

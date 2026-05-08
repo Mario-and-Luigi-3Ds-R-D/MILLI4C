@@ -30,6 +30,7 @@ public:
     Job* mIsDone; // 0x4
     Job* mJammedJob; // 0x8
 
+    JobMan() : mIsDone(0), mJammedJob(0){ }
     virtual void enqueue(Job*);
     virtual void jam(Job*);
     virtual bool release(Job*);

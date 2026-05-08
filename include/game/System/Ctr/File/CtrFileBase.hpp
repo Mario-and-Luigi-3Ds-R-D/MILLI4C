@@ -3,6 +3,8 @@
 #include "types.hpp"
 #include "System/Ctr/File/CtrFUncompSize.hpp"
 #include "System/Ctr/File/CtrModuleFile.hpp"
+#include "System/Ctr/File/CtrFRead.hpp"
+#include "System/Ctr/CtrJobMan.hpp"
 #include "System/Ctr/CtrModule.hpp"
 #include "nn/fs/fs_FileStream.h"
 #include "nn/os/os_CriticalSection.h"

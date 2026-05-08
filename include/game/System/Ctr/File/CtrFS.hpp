@@ -38,10 +38,11 @@ public:
     void* flag3; // 0x44
     Job* mFileJob; // 0x48
 public: 
-    virtual ~CtrFSEx(); // 100%
+    virtual ~CtrFSEx(){ this->term(); }
     int read(uint,MemAlcBase *,uint,uint,uint,uint); // 0x00532600
     void* read(uint,void *,uint,uint,uint); // 0x005326dc
     void read(uint,int,MemAlcBase *,uint,uint,uint); // 0x00532794 
     int read(uint,uint,uint,uint,uint); // 0x00532898
     void term(void);
 };
+

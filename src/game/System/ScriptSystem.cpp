@@ -1,5 +1,5 @@
 #include <System/ScriptSystem.hpp>
-extern const unsigned char ScriptTable[16] = {};
+extern const unsigned char ScriptTable[10] = {1,2,4, 1,2,4, 2,4,4,4};
 
 ScriptSystem::ScriptSystem(){
     this->mCommandMetaData = 0;
@@ -14,9 +14,7 @@ void ScriptSystem::init(const void*){
     return;
 }
 
-// No Hacks here, unfortately..
-//
-// Was a pain in thr ass, users Darxoon, Moddimation, M-1, Troy, and finally our G cuckydev got it to work, Hoo-ray!
+// Rewinds the current script.
 int ScriptSystem::rewind(ScriptUnit* pCurrentUnit, ScriptCode const* pCurrentCode) {
     unsigned short codeNum = pCurrentCode->mCodeNum;
     int tmp = 6;
@@ -37,10 +35,7 @@ int ScriptSystem::rewind(ScriptUnit* pCurrentUnit, ScriptCode const* pCurrentCod
     return tmp;
 }
 
-// This one was brought to us by our sponsor, (Not really a "Sponsor")
-//
-// DimiDimit, aka the MnL Goat of the century.
-// I'm eventually gonna take this title, hopefully?
+// Loads script array.
 
 float ScriptSystem::loadArrayElement(unsigned short *array, short index) {
     unsigned int elementType = (*array & 0x0F00) >> 8;

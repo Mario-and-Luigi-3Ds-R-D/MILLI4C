@@ -8,8 +8,8 @@ public:
     struct FileMem{
         void* workingMem;
         void* currentMem;
-        void* newMem;
-        ushort ststus;
+        CtrFUncompSize* mpUncompSize;
+        ushort mMountStatus;
     };
 
     static FileMem _fileMem;

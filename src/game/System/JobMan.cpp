@@ -33,6 +33,8 @@ bool JobMan::release(Job* job)
     return false;
 }
 
+// TODO: Name these params please
+
 Job* JobMan::release() {
     Job* param_2;
     Job* param_3;
@@ -63,8 +65,7 @@ void JobMan::term() {
 
 // DRATS! My Hack is gone, oh well...
 
-bool JobMan::isBusy(Job *param_2)
-{
+bool JobMan::isBusy(Job *param_2){
     Job *currentJobStatus = this->mIsDone;
 
     if (currentJobStatus != NULL) {
@@ -98,8 +99,7 @@ void JobMan::enqueue(Job* param_2) {
 
 JobMan::~JobMan() {
     JobMan* currentJob = this;
-    if (currentJob->mIsDone != 0)
-    {
+    if (currentJob->mIsDone != 0){
         do {
             currentJob->release();
         } while (currentJob->mIsDone != 0);

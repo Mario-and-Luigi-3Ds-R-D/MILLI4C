@@ -3,27 +3,15 @@
 #include <nn/os/os_Thread.h>
 #include <nn/svc/svc_Api.h>
 
-/*CtrThread::~CtrThread() {
-    nn::os::Thread* pThread;
-    if (this->mThread.mHandle != 0) {
-        Mem::Free((void*)&this->mThread.mHandle);
-        this->mThread.mHandle = 0;
-    }
-    pThread = &this->mThread;
-    pThread->FinalizeImpl();
-    pThread->Close();
-    return;
-}*/
 
 CtrThread::~CtrThread(){
-    // STUB 4 VTABLE
+//    this->freeThread();
+//    this->mCurrentThread.~Thread();
 }
 
 void CtrThread::freeThread(){
-    void* src;
-    *(nn::Handle*)src = this->mThread.mHandle;
-    if (src != 0) {
-        Mem::Free(src);
+    if (this->mThread.mHandle != 0){
+        Mem::Free(reinterpret_cast<void*>((uintptr_t)this->mThread.mHandle.GetHandle())); // Gets current thread handle. Thread->Handle->GetHandle return mHandle.
         this->mThread.mHandle = 0;
     }
 }

@@ -26,27 +26,19 @@ namespace Sleep{
 
 int update(){
     int canRec;
-    bool isReceived;
     nn::applet::CTR::OrderToCloseState pState;
 
-        AppletMan::Sleep::_callback.Initialize();
-        AppletMan::Sleep::_lightEventCallback.Initialize(1);
-        AppletMan::Sleep::_lightCallback.Initialize(1);
-        AppletMan::Sleep::_lightEventCallback.Signal();
-        AppletMan::Sleep::_lightCallback.Signal();
-        nn::applet::CTR::SetSleepQueryCallback((nn::applet::CTR::AppletSleepQueryCallback)&sleepQueryCallback, 0);
-        nn::applet::CTR::SetAwakeCallback((nn::applet::CTR::AppletAwakeCallback)&awakeCallback,0);
-        nn::applet::CTR::detail::Enable(0);
-        pState = nn::applet::CTR::detail::GetOrderToCloseState();
-        if(pState == 0){
-            isReceived = nn::applet::CTR::IsReceivedWakeupByCancel();
-            canRec = isReceived;
-            if(canRec == 0)
-                goto ret;
-        }
-        canRec = 1;
-    ret:
-        return canRec ^ 1;
+    AppletMan::Sleep::_callback.Initialize();
+    AppletMan::Sleep::_lightEventCallback.Initialize(1);
+    AppletMan::Sleep::_lightCallback.Initialize(1);
+    AppletMan::Sleep::_lightEventCallback.Signal();
+    AppletMan::Sleep::_lightCallback.Signal();
+    nn::applet::CTR::SetSleepQueryCallback((nn::applet::CTR::AppletSleepQueryCallback)&sleepQueryCallback, 0);
+    nn::applet::CTR::SetAwakeCallback((nn::applet::CTR::AppletAwakeCallback)&awakeCallback, 0);
+    nn::applet::CTR::detail::Enable(0);
+    pState = nn::applet::CTR::detail::GetOrderToCloseState();
+    canRec = (pState != 0 || nn::applet::CTR::IsReceivedWakeupByCancel()) ? 1 : 0;
+    return canRec ^ 1;
 }
 
 void startup(){

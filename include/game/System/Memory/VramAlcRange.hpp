@@ -13,7 +13,7 @@ public:
     VramAlcRange();
     ~VramAlcRange();
 
-    static u32 allocSize(u32,u32); // 100%
+    static u32 getRangeIndexFor(u32,u32); // 100%
     void initCore(void*,u32,u32);
     void merge();
     void split(u32);
@@ -36,6 +36,6 @@ public:
     };
 public:
     Pool poolObj[8];
-    MemAlc* mpMemAlc;
+    s8 mRange;
     void* mStatus;
 };

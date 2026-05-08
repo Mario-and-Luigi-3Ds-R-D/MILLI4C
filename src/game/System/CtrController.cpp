@@ -15,33 +15,30 @@ u32 TransCrossBtnBit(u32 btnBit) {
 #ifdef BTN
 #endif
 
-s32 Btn::Select(s32 param_1, s32 current, u32 oldInput, u32 newInput, s32 status){
-    s32 isTarg;
+s32 Btn::Select(s32 param_1, s32 current, u32 oldInput, u32 newInput, s32 status) {
     s32 var_r4 = param_1;
     s32 currentBtn = current;
+    param_1 = var_r4;
 
-    if(Btn::Rep(oldInput, status) != 0){
+    if (Btn::Rep(oldInput, status) != 0)
         var_r4 -= 1;
-    }
-    if(Btn::Rep(newInput, status) != 0){
+
+    if (Btn::Rep(newInput, status) != 0)
         var_r4 += 1;
-    }
-    if(var_r4 < 0){
-        isTarg = Btn::Trg(oldInput, status);
-        if(isTarg != 0){
-            goto targRet;
-        }
-        return isTarg;
-    }
-    if(currentBtn > var_r4){
-        return var_r4;
-    }
-    if(Btn::Trg(newInput, status) != 0){
+
+    if (var_r4 < 0) {
+        if (Btn::Trg(oldInput, status) != 0)
+            return currentBtn - 1;
         return 0;
     }
-targRet:
-    isTarg = currentBtn -1;
-    return isTarg;
+
+    if (currentBtn > var_r4)
+        return var_r4;
+
+    if (Btn::Trg(newInput, status) != 0)
+        return 0;
+
+    return currentBtn -1;
 }
 
 __attribute__((noinline)) s32 Btn::Trg(u32 input, s32 status){
@@ -55,7 +52,7 @@ __attribute__((noinline)) s32 Btn::Trg(u32 input, s32 status){
 }
 
 __attribute__((noinline)) s32 Btn::Rep(u32 input, s32 status){
-    s32 repeatedInput;
+    int repeatedInput;
 
     repeatedInput = input & (int)gBtn.mRepeatedInput;
     if(repeatedInput != 0){
