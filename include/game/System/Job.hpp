@@ -34,10 +34,11 @@ public:
     virtual void enqueue(Job*);
     virtual void jam(Job*);
     virtual bool release(Job*);
-    virtual Job* release();
+    virtual void release();
     virtual void term();
     virtual bool isBusy(Job*);
-    virtual int end();
+    virtual bool isDone();
     virtual ~JobMan();
+    
     void cancel(Job*,Job*);
 };

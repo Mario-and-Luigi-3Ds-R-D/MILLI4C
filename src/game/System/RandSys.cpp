@@ -1,7 +1,14 @@
 #include <System/RandSys.hpp>
 
-RandSys gRand = *(RandSys*)0x2a6d365a; // Initialize gRand STI.
-RandSys::DateTimeMan gDtMan;
+// STI
+
+//RandSys gRand = *(RandSys*)0x2a6d365a;
+
+static RandSys gRand;
+
+/* RandSys::get() */
+
+/* Gets a new random number. */
 
 int RandSys::get() {
     int pRandNum;
@@ -13,18 +20,4 @@ int RandSys::get() {
     pRandNum = pRandNum + __ror(pRandNum + __ror(pRandNum, 0x1e), 0x1d);
     this->mState = pRandNum;
     return (u16)pRandNum;
-}
-
-NONMATCHING
-/*void RandSys::DateTimeMan::GetNow(){
-    nn::fnd::DateTime* datetime;
-    s32 stack;
-
-    datetime->GetNow();
-    this->mDateTime = datetime;
-    this->flag_0xc = stack;
-}*/
-
-void RandSys::DateTimeMan::calcNumber(int newNumber){
-    this->mNumber = newNumber + this->mNumber;
 }

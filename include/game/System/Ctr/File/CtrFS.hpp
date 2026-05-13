@@ -5,30 +5,25 @@
 #include "System/Ctr/CtrJobMan.hpp"
 #include "System/Ctr/CtrSave.hpp"
 //#include "System/Ctr/File/CtrFileTmp.hpp"
+//#include "System/Backup.hpp"
 #include "System/Memory/MemAlcBase.hpp"
 
 class CtrFS{
 public:
-
-    struct MountedStatus{
-        ushort usFlag1;
-        ushort mMounted;  
-    };
-
     int* flag1; // 0x4
     CtrJobMan* mJobMan; // 0x8
     CtrFEnd mCtrFEnd; // 0xc
     const char* mRomPath; // 0x18
-    void* mCoreStatus; // 0x1c
-    s32 mCoreNumber; // 0x20
-    CtrFS::MountedStatus mFSMountStatus; // 0x24
+    void* mCoreSource; // 0x1c
+    s32 mCoreSize; // 0x20
+//    Backup::errCode* mpErrorCode;
     CtrSaveFormat mCtrSaveFormat; // 0x28
 
     CtrFS(void); // 78%
     virtual ~CtrFS(); 
     void cancel(void);
-    int unmountSaveData(void); // 100%
-    void mountSaveData(); // 93%
+    static Result unmountSaveData(void); // 100%
+    static void mountSaveData(); // 93%
     void initCore(CtrJobMan*, void*, int); // 100%
 };
 

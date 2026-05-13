@@ -11,10 +11,12 @@ protected:
     int flag1; // 0xc
     CtrFSEx mCtrFSExLoader;
 public:
-    virtual void update();
-    virtual ~Boot();
+    virtual void update(){ }
+    virtual ~Boot(){ }
 
-    Boot(void);
+    Boot(void){
+        
+    }
     static void initalizeMemory(uint,uint,uint);
     static void initialize(); // 100%
     void startMessageSys();

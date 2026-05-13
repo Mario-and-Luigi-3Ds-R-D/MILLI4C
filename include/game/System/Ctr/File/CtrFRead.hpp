@@ -21,7 +21,7 @@ public:
     virtual void term(); // 100%
     virtual JobReturnCode getJobId(); // 100%
 
-    int initRead(int);
+    void* popMemory(bool);
 };
 
 class CtrFReadSimple : public CtrFReadBase{  // bro :skull:

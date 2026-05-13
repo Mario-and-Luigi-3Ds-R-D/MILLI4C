@@ -1,5 +1,6 @@
 #include <System/ScriptSystem.hpp>
-extern const unsigned char ScriptTable[10] = {1,2,4, 1,2,4, 2,4,4,4};
+
+extern const unsigned char gScriptTable[10] = {1,2,4, 1,2,4, 2,4,4,4};
 
 ScriptSystem::ScriptSystem(){
     this->mCommandMetaData = 0;
@@ -8,62 +9,65 @@ ScriptSystem::ScriptSystem(){
 ScriptSystem::~ScriptSystem(){
 }
 
-void ScriptSystem::init(const void*){
-    int* data;
-    this->mCommandMetaData = (int)data;
-    return;
+void ScriptSystem::init(const void* data){
+    uchar* scriptData;
+    this->mCommandMetaData = scriptData;
 }
 
-// Rewinds the current script.
-int ScriptSystem::rewind(ScriptUnit* pCurrentUnit, ScriptCode const* pCurrentCode) {
-    unsigned short codeNum = pCurrentCode->mCodeNum;
+/* ScriptSystem::rewind(ScriptUnit*, const ScriptCode*) */
+
+/* Rewinds the current script. */
+int ScriptSystem::rewind(ScriptUnit* pScriptUnit, ScriptCode const* pScriptCodeUnit) {
+    unsigned short codeNum = pScriptCodeUnit->mCodeNum;
     int tmp = 6;
-    uchar *base = ((16 * codeNum) + (uchar*)this->mCommandMetaData);
+    uchar *base = ((16 * codeNum) + this->mCommandMetaData);
 
     int count = *base & 0x7F;
     if ((*base & 0x80) != 0)
         count++;
     
     for (int i = 0; i < count; i++) {
-        if ((pCurrentCode->mCodeUnit >> i) & 1) {
+        if ((pScriptCodeUnit->mVarFlags >> i) & 1) {
             tmp += 2;
         } else {
-            tmp += ScriptTable[(base[i / 2 + 1] >> ((i & 1) << 2)) & 0xF];
+            tmp += gScriptTable[(base[i / 2 + 1] >> ((i & 1) << 2)) & 0xF];
         }
     }
-    pCurrentUnit->mUnitValue -= tmp;
+    pScriptUnit->mUnitValue -= tmp;
     return tmp;
 }
 
-// Loads script array.
+/* ScriptSystem::loadArrayElement(unsigned short *array, short index) */
+
+/* Loads a array element, entered into array */
 
 float ScriptSystem::loadArrayElement(unsigned short *array, short index) {
     unsigned int elementType = (*array & 0x0F00) >> 8;
-    int elementOffset = index * ScriptTable[elementType];
+    int elementOffset = index * gScriptTable[elementType];
     unsigned char *elementPtr = ((unsigned char*) array) + 2 + elementOffset;
     
     switch (elementType) {
         case 0:
-            return (float) *((unsigned char*) elementPtr);
+            return (float)*((uchar*) elementPtr);
         case 3: {
-            unsigned char element = *((unsigned char*) elementPtr);
-            return (float) (signed char) element;
+            unsigned char element = *((uchar*) elementPtr);
+            return (float)(char) element;
         }
         case 1:
-            return (float) *((unsigned short*) elementPtr);
+            return (float) *((ushort*) elementPtr);
         case 4:
         case 6: {
-            unsigned short element = *((unsigned short*) elementPtr);
-            return (float) (signed short) element;
+            ushort element = *((ushort*) elementPtr);
+            return (float) (short) element;
         }
         case 2:
-            return (float) (*((unsigned int*) elementPtr) & 0x00FFFFFF | ((unsigned int) *(elementPtr + 3) << 24));
+            return (float) (*((uint*) elementPtr) & 0x00FFFFFF | ((uint) *(elementPtr + 3) << 24));
         case 5:
         case 7: {
-            return (float) (signed int) (*((unsigned int*) elementPtr) & 0x00FFFFFF | ((unsigned int) *(elementPtr + 3) << 24));
+            return (float) (int) (*((uint*) elementPtr) & 0x00FFFFFF | ((uint) *(elementPtr + 3) << 24));
         }
         case 8: {
-            unsigned int element = (*((unsigned int*) elementPtr) & 0x00FFFFFF | ((unsigned int) *(elementPtr + 3) << 24));
+            int element = (*((uint*) elementPtr) & 0x00FFFFFF | ((uint) *(elementPtr + 3) << 24));
             return *((float*) &element);
         }
         default:

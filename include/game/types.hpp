@@ -42,9 +42,7 @@ typedef s32 intptr_t;
 
 #define NONMATCHING
 
-// Global Operators
-
 class MemAlcBase;
 
-void* operator new(unsigned int size, MemAlcBase* heap, const char* tag, unsigned int flags) throw();
-void* operator new[](unsigned int size, MemAlcBase* heap, const char* tag, unsigned int flags) throw();
+void* operator new(unsigned int size, MemAlcBase* heap, const char* tag,unsigned int flags);
+void* operator new[](uint size, MemAlcBase* heap, const char* tag,uint flags);

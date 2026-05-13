@@ -12,22 +12,20 @@ public:
     nn::os::LightEvent mLightEvent; //0x20
     nn::os::CriticalSection mCriticalSection; // 0x28
     Job mJob; // 0x34
-    int flag8; // 0x40
 public:
     CtrJobMan(void);
 
     virtual void enqueue(Job *); // 100%
     virtual void jam(Job *); // 100%
     virtual bool release(Job *); // 100%
-    virtual Job* release(); // 100%
-    virtual void term();
+    virtual void release(); // 100%
+    virtual void term(); // 100%
     virtual bool isBusy(Job *); // 100%
-    virtual int end(); // 100%
+    virtual bool isDone(); // 100%
     virtual ~CtrJobMan();
-    virtual int startCounter(); // 100%
-    virtual int startCtrThread(); // 100%
+    virtual s32 signalValue(); // 100%
+    virtual int termCtrThread(); // 100%
 
     void start(int, int, int);
     void init(void*,int,int);
-    void enter();
 };

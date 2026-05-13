@@ -5,13 +5,9 @@
 
 
 CtrThread::~CtrThread(){
-//    this->freeThread();
-//    this->mCurrentThread.~Thread();
+    this->freeThread();
 }
 
 void CtrThread::freeThread(){
-    if (this->mThread.mHandle != 0){
-        Mem::Free(reinterpret_cast<void*>((uintptr_t)this->mThread.mHandle.GetHandle())); // Gets current thread handle. Thread->Handle->GetHandle return mHandle.
-        this->mThread.mHandle = 0;
-    }
+    Mem::Clear((void**)&this->mThreadNumber);
 }

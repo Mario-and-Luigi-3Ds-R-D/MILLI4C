@@ -3,11 +3,11 @@
 #include "types.hpp"
 #include "nn/os/os_Thread.h"
 
-class CtrThread{
+class CtrThread : public nn::os::Thread {
 public:
-    nn::os::Thread mCurrentThread; // 0x4
-    nn::os::Thread mThread; // 0xC
+    s32 mThreadNumber;
 public:
+    CtrThread() : mThreadNumber(0){}
     virtual void freeThread(); // 100%
     virtual ~CtrThread();
 };

@@ -1,15 +1,15 @@
 #include <System/Task.hpp>
 
+/* Task::term() */
+
 void Task::term(void) {
     if (this->mTaskManager) {
-        *(void**)this->mTaskManager = 0;
+        this->mTaskManager->currentTask = 0;
         this->mTaskManager = 0;
     }
 }
 
-// TaskList
-//
-//
+/* TaskList::term() */
 
 void TaskList::term(){
     if (!this->mListFinished)
@@ -22,10 +22,11 @@ void TaskList::term(){
     this->mListFinished = 0;
 }
 
-// TaskMainBase
-//
-//
+/* TaskMainBase::restore() */
 
+/* Restores the next task, quit the new one */
+
+// TODO: mTaskManager -> mCurrentTask
 
 void TaskMainBase::restore(void){
     TaskMan* manager = this->mTaskManager;

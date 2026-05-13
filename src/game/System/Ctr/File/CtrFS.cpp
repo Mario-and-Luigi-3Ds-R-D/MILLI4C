@@ -3,14 +3,7 @@
 // NONMATCH
 
 CtrFS::CtrFS(){
-/*    this->flag1 = (int*) 0xe7e3ffff;
-    this->mCtrFEnd.mCurrentJob = 0;
-    this->mCtrFEnd.mTerminateStatus = 0;
-    this->mRomPath = 0;
-    this->mCoreNumber = 0;
-    *(int*)this->mFSMountStatus.usFlag1 = 0;
-    this->mCtrSaveFormat.mCurrentJob = 0;
-*/
+
 }
 
 CtrFS::~CtrFS(){
@@ -37,8 +30,8 @@ Result CtrFS::formatSave(){
 */
 
 // MATCHED 100%
-void CtrFS::initCore(CtrJobMan* pJobManager, void* status, int number){
+void CtrFS::initCore(CtrJobMan* pJobManager, void* pSrc, int size){
     this->mJobMan = pJobManager;
-    this->mCoreStatus = status;
-    this->mCoreNumber = number;
+    this->mCoreSource = pSrc;
+    this->mCoreSize =  size;
 }

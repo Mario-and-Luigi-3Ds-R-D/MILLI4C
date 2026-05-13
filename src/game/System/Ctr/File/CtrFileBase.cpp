@@ -7,25 +7,19 @@ CtrFileBase::CtrFileBase(){
 }
 
 CtrFileBase::~CtrFileBase(){
-
+//    this->mUncompFile;
+//    this->close();
 }
 
 /*
-void CtrFileBase::open(wchar_t const* __file){
+void CtrFileBase::open(wchar_t const* pPath){
     CtrFUncompSize* pUncompSize;
     // End
     this->SetFlagsImpl();
-    this->TryGetSize(__file, 1);
+    this->TryGetSize(pPath, 1);
 }
 */
 void CtrFileBase::close(){
     CtrSaveFormat::close();
     this->Finalize();
 }
-
-//void CtrFileBase::cancel(void){
-//}
-
-//bool CtrFileBase::isBusy(void){
-
-//}

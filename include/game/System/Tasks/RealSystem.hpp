@@ -7,7 +7,4 @@
 class RealSystem : public FieldSystem {
 public:
     virtual ~RealSystem();
-
-    RealSystem(FieldBootInfo const*);
-    void getPath();
 };

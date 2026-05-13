@@ -3,5 +3,5 @@
 
 // Hack cast to Signal();
 void CtrFEnd::term() {
-    ((nn::os::LightEvent *)&this->mTerminateStatus)->Signal();
+    ((nn::os::LightEvent*)&this->mTerminateStatus)->Signal();
 }

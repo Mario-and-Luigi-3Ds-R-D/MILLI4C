@@ -1,18 +1,21 @@
 #include <System/AppletMan.hpp>
+#include <nn/applet/CTR/applet_Api.h>
+#include <nn/applet/CTR/applet_Info.h>
+#include <nn/applet/CTR/applet_Wrapper.h>
 
-// Prepare for sti plus make armcc no cry
+/* STI */
 
-nn::os::CriticalSection AppletMan::Sleep::_callback = *(nn::os::CriticalSection*)0;
-nn::os::LightEvent AppletMan::Sleep::_lightEventCallback = *(nn::os::LightEvent*)0;
-nn::os::LightEvent AppletMan::Sleep::_lightCallback = *(nn::os::LightEvent*)0;
+nn::os::CriticalSection AppletMan::Sleep::_callback;
+nn::os::LightEvent AppletMan::Sleep::_lightEventCallback;
+nn::os::LightEvent AppletMan::Sleep::_lightCallback;
 
-// Global funcs for Applet
-void awakeCallback(void) {
+/* Callbacks */
+void awakeCallback(uptr) {
     AppletMan::Sleep::_lightCallback.Signal();
     AppletMan::Sleep::_callbackSleep = 1;
 }
 
-int sleepQueryCallback() {
+int sleepQueryCallback(uptr) {
     AppletMan::Sleep::_lightCallback.Signal();
     if (nn::applet::CTR::detail::IsActive() != 0) {
         return 2;
@@ -23,6 +26,10 @@ int sleepQueryCallback() {
 
 namespace AppletMan{
 namespace Sleep{
+    char _callbackSleep;
+    bool _disable;
+    s8 _state;
+    bool _isSleep;
 
 int update(){
     int canRec;
@@ -33,10 +40,11 @@ int update(){
     AppletMan::Sleep::_lightCallback.Initialize(1);
     AppletMan::Sleep::_lightEventCallback.Signal();
     AppletMan::Sleep::_lightCallback.Signal();
-    nn::applet::CTR::SetSleepQueryCallback((nn::applet::CTR::AppletSleepQueryCallback)&sleepQueryCallback, 0);
-    nn::applet::CTR::SetAwakeCallback((nn::applet::CTR::AppletAwakeCallback)&awakeCallback, 0);
+    nn::applet::CTR::SetSleepQueryCallback(&sleepQueryCallback, 0);
+    nn::applet::CTR::SetAwakeCallback(&awakeCallback, 0);
     nn::applet::CTR::detail::Enable(0);
     pState = nn::applet::CTR::detail::GetOrderToCloseState();
+
     canRec = (pState != 0 || nn::applet::CTR::IsReceivedWakeupByCancel()) ? 1 : 0;
     return canRec ^ 1;
 }
@@ -58,14 +66,17 @@ void beginFromSleep(){
 
 namespace HomeMenu{
 namespace NixSign{
+    int unk2;
+    void* _callbackFunc;
+    void* _state;
 /*
-void getNixState(uint param_2){
-    if(AppletMan::HomeMenu::NixSign::_state != 0){
-        AppletMan::HomeMenu::getNixState((uint)AppletMan::HomeMenu::NixSign::_state, param_2);
+void getNixState(){
+    if(_state != 0){
+        setNixState();
     }
 }
 
-void getNixState(int state, uint){
+void setNixState(){
     // TODO
 }
 */

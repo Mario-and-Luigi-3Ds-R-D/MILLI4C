@@ -14,8 +14,9 @@ public:
 
 class CtrSaveFormat : public Job{
 protected:
-    int flag4; // 0x10
-    int flag5; // 0x14
+    size_t mMaxFiles;
+    size_t mMaxDirectories;
+    bool mIsDuplicated;
 public:
     static void close();
     virtual void start();
@@ -24,11 +25,13 @@ public:
 
 class CtrSaveRead : public Job{
 protected:
-    int flag2; // 0x10
-    int flag3; // 0x14
-    int flag4; // 0x18
-    int flag5; // 0x1c
-    int flag6; // 0x20
+    void* _C;
+    void* _10;
+    void* _14;
+    void* _18;
+    void* _1C;
+    Job* mpJob; // 0x20, TODO: does this belong here?
+    void* _24;
 public:
     CtrSaveRead(); // 100%
     virtual void start();

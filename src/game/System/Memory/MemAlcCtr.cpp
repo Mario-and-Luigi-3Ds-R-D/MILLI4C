@@ -6,11 +6,7 @@
 CtrModule::ModulePtrs CtrModule::_module = { nullptr, nullptr, nullptr };
 MemAlcCtr gMemCtr;
 
-MemAlcCtr::~MemAlcCtr(){
-
-}
-
-/*void MemAlcCtr::mountFS(int,int,int,int){
+/*void MemAlcCtr::mount(uint flags,,uint,uint,bool){
     // STUB
 }
 
@@ -18,7 +14,7 @@ void MemAlcCtr::mountRO(int){
     // STUB
 }
 
-void MemAlcCtr::finalizeFS(){
+void MemAlcCtr::finalize(){
     // STUB
 }
 */

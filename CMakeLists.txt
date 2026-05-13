@@ -49,11 +49,13 @@ target_link_options(MILLI4C PRIVATE
     --libpath=${ARMCC41LIB}
     )
 
+    #if Debug Build add -DBUILD_DEBUG
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:CXX>:
     --apcs=//interwork --cpu=MPCore --fpmode=fast --cpp --arm --force_new_nothrow
     --signed_chars --multibyte-chars --no_vfe 
     --diag_suppress=1 --diag_suppress=177 --diag_suppress=541 --diag_suppress=1134 --diag_suppress=3017
     --rtti --rtti_data --no_exceptions -O3 -Otime --data-reorder --split_sections
+    -DBUILD_RELEASE 
     >)
 
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:C>:

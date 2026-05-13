@@ -11,12 +11,10 @@ CtrJobMan::CtrJobMan(){
 }
 
 CtrJobMan::~CtrJobMan(){
-//  Job* pJob;
 
-//  this->term(pJob)
 }
 
-//void CtrJobMan::start(){
+//void CtrJobMan::start(MemAlcBase* pAlcBase, size_t size,  ){
 //}
 
 
@@ -48,7 +46,7 @@ bool CtrJobMan::release(Job* pJob) {
 
 /* CtrJobMan::release() */
 
-Job* CtrJobMan::release(){
+void CtrJobMan::release(){
     this->mCriticalSection.Enter();
     this->JobMan::release();
     this->mCriticalSection.Leave();
@@ -56,7 +54,19 @@ Job* CtrJobMan::release(){
 
 /* CtrJobMan::term() */
 
-void CtrJobMan::term(){
+void CtrJobMan::term() {
+    if(this->termCtrThread() != 0){
+        this->jam(&this->mJob);
+        {int index;
+        nn::Handle handle = this->mCtrThread.mHandle;
+        Result result = nn::svc::WaitSynchronizationN(&index,&handle, 1, false, -1);
+        NN_OS_ERROR_IF_FAILED(result);
+        this->mCtrThread.mCanFinalize = true;
+        this->mCtrThread.FinalizeImpl();
+        this->mCtrThread.Close();}
+        this->JobMan::term();
+        this->mCtrThread.freeThread();
+    }
 }
 
 /* CtrJobMan::isBusy(CTRJOB* pJob) */
@@ -67,28 +77,68 @@ bool CtrJobMan::isBusy(Job* pJob) {
     this->mCriticalSection.Leave();
 }
 
-/* CtrJobMan::end() */
+/* CtrJobMan::isDone() */
 
-int CtrJobMan::end() {
-    int pDone;
-
-    pDone = (int)this->mIsDone;
-    return pDone != 0 ? 1 : pDone;
+bool CtrJobMan::isDone() {
+    return this->mIsDone != 0;
 }
 
-/* CtrJobMan::startCounter() */
+/* CtrJobMan::signalValue() */
 
-int CtrJobMan::startCounter(){
-    return (static_cast<s32>(*this->mLightEvent.mCounter) >> 0x1f) + 1;
+s32 CtrJobMan::signalValue(){
+    return (static_cast<s32>(*this->mLightEvent.mLock.mCounter) >> 0x1f) + 1;
 }
 
-/* CtrJobMan::startCtrThread() */
+/* CtrJobMan::termCtrThread() */
 
-int CtrJobMan::startCtrThread() {
-    int pThreadNumber;
+int CtrJobMan::termCtrThread() {
+    return this->mCtrThread.mHandle != 0;
+}
 
-    *(nn::Handle*)pThreadNumber = this->mCtrThread.mCurrentThread.mHandle;
-    return pThreadNumber != 0 ? 1 : pThreadNumber;
+/* enterJob(CtrJobMan pThis) */
+//
+/* Used in the thread funcs start & init. */
+
+void enterJob(CtrJobMan* pThis){
+    Job* pJob;
+    // Enter Thread.
+    pThis->mCriticalSection.Enter();
+    // TODO: Make this Shit Into an inline.
+    // If the job is done, proceed.
+    if(pThis->mIsDone == 0){
+        pThis->mLightEvent.ClearSignal();
+        pThis->mCriticalSection.Leave();
+        pThis->mLightEvent.Wait();
+    } else{
+        pThis->mCriticalSection.Leave();
+    } // If not, fuck off and leave the thread.
+
+    // After what we did above, it is completed. However if its not mJob then...
+    pJob = pThis->mIsDone;
+    while(pJob != &pThis->mJob){
+        // Allocate Thread to the current job.
+        pThis->mCriticalSection.Enter();
+        pJob = pThis->mIsDone;
+        pThis->mCriticalSection.Leave();
+
+        // We enter a new CTR job, proceed.
+        pJob->start();
+        pThis->mCriticalSection.Enter();
+        pThis->JobMan::release(pJob);
+        pThis->mCriticalSection.Leave();
+
+        // Same as what we need initially.
+        pThis->mCriticalSection.Enter();
+        if(pThis->mIsDone == 0){
+            pThis->mLightEvent.ClearSignal();
+            pThis->mCriticalSection.Leave();
+            pThis->mLightEvent.Wait();
+        } else{
+            pThis->mCriticalSection.Leave();
+        }
+        pJob = pThis->mIsDone;
+    }
+    return;
 }
 
 /* CtrJobMan::init(void* pBuffer, int size, int priority) */
@@ -96,49 +146,7 @@ int CtrJobMan::startCtrThread() {
    Used with gMemCtr->allocCore(all the shit in it)
 */
 
-void CtrJobMan::init(void* pBuffer, int size, int priority){
-}
-
-void CtrJobMan::enter(){
-    Job* pJob;
-    // Enter Thread.
-    this->mCriticalSection.Enter();
-
-    // TODO: This is a inline no doubt. Create it.
-    //
-    // If the job is done, proceed.
-    if(this->mIsDone == 0){
-        this->mLightEvent.ClearSignal();
-        this->mCriticalSection.Leave();
-        this->mLightEvent.Wait();
-    } else{
-        this->mCriticalSection.Leave();
-    } // If not, fuck off and leave the thread.
-
-    // After what we did above, it is completed. However if its not mJob then...
-    pJob = this->mIsDone;
-    while(pJob != &this->mJob){
-        // Allocate Thread to the current job.
-        this->mCriticalSection.Enter();
-        pJob = this->mIsDone;
-        this->mCriticalSection.Leave();
-
-        // We enter a new CTR Job, proceed.
-        pJob->start();
-        this->mCriticalSection.Enter();
-        this->JobMan::release(pJob);
-        this->mCriticalSection.Leave();
-
-        // Same as what we need initially.
-        this->mCriticalSection.Enter();
-        if(this->mIsDone == 0){
-            this->mLightEvent.ClearSignal();
-            this->mCriticalSection.Leave();
-            this->mLightEvent.Wait();
-        } else{
-            this->mCriticalSection.Leave();
-        }
-        pJob = this->mIsDone;
-    }
-    return;
-}
+//void CtrJobMan::init(void* src, int size, int priority){
+//    *this->mLightEvent.mCounter.mValue = src + priority;
+//    this->mCtrThread.mCurrentThread.StartUsingAutoStack(enterJob, this, nullptr, size, priority);
+//}

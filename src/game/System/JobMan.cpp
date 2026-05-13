@@ -1,18 +1,18 @@
 #include <System/Job.hpp>
 
-void JobMan::jam(Job* job){
-    job->mCurrentJob = this->mIsDone;
-    this->mIsDone = job;
+/* Use the CtrJobMan entry, not this. */
+
+void JobMan::jam(Job* pJob){
+    pJob->mCurrentJob = this->mIsDone;
+    this->mIsDone = pJob;
     if(!this->mJammedJob){
-        this->mJammedJob = job;
+        this->mJammedJob = pJob;
     }
-    return;
 }
 
-bool JobMan::release(Job* job)
-{
+bool JobMan::release(Job* pJob){
     Job* cur = mIsDone;
-    if (cur == job) {
+    if (cur == pJob) {
         this->release();
         return true;
     }
@@ -20,12 +20,12 @@ bool JobMan::release(Job* job)
         return false;
     do {
         Job* next = cur->mCurrentJob;
-        if (next == job) {
-            Job* nextNext = job->mCurrentJob;
+        if (next == pJob) {
+            Job* nextNext = pJob->mCurrentJob;
             cur->mCurrentJob = nextNext;
             if (nextNext == 0)
                 mJammedJob = cur;
-            job->term();
+            pJob->term();
             return true;
         }
         cur = next;
@@ -33,68 +33,53 @@ bool JobMan::release(Job* job)
     return false;
 }
 
-// TODO: Name these params please
-
-Job* JobMan::release() {
-    Job* param_2;
-    Job* param_3;
+void JobMan::release() {
+    Job* current = this->mIsDone;
+    Job* next = current->mCurrentJob;
     
-    param_2 = this->mIsDone;
-    param_3 = param_2->mCurrentJob;
-    this->mIsDone = param_3;
-
-    if(param_3 == 0){
-        param_3 = this->mIsDone;
-        param_3 = 0;
+    this->mIsDone = next;
+    if(next == 0)
         this->mJammedJob = 0;
-    }
-    else{
-        this->mIsDone = param_3;
-    }
-    return ((Job* (*)(Job*))(*(void***)param_2)[1])(param_2);
+    
+    current->term();
 }
 
 void JobMan::term() {
     if(this->mIsDone == 0)
         return;
+
     do{
         this->release();
-    }
-    while (mIsDone != 0);
+    } while (mIsDone != 0);
 }
 
-// DRATS! My Hack is gone, oh well...
-
-bool JobMan::isBusy(Job *param_2){
+bool JobMan::isBusy(Job *pJob){
     Job *currentJobStatus = this->mIsDone;
 
     if (currentJobStatus != NULL) {
         do {
-            if (currentJobStatus == param_2) {
-                return 1;
+            if (currentJobStatus == pJob) {
+                return true;
             }
             currentJobStatus = currentJobStatus->mCurrentJob;
         } while (currentJobStatus != 0);
     }
-
-    return 0;
+    return false;
 }
 
-int JobMan::end() {
-    return this->mIsDone !=0;
+bool JobMan::isDone() {
+    return this->mIsDone != 0;
 }
 
-void JobMan::enqueue(Job* param_2) {
-    
+void JobMan::enqueue(Job* pJob) {
     if (this->mIsDone){
-        this->mJammedJob->mCurrentJob = param_2;
+        this->mJammedJob->mCurrentJob = pJob;
     }
     else{
-        this->mIsDone = param_2;
+        this->mIsDone = pJob;
     }
-    param_2->mCurrentJob = 0;
-    this->mJammedJob = param_2;
-    return;
+    pJob->mCurrentJob = 0;
+    this->mJammedJob = pJob;
 }
 
 JobMan::~JobMan() {
@@ -106,18 +91,18 @@ JobMan::~JobMan() {
     }
 }
 
-void JobMan::cancel(Job* current, Job* oldJob) {
-    Job* jammed = current->mCurrentJob;
+void JobMan::cancel(Job* pJammedJob, Job* pJob) {
+    Job* jammed = pJammedJob->mCurrentJob;
     
-    if(oldJob){
-        oldJob->mCurrentJob = jammed;
+    if(pJob){
+        pJob->mCurrentJob = jammed;
         if(!jammed)
-            this->mJammedJob = oldJob;
+            this->mJammedJob = pJob;
     }
     else{
         this->mIsDone = jammed;
         if(!jammed)
             this->mJammedJob = 0;
     }
-    current->term();
+    pJammedJob->term();
 }

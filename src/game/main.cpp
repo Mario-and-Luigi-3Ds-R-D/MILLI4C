@@ -4,6 +4,8 @@
 // Purposes: Mainloop + nninitStartup();
 
 // SYSTEM
+
+
 #include "System/AppletMan.hpp"
 #include "System/RandSys.hpp"
 #include "System/Backup.hpp"
@@ -16,9 +18,11 @@
 #include "System/Memory/Mem.hpp"
 
 // MISC
+
+
 #include "Equip/GameWork.hpp"
 #include "Equip/GameDB.hpp"
-#include "Gfx/GXRes.hpp" // its prob not gxrescmn but ill research
+#include "Gfx/GXRes.hpp"
 #include "Gfx/Prim.hpp"
 #include "Message/MessageDrawer.hpp"
 #include "Message/MessageSys.hpp"
@@ -36,17 +40,22 @@
 extern "C" void nninitStartUpDefault(); // nn/src/init/init_Default.cpp 
 
 // Custom, so it goes here.
+
 extern "C" void nninitStartUp(){
     nninitStartUpDefault();
-    // CmdCacheInit::startup();
+    //GxMemAlc::startup();
 }
 
-/* AppletMan::Main() */
+/* inline voidAppletMan::Main() */
+//
+/* Main Game Loop */
 inline void AppletMan::Main(){
 
 }
 
 /* nnMain */
+//
+/* Main Application Loop */
 extern "C" void nnMain(){
     AppletMan::Main();
     AppletMan::Sleep::startup();

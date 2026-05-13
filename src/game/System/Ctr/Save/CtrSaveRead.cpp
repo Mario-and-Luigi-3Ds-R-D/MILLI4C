@@ -3,8 +3,8 @@
 CtrSaveRead::CtrSaveRead(){
     this->mCurrentJob = 0;
     this->mTerminateStatus = 0;
-    this->flag5 = 0;
-    this->flag6 = 0;
+    this->_1C = 0;
+    this->mpJob = 0;
 }
 
 void CtrSaveRead::start(){

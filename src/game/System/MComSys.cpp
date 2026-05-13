@@ -1,5 +1,7 @@
 #include <System/MComSys.hpp>
 
+/* Module Com Sys used for CROs */
+
 int MComSys::_sAreaNo;
 
 int MComSys::getPrevAreaNo(void) {

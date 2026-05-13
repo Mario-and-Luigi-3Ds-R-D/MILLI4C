@@ -37,7 +37,6 @@ public:
     };
 
     struct errCode{
-
     };
 
     struct fs{

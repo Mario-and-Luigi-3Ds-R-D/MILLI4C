@@ -19,6 +19,7 @@ public:
     void swapDispBuf(size_t);
     void term();
     void waitVSync(size_t);
+    uint getVram(uint sp, Grp grpPtr, uint sizeHi, uint sizeLo);
 
     VramAlcRange vramRanges[2];
 };
