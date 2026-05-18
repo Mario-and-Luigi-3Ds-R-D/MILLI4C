@@ -12,16 +12,14 @@ void* operator new[](uint size, MemAlcBase* heap, const char* tag,uint flags){
     heap->allocCore(size, flags);
 }
 
-// TODO: Fix this
+/* Deleting function, it looks ugly, but its better than it was, actually! */
 
 void operator delete(void* ptr) {
-    void* allocator = *(void**)((char*)ptr - 4);
-    void** vtable = *(void***)allocator;
-    ((void (*)(void*, void*))vtable[0])(allocator, ptr);
+    MemAlcBase* heap = *(MemAlcBase**)((uint)ptr - 4);
+    heap->free((uint)ptr);
 }
 
 void operator delete[](void* ptr) {
-    void* allocator = *(void**)((char*)ptr - 4);
-    void** vtable = *(void***)allocator;
-    ((void (*)(void*, void*))vtable[0])(allocator, ptr);
+    MemAlcBase* heap = *(MemAlcBase**)((uint)ptr - 4);
+    heap->free((uint)ptr);
 }

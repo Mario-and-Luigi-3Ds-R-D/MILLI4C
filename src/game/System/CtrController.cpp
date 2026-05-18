@@ -4,77 +4,25 @@ CtrBtn gBtn;
 CtrAcl gAcl;
 CtrTp gTp;
 
-u32 TransCrossBtnBit(u32 btnBit) {
-    uint crossed = btnBit >> 0x18 & 0xf0;
-    if(crossed != 0){
-        btnBit = btnBit & 0xffffff0f | crossed;
-    }
-    return btnBit;
-}
-
-#ifdef BTN
-#endif
-
-s32 Btn::Select(s32 param_1, s32 current, u32 oldInput, u32 newInput, s32 status) {
-    s32 var_r4 = param_1;
-    s32 currentBtn = current;
-    param_1 = var_r4;
-
-    if (Btn::Rep(oldInput, status) != 0)
-        var_r4 -= 1;
-
-    if (Btn::Rep(newInput, status) != 0)
-        var_r4 += 1;
-
-    if (var_r4 < 0) {
-        if (Btn::Trg(oldInput, status) != 0)
-            return currentBtn - 1;
-        return 0;
-    }
-
-    if (currentBtn > var_r4)
-        return var_r4;
-
-    if (Btn::Trg(newInput, status) != 0)
-        return 0;
-
-    return currentBtn -1;
-}
-
-__attribute__((noinline)) s32 Btn::Trg(u32 input, s32 status){
-    s32 newTarg;
-
-    newTarg = input & (int)gBtn.mJustPressedInput;
-    if (newTarg != 0) {
-        newTarg = 1;
-    }
-    return newTarg;
-}
-
-__attribute__((noinline)) s32 Btn::Rep(u32 input, s32 status){
-    int repeatedInput;
-
-    repeatedInput = input & (int)gBtn.mRepeatedInput;
-    if(repeatedInput != 0){
-        repeatedInput = 1;
-    }
-    return repeatedInput;
-}
-
-__attribute__((noinline)) s32 Btn::Cnt(u32 currentInput, s32 status){
-    s32 currentInp;
-
-    currentInp = currentInput & (int)gBtn.mCurrentInput;
-    if(currentInp != 0){
-        currentInp = 1;
-    }
-    return currentInp;
-}
-
 #ifdef CTRBTN
 #endif
 
-void* CtrBtn::get(int current) const{
+bit32 CtrBtn::get(int current) const{
     return (&this->mCurrentInput)[current];
 }
 
+#ifdef CTRACL
+#endif
+
+/* CtrAcl::read() */
+
+/* Used to as a entry to the AccelerometerReader */
+
+/* Gets ran every game loop. */
+
+//void CtrAcl::read() {
+//    static nn::hid::CTR::AccelerometerReader gAccelerometerReader(nn::hid::CTR::GetAccelerometer());
+//    AccelerometerReader* pReader = &gAccelerometerReader;
+//    pReader->ReadLatest(&this->mAclStatus);
+//    pReader->ConvertToAcceleration(&this->mAclFloat, 1, &this->mAclStatus, -1);
+//}

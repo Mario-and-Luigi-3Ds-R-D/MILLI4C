@@ -82,15 +82,6 @@ void JobMan::enqueue(Job* pJob) {
     this->mJammedJob = pJob;
 }
 
-JobMan::~JobMan() {
-    JobMan* currentJob = this;
-    if (currentJob->mIsDone != 0){
-        do {
-            currentJob->release();
-        } while (currentJob->mIsDone != 0);
-    }
-}
-
 void JobMan::cancel(Job* pJammedJob, Job* pJob) {
     Job* jammed = pJammedJob->mCurrentJob;
     

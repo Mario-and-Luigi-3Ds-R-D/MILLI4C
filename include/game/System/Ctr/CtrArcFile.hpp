@@ -11,7 +11,6 @@ public:
     virtual void getBinHdr(int*) = 0;
     virtual void getOfs(int,uint*,uchar*) = 0;
 
-    CtrArcFile();
     void open(wchar_t const*,void const*);
     void cancel(int);
     void isBusy(uint);

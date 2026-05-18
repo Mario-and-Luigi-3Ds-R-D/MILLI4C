@@ -25,10 +25,10 @@ void MemAlc::initCore(void* heap, u32 size) {
     this->flag2 = size + (int)heap;
     this->mCoreNumber = heap;
     this->mCoreStatus = heap;
-    *(int*)heap = 0;
+    ((int*)heap)[0] = 0;
     newCore = this->flag2;
-    *(int*)((int)heap + 4) = 0;
-    *(int*)((int)heap + 8) = newCore;
+    ((int*)heap)[1] = 0;
+    ((int*)heap)[2] = newCore;
 }
 /*
 void MemAlc::destroy(){

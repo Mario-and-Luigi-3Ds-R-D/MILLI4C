@@ -3,6 +3,11 @@
 // Filename: main.cpp
 // Purposes: Mainloop + nninitStartup();
 
+// nnMain Location
+
+
+#include "nn/init/init_Default.h"
+
 // SYSTEM
 
 
@@ -28,7 +33,8 @@
 #include "Message/MessageSys.hpp"
 #include "Snd/SndSys.hpp"
 
-// CTRSDK-4_2_5 EXTERNS
+// CTRSDK-4_2_5 Extras
+
 
 #include "nn/cfg/CTR/cfg_Api.h"
 #include "nn/fnd/fnd_DateTime.h"
@@ -47,14 +53,14 @@ extern "C" void nninitStartUp(){
 }
 
 /* inline voidAppletMan::Main() */
-//
+
 /* Main Game Loop */
 inline void AppletMan::Main(){
 
 }
 
 /* nnMain */
-//
+
 /* Main Application Loop */
 extern "C" void nnMain(){
     AppletMan::Main();

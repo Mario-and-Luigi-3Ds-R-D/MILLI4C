@@ -9,9 +9,25 @@ MemAlcCtr gMemCtr;
 /*void MemAlcCtr::mount(uint flags,,uint,uint,bool){
     // STUB
 }
-
+// ROUGH SKETCH
 void MemAlcCtr::mountRO(int){
-    // STUB
+    CtrFileBase fileBase;
+
+    fileBase.TryOpenFileImpl(L"rom:/RO/static.crs",1);
+    fileBase.TryGetSize(s64* pOut);
+    fileBase.TryOpenFileImpl(L"rom:/RO/static.crr",1);
+    fileBase.TryGetSize(ynk);
+    // memalc->alloccore shit here
+    fileBase.FileBase::Read();
+    fileBase.Finalize();
+    fileBase.FileBase::Read();
+    fileBase.Finalize();
+
+    nn::ro::Initialize();
+    nn::ro::RegisterList();
+
+    fileBase.Finalize();
+    fileBase.Finalize();
 }
 
 void MemAlcCtr::finalize(){

@@ -22,7 +22,7 @@ public:
     virtual void start();
     virtual void term();
     virtual JobReturnCode getJobId();
-    virtual bool end(int, int);
+    virtual bool get(int, uint);
 };
 
 class JobMan{ // could inherit from Job, you should get one
@@ -38,7 +38,7 @@ public:
     virtual void term();
     virtual bool isBusy(Job*);
     virtual bool isDone();
-    virtual ~JobMan();
+    virtual ~JobMan() {this->JobMan::term();}
     
     void cancel(Job*,Job*);
 };

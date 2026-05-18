@@ -3,23 +3,23 @@
 #include "types.hpp"
 #include "System/Ctr/File/CtrFUncompSize.hpp"
 #include "System/Ctr/File/CtrModuleFile.hpp"
-#include "System/Ctr/File/CtrFRead.hpp"
-#include "System/Ctr/CtrJobMan.hpp"
-#include "System/Ctr/CtrModule.hpp"
+#include "System/Ctr/File/CtrFS.hpp"
 #include "nn/fs/fs_FileStream.h"
 #include "nn/os/os_CriticalSection.h"
 
 using namespace nn::os;
 
+class CtrFRead;
+class CtrFReadBase;
+
 class CtrFileBase : public nn::fs::FileInputStream{
-protected:
-    CtrJobMan* mpJobMan;
-    CtrFUncompSize mUncompFile; // 0x1c
-    CtrModule* mpModule; // 0x3c
 public:
-    CtrFileBase(void); // 100%
+    CtrFS* mpFileSystem;
+    CtrFUncompSize mUncompFile; // 0x1c
+public:
+    CtrFileBase(void);
     virtual ~CtrFileBase();
-    void close(void); // 100%
+    void close(void);
     void cancel(void); 
     void open(wchar_t const*);
     void read(CtrFRead*,const char*,void*,uint);

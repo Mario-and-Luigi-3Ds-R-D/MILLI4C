@@ -9,5 +9,5 @@ public:
 public:
     CtrThread() : mThreadNumber(0){}
     virtual void freeThread(); // 100%
-    virtual ~CtrThread();
+    virtual ~CtrThread(){ this->freeThread();}
 };

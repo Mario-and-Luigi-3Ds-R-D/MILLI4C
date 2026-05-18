@@ -24,7 +24,6 @@ class CtrTp{
     u8 tpTouch; // 0x9
     u8 flag6; // 0xa
     u8 flag7; // 0xb
-    u8 flag8; // 0xc
     TouchPanelStatus mpTpStatus;
 public:
     //CtrTp(void) { }
@@ -33,18 +32,18 @@ public:
 
 class CtrBtn{
 public:
-    void* mCurrentInput;
-    void* mLastFrameInput;
-    void* mJustPressedInput;
-    void* mReleasedInput;
-    void* mRepeatedInput;
+    bit32 mCurrentInput;
+    bit32 mLastFrameInput;
+    bit32 mJustPressedInput;
+    bit32 mReleasedInput;
+    bit32 mRepeatedInput;
     short _14;
     u8 rev[30]; //watch ts be the `ULTIMATE` input table
     short _34;
     short _36;
     PadStatus mPadBuffer;
 public:
-    void* get(int) const;
+    bit32 get(int) const;
     void read();
 };
 
@@ -52,18 +51,9 @@ class CtrAcl{
 protected:
     AccelerometerStatus mAclStatus;
     short rev;
-    AccelerationFloat* mAclFloat;
-    void* _C;
-    void* _10;
+    AccelerationFloat mAclFloat;
 public:
     void read();
-};
-
-struct Btn{
-    static s32 Rep(u32,s32);
-    static s32 Trg(u32,s32);
-    static s32 Select(s32,s32,u32,u32,s32);
-    static s32 Cnt(u32,s32);
 };
 
 extern CtrBtn gBtn;

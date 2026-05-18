@@ -24,7 +24,7 @@ public:
     virtual bool isDone(); // 100%
     virtual ~CtrJobMan();
     virtual s32 signalValue(); // 100%
-    virtual int termCtrThread(); // 100%
+    virtual int startCtrThread(); // 100%
 
     void start(int, int, int);
     void init(void*,int,int);

@@ -10,9 +10,13 @@ void Job::start(){
 void Job::term(){
 }
 
-bool Job::end(int jobId, int end){
+/* Job::get(int jobId, uint mask) */
+
+/* Puts in a JobID, and masks it. */
+
+bool Job::get(int jobId, uint mask){
     int result = this->getJobId();
-    result &= end;
+    result &= mask;
     return result == jobId;
 }
 

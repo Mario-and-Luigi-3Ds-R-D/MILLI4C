@@ -3,12 +3,12 @@
 #include "types.hpp"
 #include "System/Job.hpp"
 #include "System/Memory/Mem.hpp"
-#include "System/Ctr/File/CtrFS.hpp"
+#include "System/Ctr/File/CtrFileBase.hpp"
 
 class CtrFReadBase : public Job{
 public:
     int flag3; // 0xC
-    CtrFSEx* mpFileSystem; // 0x10
+    CtrFileBase* mpFileSystem; // 0x10
     Mem* mpActiveMem; // 0x14
     uint* mpFileOffset;
     uint _1C;

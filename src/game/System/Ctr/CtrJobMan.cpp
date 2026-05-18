@@ -11,7 +11,8 @@ CtrJobMan::CtrJobMan(){
 }
 
 CtrJobMan::~CtrJobMan(){
-
+    this->term();
+    this->mCriticalSection.Finalize();
 }
 
 //void CtrJobMan::start(MemAlcBase* pAlcBase, size_t size,  ){
@@ -55,7 +56,7 @@ void CtrJobMan::release(){
 /* CtrJobMan::term() */
 
 void CtrJobMan::term() {
-    if(this->termCtrThread() != 0){
+    if(this->startCtrThread() != 0){
         this->jam(&this->mJob);
         {int index;
         nn::Handle handle = this->mCtrThread.mHandle;
@@ -72,7 +73,7 @@ void CtrJobMan::term() {
 /* CtrJobMan::isBusy(CTRJOB* pJob) */
 
 bool CtrJobMan::isBusy(Job* pJob) {
-    this->mCriticalSection.Leave();
+    this->mCriticalSection.Enter();
     this->JobMan::isBusy(pJob);
     this->mCriticalSection.Leave();
 }
@@ -89,9 +90,9 @@ s32 CtrJobMan::signalValue(){
     return (static_cast<s32>(*this->mLightEvent.mLock.mCounter) >> 0x1f) + 1;
 }
 
-/* CtrJobMan::termCtrThread() */
+/* CtrJobMan::startCtrThread() */
 
-int CtrJobMan::termCtrThread() {
+int CtrJobMan::startCtrThread() {
     return this->mCtrThread.mHandle != 0;
 }
 

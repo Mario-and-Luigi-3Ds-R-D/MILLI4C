@@ -24,8 +24,8 @@ __compiler_armcc(ASM)
 
 # Dwarf info :D
 
-set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   --dwarf2 --debug")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --dwarf2 --debug")
+set(CMAKE_C_FLAGS   "${CMAKE_C_FLAGS}   --dwarf3 --debug")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --dwarf3 --debug")
 
 file(GLOB_RECURSE SOURCES_GAME ${CMAKE_SOURCE_DIR}/src/game/*.c ${CMAKE_SOURCE_DIR}/src/game/*.cpp)
 file(GLOB_RECURSE SOURCES_RSLIB ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.c ${CMAKE_SOURCE_DIR}/library/rsLib/src/*.cpp) 
@@ -52,8 +52,8 @@ target_link_options(MILLI4C PRIVATE
     #if Debug Build add -DBUILD_DEBUG
 target_compile_options(MILLI4C PUBLIC $<$<COMPILE_LANGUAGE:CXX>:
     --apcs=//interwork --cpu=MPCore --fpmode=fast --cpp --arm --force_new_nothrow
-    --signed_chars --multibyte-chars --no_vfe 
-    --diag_suppress=1 --diag_suppress=177 --diag_suppress=541 --diag_suppress=1134 --diag_suppress=3017
+    --signed_chars --multibyte-chars --no_vfe
+    --diag_suppress=1 --diag_suppress=177 --diag_suppress=541 --diag_suppress=1134 --diag_suppress=3017 
     --rtti --rtti_data --no_exceptions -O3 -Otime --data-reorder --split_sections
     -DBUILD_RELEASE 
     >)
